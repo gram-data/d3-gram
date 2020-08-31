@@ -6,7 +6,7 @@
     "type": "git",
     "url": "https://github.com/gram-data/gram-js.git"
   },
-  "version": "0.1.12",
+  "version": "0.1.13",
   "author": "Andreas Kollegger",
   "license": "MIT",
   "main": "dist/index.js",
