@@ -1,11 +1,12 @@
 import * as d3 from "d3";
 
-import {gramParse, GramNodeDatum, GramLinkDatum, isGramNodeDatum} from '../src';
+import {d3Gram, GramNodeDatum, GramLinkDatum, isGramNodeDatum} from '../src';
 
 // a trick enabled by parcel. `miserables` will  be a URL
 const miserables = require('./miserables.gram'); 
 
-const shapeSize = 1200;
+const shapeRadius = 20;
+const shapeSize = Math.PI * shapeRadius * shapeRadius; // the area of the shape
 
 var svg = d3.select("svg"),
     width = +svg.attr("width"),
@@ -44,28 +45,30 @@ const colorFor = (node:GramNodeDatum) => {
 }
   
 var simulation = d3.forceSimulation()
-    .force("charge", d3.forceManyBody().strength(-1000))
-    .force("center", d3.forceCenter(center.x, center.y));
+    .force("charge", d3.forceManyBody().strength(-30))
+    .force("center", d3.forceCenter(center.x, center.y))
+    .force('collision', d3.forceCollide().radius(30))
+    ;
     
 const drag = (simulation:any) => {
   
-  function dragstarted(d:any) {
-    if (!d3.event.active) simulation.alphaTarget(0.3).restart();
-    // simulation.stop();
-    d.fx = d.x;
-    d.fy = d.y;
+  function dragstarted(event) {
+    if (!event.active) simulation.alphaTarget(0.3).restart();
+    event.subject.fx = event.subject.x;
+    event.subject.fy = event.subject.y;
   }
   
-  function dragged(d:any) {
-    d.fx = d3.event.x;
-    d.fy = d3.event.y;
+  function dragged(event) {
+    event.subject.fx = event.x;
+    event.subject.fy = event.y;
   }
   
-  function dragended(d:any) {
-    if (!d3.event.active) simulation.alphaTarget(0).restart();
-    d.fx = null;
-    d.fy = null;
+  function dragended(event) {
+    if (!event.active) simulation.alphaTarget(0);
+    event.subject.fx = null;
+    event.subject.fy = null;
   }
+
   
   return d3.drag()
       .on("start", dragstarted)
@@ -92,9 +95,14 @@ const drawNodes = (nodes:any) => {
 window.onload = () => {
 
   d3.text(miserables).then( gramSource => {
-    const altGramSource = "(a:Person {born:date`1969-01-01`})-->(b:Event)<--(c:Movie)"
+    const altGramSource = [
+      gramSource,
+      "(a:Person {born:date`1969-01-01`})-->(b:Event)<--(c:Movie)",
+      "(a)-->(b)<--(c)",
+      "(a) (b) (c)"
+    ]
 
-    let graph = gramParse(gramSource);
+    let graph = d3Gram(altGramSource[0]);
 
     console.log("D3 Graph Loaded:");
     console.dir(graph);
@@ -128,15 +136,15 @@ window.onload = () => {
     .attr('stroke-width', 4)
     .attr('d', shapeFor)
   
-  node.append("text")
-        .text(function(d) {
-          return d.id;
-        })
-        .attr("text-anchor", "middle")
-        .attr("fill", "white")
-        .attr('x', 0)
-        .attr('y', 4)
-        .attr('pointer-events', 'none');
+  // node.append("text")
+  //       .text(function(d) {
+  //         return d.id;
+  //       })
+  //       .attr("text-anchor", "middle")
+  //       .attr("fill", "white")
+  //       .attr('x', 0)
+  //       .attr('y', 4)
+  //       .attr('pointer-events', 'none');
   
     node.append("title")
         .text(function(d) { return d.id; });

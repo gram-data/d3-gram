@@ -1,4 +1,4 @@
-// export * from './gram-parse';
-// export { recordToValue } from './record-to-object';
+export * from './d3-gram';
+export * from './gram-d3-types';
 
 export const status = 'TBD';

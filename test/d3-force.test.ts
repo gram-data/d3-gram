@@ -1,15 +1,15 @@
 import {
   GramNodeDatum,
   GramLinkDatum,
-  gramNodeDatum,
-  gramLinkDatum,
+  makeGramNodeDatum,
+  makeGramLinkDatum,
 } from '../src';
 import * as d3 from 'd3-force';
 
 describe('D3Force with D3Gram model', () => {
   it('accepts GramNodeDatum', () => {
     const nodes: GramNodeDatum[] = [];
-    nodes.push(gramNodeDatum('a'));
+    nodes.push(makeGramNodeDatum('a'));
     d3.forceSimulation(nodes);
   });
   it('accepts GramLinkDatum', () => {
@@ -19,10 +19,10 @@ describe('D3Force with D3Gram model', () => {
   it('will position nodes', () => {
     const width = 1200;
     const height = 900;
-    const nodeA = gramNodeDatum('a');
-    const nodeB = gramNodeDatum('b');
+    const nodeA = makeGramNodeDatum('a');
+    const nodeB = makeGramNodeDatum('b');
     const nodes: GramNodeDatum[] = [nodeA, nodeB];
-    const linkR = gramLinkDatum(nodeA.id, nodeB.id, 'r');
+    const linkR = makeGramLinkDatum(nodeA.id, nodeB.id, 'r');
     const links: GramLinkDatum[] = [linkR];
     const simulation = d3
       .forceSimulation(nodes)
