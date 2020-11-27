@@ -23,6 +23,11 @@ describe('d3Gram from nodes', () => {
     expect(gramGraph.nodes[1].id).toBe('b');
     expect(gramGraph.nodes[2].id).toBe('c');
   });
+  it('(a) (a) (a)', () => {
+    const src = '(a) (a) (a)';
+    const gramGraph = d3Gram(src);
+    expect(gramGraph.nodes).toHaveLength(1);
+  });
   it('(a:Aye)', () => {
     const src = '(a:Aye)';
     const gramGraph = d3Gram(src);

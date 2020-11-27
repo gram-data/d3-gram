@@ -23,6 +23,15 @@ describe('Gram', () => {
     expect(head(path).id).toBe('a');
     expect(tail(path).id).toBe('b');
   });
+  it('deduplicates nodes from the path', () => {
+    const src = '(a)-->(a)';
+    const seq = toAST(src);
+    const path = seq.children[0];
+    const ns: GramPath[] = nodes(path);
+    expect(ns).toHaveLength(1);
+    expect(head(path).id).toBe('a');
+    expect(tail(path).id).toBe('a');
+  });
   it('extracts links from the ast', () => {
     const src = '(a)-->(b)';
     const seq = toAST(src);

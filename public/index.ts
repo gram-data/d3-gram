@@ -99,10 +99,11 @@ window.onload = () => {
       gramSource,
       "(a:Person {born:date`1969-01-01`})-->(b:Event)<--(c:Movie)",
       "(a)-->(b)<--(c)",
-      "(a) (b) (c)"
+      "(a) (b) (c)",
+      "(a) (b) (a)"
     ]
 
-    let graph = d3Gram(altGramSource[0]);
+    let graph = d3Gram(altGramSource[4]);
 
     console.log("D3 Graph Loaded:");
     console.dir(graph);
