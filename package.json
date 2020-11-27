@@ -34,7 +34,7 @@
     "build": "tsdx build --format umd,esm,cjs --tsconfig tsconfig.build.json",
     "test": "tsdx test",
     "test:watch": "tsdx test --watch",
-    "lint": "tsdx lint",
+    "lint": "tsdx lint src",
     "lint:fix": "tsdx lint src --fix",
     "demo": "parcel public/index.html",
     "release": "np --no-tests --no-release-draft --no-yarn",

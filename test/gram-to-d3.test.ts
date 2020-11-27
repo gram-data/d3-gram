@@ -1,6 +1,29 @@
-import { d3Gram, GramNodeDatum, GramLinkDatum, isGramNodeDatum } from '../src';
+import { d3Gram, isGramNodeDatum } from '../src';
 
 describe('d3Gram from nodes', () => {
+  it('()', () => {
+    const src = '()';
+    const gramGraph = d3Gram(src);
+    expect(gramGraph.nodes).toHaveLength(1);
+    expect(isGramNodeDatum(gramGraph.nodes[0])).toBeTruthy();
+    expect(gramGraph.nodes[0].id).toBeDefined();
+  });
+  it('()-->()', () => {
+    const src = '()-->()';
+    const gramGraph = d3Gram(src);
+    expect(gramGraph.nodes).toHaveLength(2);
+    expect(isGramNodeDatum(gramGraph.nodes[0])).toBeTruthy();
+    expect(gramGraph.nodes[0].id).toBeDefined();
+    expect(gramGraph.nodes[1].id).toBeDefined();
+  });
+  it('(:Aye)-->(:Bee)', () => {
+    const src = '()-->()';
+    const gramGraph = d3Gram(src);
+    expect(gramGraph.nodes).toHaveLength(2);
+    expect(isGramNodeDatum(gramGraph.nodes[0])).toBeTruthy();
+    expect(gramGraph.nodes[0].id).toBeDefined();
+    expect(gramGraph.nodes[1].id).toBeDefined();
+  });
   it('(a)', () => {
     const src = '(a)';
     const gramGraph = d3Gram(src);

@@ -1,7 +1,6 @@
 import { toAST } from '@gram-data/gram-parse';
 import { GramPath, isGramPath, isGramSeq } from '@gram-data/gram-ast';
 import { head, tail, nodes, edges } from '@gram-data/gram-ops';
-import { stringify } from '@gram-data/gram-stringify';
 
 describe('Gram', () => {
   it('parses text into an ast', () => {
