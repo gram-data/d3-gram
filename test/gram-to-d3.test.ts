@@ -1,4 +1,4 @@
-import { d3Gram, isGramNodeDatum } from '../src';
+import { d3Gram, isGramNodeDatum, MISSING_ID } from '../src';
 
 describe('d3Gram from nodes', () => {
   it('()', () => {
@@ -68,6 +68,13 @@ describe('d3Gram with links', () => {
     expect(gramGraph.links).toHaveLength(1);
     expect(gramGraph.links[0].source).toBe(gramGraph.nodes[0].id);
     expect(gramGraph.links[0].target).toBe(gramGraph.nodes[1].id);
+  });
+  it('links "right" direction from anonymous source to anonymous target', () => {
+    const src = '()-->()';
+    const gramGraph = d3Gram(src);
+    expect(gramGraph.links).toHaveLength(1);
+    expect(gramGraph.links[0].source).not.toBe(MISSING_ID);
+    expect(gramGraph.links[0].target).not.toBe(MISSING_ID);
   });
   it('links "left" direction from target to source', () => {
     const src = '(a)<--(b)';

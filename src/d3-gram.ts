@@ -10,9 +10,9 @@ import {
 } from './gram-d3-types';
 import { GramEdge, GramNode, GramPath, isGramNode } from '@gram-data/gram-ast';
 
-const unified = require('unified');
-const gramParserPlugin = require('@gram-data/gram-parse').gramParserPlugin;
-const gramPresetBasic = require('@gram-data/gram-preset-basic');
+import unified from 'unified';
+import { gramParserPlugin } from '@gram-data/gram-parse';
+import * as gramPresetBasic from '@gram-data/gram-preset-basic';
 
 const gramProcessor = unified()
   .use(gramParserPlugin)
@@ -25,14 +25,12 @@ const gramProcessor = unified()
  * @param src
  */
 export const d3Gram = (src: string): GramGraphData => {
-  const parsed = gramProcessor.runSync(gramProcessor.parse(src));
+  const parsed: GramPath = gramProcessor.runSync(
+    gramProcessor.parse(src)
+  ) as GramPath;
   const d3Gram = {
     nodes: (nodes(parsed) as GramNode[]).map(nodeToD3),
-    links: parsed.children.reduce(
-      (acc: GramLinkDatum[], p: GramPath) =>
-        acc.concat((edges(p) as GramEdge[]).map(edgeToD3)),
-      [] as GramLinkDatum[]
-    ),
+    links: (edges(parsed) as GramEdge[]).map(edgeToD3),
     paths: [] as GramPathDatum[],
   };
 

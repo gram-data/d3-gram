@@ -45,6 +45,6 @@ describe('Gram', () => {
     const ns: GramPath[] = nodes(path);
     expect(ns).toHaveLength(1);
     const n = ns[0];
-    expect(n.labels[0]).toBe('Aye');
+    expect(n.labels![0]).toBe('Aye');
   });
 });
