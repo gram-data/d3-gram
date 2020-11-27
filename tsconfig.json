@@ -1,6 +1,5 @@
 {
   "baseUrl": "./",
-  "sourceRoot": "./",
   "compilerOptions": {
       "outDir": "./dist",
   },
