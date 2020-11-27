@@ -1,5 +1,11 @@
 {
   "name": "@gram-data/d3-gram",
+  "description":"D3 support for gram text format of graph data. (a)-->(b)",
+  "keywords": [
+    "graph",
+    "d3",
+    "gram"
+  ],
   "homepage": "https://github.com/gram-data/d3-gram/",
   "bugs": "https://github.com/gram-data/d3-gram/issues",
   "repository": {

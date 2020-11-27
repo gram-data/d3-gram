@@ -1,4 +1,4 @@
-D3 support for reading the [gram](http://gram-data.github.io) text format of graph data.
+D3 support for the [gram](http://gram-data.github.io) text format of graph data. `(a)-->(b)<--(c)`
 
 ## How to d3-gram
 
