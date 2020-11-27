@@ -1,10 +1,10 @@
 {
   "name": "@gram-data/d3-gram",
-  "homepage": "https://github.com/gram-data/gram-js/tree/master/packages/d3-gram",
-  "bugs": "https://github.com/gram-data/gram-js/issues",
+  "homepage": "https://github.com/gram-data/d3-gram/",
+  "bugs": "https://github.com/gram-data/d3-gram/issues",
   "repository": {
     "type": "git",
-    "url": "https://github.com/gram-data/gram-js.git"
+    "url": "https://github.com/gram-data/d3-gram.git"
   },
   "version": "0.1.13",
   "author": "Andreas Kollegger",
