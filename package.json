@@ -53,7 +53,7 @@
   },
   "devDependencies": {
     "@gram-data/gram-builder": "^0.2.13",
-    "@gram-data/gram-stringify": "^0.2.13",
+    "@gram-data/gram-stringify": "^0.2.14",
     "@types/d3": "^6.2.0",
     "@types/jest": "^26.0.15",
     "@types/unist": "^2.0.3",
@@ -73,8 +73,8 @@
   },
   "dependencies": {
     "@gram-data/gram-ast": "^0.2.13",
-    "@gram-data/gram-ops": "^0.2.13",
-    "@gram-data/gram-parse": "^0.2.13",
+    "@gram-data/gram-ops": "^0.2.14",
+    "@gram-data/gram-parse": "^0.2.14",
     "@gram-data/gram-preset-basic": "^0.2.13"
   },
   "gitHead": "a255da2f7cfa6bd16f637d1241d17e10510e60c0"
