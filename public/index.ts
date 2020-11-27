@@ -44,17 +44,11 @@ const colorFor = (node:GramNodeDatum) => {
   return color(label) || 'gray';
 }
   
-// var simulation = d3.forceSimulation()
-//     .force("charge", d3.forceManyBody().strength(-30))
-//     .force("center", d3.forceCenter(center.x, center.y))
-//     .force('collision', d3.forceCollide().radius(30))
-//     ;
-
 var simulation = d3.forceSimulation()
-.force("charge", d3.forceManyBody())
-.force("center", d3.forceCenter(center.x, center.y))
-.force('collision', d3.forceCollide())
-;
+    .force("charge", d3.forceManyBody().strength(-30))
+    .force("center", d3.forceCenter(center.x, center.y))
+    .force('collision', d3.forceCollide().radius(30))
+    ;
     
 const drag = (simulation:any) => {
   

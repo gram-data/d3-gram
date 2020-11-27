@@ -20,7 +20,7 @@ import { GramEdge, GramNode, GramPath, isGramNode } from '@gram-data/gram-ast';
 export const d3Gram = (src: string): GramGraphData => {
   const parsed = toAST(src);
   const d3Gram = {
-    nodes: nodes(parsed).map(nodeToD3),
+    nodes: (nodes(parsed) as GramNode[]).map(nodeToD3),
     links: parsed.children.reduce(
       (acc: GramLinkDatum[], p: GramPath) =>
         acc.concat((edges(p) as GramEdge[]).map(edgeToD3)),
