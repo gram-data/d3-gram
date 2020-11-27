@@ -5,7 +5,7 @@ import {d3Gram, GramNodeDatum, GramLinkDatum, isGramNodeDatum} from '../src';
 // a trick enabled by parcel. `miserables` will  be a URL
 const miserables = require('./miserables.gram'); 
 
-const shapeRadius = 20;
+const shapeRadius = 2;
 const shapeSize = Math.PI * shapeRadius * shapeRadius; // the area of the shape
 
 var svg = d3.select("svg"),
@@ -44,11 +44,17 @@ const colorFor = (node:GramNodeDatum) => {
   return color(label) || 'gray';
 }
   
+// var simulation = d3.forceSimulation()
+//     .force("charge", d3.forceManyBody().strength(-30))
+//     .force("center", d3.forceCenter(center.x, center.y))
+//     .force('collision', d3.forceCollide().radius(30))
+//     ;
+
 var simulation = d3.forceSimulation()
-    .force("charge", d3.forceManyBody().strength(-30))
-    .force("center", d3.forceCenter(center.x, center.y))
-    .force('collision', d3.forceCollide().radius(30))
-    ;
+.force("charge", d3.forceManyBody())
+.force("center", d3.forceCenter(center.x, center.y))
+.force('collision', d3.forceCollide())
+;
     
 const drag = (simulation:any) => {
   
@@ -103,7 +109,7 @@ window.onload = () => {
       "(a) (b) (a)"
     ]
 
-    let graph = d3Gram(altGramSource[4]);
+    let graph = d3Gram(altGramSource[2]);
 
     console.log("D3 Graph Loaded:");
     console.dir(graph);

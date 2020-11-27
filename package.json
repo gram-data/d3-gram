@@ -1,6 +1,6 @@
 {
-  "name": "@gram-data/gram-d3",
-  "homepage": "https://github.com/gram-data/gram-js/tree/master/packages/gram-d3",
+  "name": "@gram-data/d3-gram",
+  "homepage": "https://github.com/gram-data/gram-js/tree/master/packages/d3-gram",
   "bugs": "https://github.com/gram-data/gram-js/issues",
   "repository": {
     "type": "git",
@@ -10,8 +10,8 @@
   "author": "Andreas Kollegger",
   "license": "MIT",
   "main": "dist/index.js",
-  "module": "dist/gram-d3.esm.js",
-  "unpkg": "dist/gram-d3.umd.production.min.js",
+  "module": "dist/d3-gram.esm.js",
+  "unpkg": "dist/d3-gram.umd.production.min.js",
   "types": "dist/index.d.ts",
   "publishConfig": {
     "access": "public"

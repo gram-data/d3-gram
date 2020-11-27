@@ -1,27 +1,25 @@
-# TSDX Bootstrap
+D3 support for reading the [gram](http://gram-data.github.io) text format of graph data.
 
-This project was bootstrapped with [TSDX](https://github.com/jaredpalmer/tsdx).
+## How to d3-gram
 
-## Local Development
+`d3Gram()` parses text in the gram format, producing a graph of nodes and links that is
+ready to be used in a `d3-force` simulation.
 
-Below is a list of commands you will probably find useful.
+``` TypeScript
+import * as d3 from "d3";
+import {d3Gram} from 'd3-gram';
 
-### `npm start` or `yarn start`
+d3.text("https://raw.githubusercontent.com/gram-data/d3-gram/master/public/miserables.gram").then( gramSource => {
 
-Runs the project in development/watch mode. Your project will be rebuilt upon changes. TSDX has a special logger for you convenience. Error messages are pretty printed and formatted for compatibility VS Code's Problems tab.
+  let graph = d3Gram(gramSource);
 
-<img src="https://user-images.githubusercontent.com/4060187/52168303-574d3a00-26f6-11e9-9f3b-71dbec9ebfcb.gif" width="600" />
+  let simulation = d3.forceSimulation()
+    .force("charge", d3.forceManyBody())
+    .force("center", d3.forceCenter(300,200)) // preferably calculate the center of the svg
+    .force('collision', d3.forceCollide());
 
-Your library will be rebuilt if you make edits.
+  simulation.nodes(graph.nodes);
+  simulation.force("link", d3.forceLink(graph.links).id((d:any) => d.id))
 
-### `npm run build` or `yarn build`
 
-Bundles the package to the `dist` folder.
-The package is optimized and bundled with Rollup into multiple formats (CommonJS, UMD, and ES Module).
-
-<img src="https://user-images.githubusercontent.com/4060187/52168322-a98e5b00-26f6-11e9-8cf6-222d716b75ef.gif" width="600" />
-
-### `npm test` or `yarn test`
-
-Runs the test watcher (Jest) in an interactive mode.
-By default, runs tests related to files changed since the last commit.
+```
