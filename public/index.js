@@ -104,7 +104,7 @@ window.onload = () => {
       "()-->()<--()"
     ]
 
-    let graph = d3Gram(altGramSource[5]);
+    let graph = d3Gram(altGramSource[0]);
 
     console.log("D3 Graph Loaded:");
     console.dir(graph);

@@ -16,7 +16,7 @@ export const makeGramNodeDatum = (
   return {
     id: id || MISSING_ID,
     labels: labels || [],
-    record: record || {},
+    record: record || [],
   };
 };
 
@@ -40,7 +40,7 @@ export const makeGramLinkDatum = (
   return {
     id: id || MISSING_ID,
     labels: labels || [],
-    record: record || {},
+    record: record || [],
     source,
     target,
   };

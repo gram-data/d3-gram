@@ -59,6 +59,22 @@ describe('d3Gram from nodes', () => {
     expect(n.id).toBe('a');
     expect(n.labels[0]).toBe('Aye');
   });
+  it('(a {k:"v"})', () => {
+    const src = '(a {k:"v"})';
+    const gramGraph = d3Gram(src);
+    expect(gramGraph.nodes).toHaveLength(1);
+    const n = gramGraph.nodes[0];
+    expect(n.id).toBe('a');
+    expect(n.record.length).toBe(1);
+  });
+  it('(a {})', () => {
+    const src = '(a {})';
+    const gramGraph = d3Gram(src);
+    expect(gramGraph.nodes).toHaveLength(1);
+    const n = gramGraph.nodes[0];
+    expect(n.id).toBe('a');
+    expect(n.record.length).toBe(0);
+  });
 });
 
 describe('d3Gram with links', () => {
