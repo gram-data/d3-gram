@@ -65,7 +65,8 @@ describe('d3Gram from nodes', () => {
     expect(gramGraph.nodes).toHaveLength(1);
     const n = gramGraph.nodes[0];
     expect(n.id).toBe('a');
-    expect(n.record.length).toBe(1);
+    expect(n.record).toBeDefined();
+    expect(n.record).toStrictEqual({k:'v'})
   });
   it('(a {})', () => {
     const src = '(a {})';
@@ -73,7 +74,8 @@ describe('d3Gram from nodes', () => {
     expect(gramGraph.nodes).toHaveLength(1);
     const n = gramGraph.nodes[0];
     expect(n.id).toBe('a');
-    expect(n.record.length).toBe(0);
+    expect(n.record).toBeDefined();
+    expect(n.record).toStrictEqual({})
   });
 });
 

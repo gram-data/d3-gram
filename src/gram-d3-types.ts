@@ -2,16 +2,18 @@ import { SimulationNodeDatum, SimulationLinkDatum } from 'd3-force';
 
 export const MISSING_ID = '__missing_id__';
 
+export type PathDatumRecord = { [key: string]: any };
+
 export interface GramNodeDatum extends SimulationNodeDatum {
   id: string;
   labels: string[];
-  record: { [key: string]: any };
+  record: PathDatumRecord;
 }
 
 export const makeGramNodeDatum = (
   id?: string,
   labels?: string[],
-  record?: { [key: string]: any }
+  record?: PathDatumRecord
 ) => {
   return {
     id: id || MISSING_ID,
@@ -27,7 +29,7 @@ export const isGramNodeDatum = (o: any): o is GramNodeDatum => {
 export interface GramLinkDatum extends SimulationLinkDatum<GramNodeDatum> {
   id: string;
   labels?: string[];
-  record: { [key: string]: any };
+  record: PathDatumRecord;
 }
 
 export const makeGramLinkDatum = (
@@ -35,7 +37,7 @@ export const makeGramLinkDatum = (
   target: string,
   id?: string,
   labels?: string[],
-  record?: { [key: string]: any }
+  record?: PathDatumRecord
 ) => {
   return {
     id: id || MISSING_ID,

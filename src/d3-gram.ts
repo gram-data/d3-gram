@@ -7,6 +7,7 @@ import {
   makeGramLinkDatum,
   makeGramNodeDatum,
   MISSING_ID,
+  PathDatumRecord,
 } from './gram-d3-types';
 import { GramEdge, GramNode, GramPath, isGramNode } from '@gram-data/gram-ast';
 
@@ -37,9 +38,17 @@ export const d3Gram = (src: string): GramGraphData => {
   return d3Gram;
 };
 
+export const dataFromPath = (p: GramPath): PathDatumRecord => {
+  return p.data && p.data.value
+    ? (p.data.value as PathDatumRecord)
+    : p.record
+    ? p.record
+    : {};
+};
+
 export const nodeToD3 = (node: GramNode): GramNodeDatum => {
   return isGramNode(node)
-    ? makeGramNodeDatum(node.id, node.labels, node.record)
+    ? makeGramNodeDatum(node.id, node.labels, dataFromPath(node))
     : makeGramNodeDatum('random');
 };
 
@@ -59,6 +68,6 @@ export const edgeToD3 = (edge: GramEdge): GramLinkDatum => {
     target(edge),
     edge.id,
     edge.labels,
-    edge.record
+    dataFromPath(edge)
   );
 };
