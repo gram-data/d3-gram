@@ -55,7 +55,7 @@ Renames and exports: [parse](d3_gram_parse.md#parse)
 
 Ƭ **PathDatumRecord**: { [key: string]: *any*;  }
 
-Defined in: [src/d3-gram-types.ts:5](https://github.com/gram-data/d3-gram/blob/b65614d/src/d3-gram-types.ts#L5)
+Defined in: [src/d3-gram-types.ts:5](https://github.com/gram-data/d3-gram/blob/3dd6a0d/src/d3-gram-types.ts#L5)
 
 ## Variables
 
@@ -63,7 +63,7 @@ Defined in: [src/d3-gram-types.ts:5](https://github.com/gram-data/d3-gram/blob/b
 
 • `Const` **MISSING\_ID**: *__missing_id__*= '\_\_missing\_id\_\_'
 
-Defined in: [src/d3-gram-types.ts:3](https://github.com/gram-data/d3-gram/blob/b65614d/src/d3-gram-types.ts#L3)
+Defined in: [src/d3-gram-types.ts:3](https://github.com/gram-data/d3-gram/blob/3dd6a0d/src/d3-gram-types.ts#L3)
 
 ## Functions
 
@@ -79,30 +79,30 @@ Name | Type |
 
 **Returns:** [*PathDatumRecord*](d3_gram_types.md#pathdatumrecord)
 
-Defined in: [src/d3-gram-parse.ts:42](https://github.com/gram-data/d3-gram/blob/b65614d/src/d3-gram-parse.ts#L42)
+Defined in: [src/d3-gram-parse.ts:42](https://github.com/gram-data/d3-gram/blob/3dd6a0d/src/d3-gram-parse.ts#L42)
 
 ___
 
 ### draw
 
-▸ `Const`**draw**(`graph`: [*GramGraphData*](../interfaces/d3_gram_types.gramgraphdata.md), `selector`: *string*, `configuration?`: D3GramDrawConfiguration): *object*
+▸ `Const`**draw**(`graph`: [*GramGraphData*](../interfaces/d3_gram_types.gramgraphdata.md), `selector`: *any*, `configuration?`: *Partial*<D3GramDrawConfiguration\>): *object*
 
 #### Parameters:
 
 Name | Type | Default value | Description |
 ------ | ------ | ------ | ------ |
 `graph` | [*GramGraphData*](../interfaces/d3_gram_types.gramgraphdata.md) | - | gram source text   |
-`selector` | *string* | - | dom selector for an svg element   |
-`configuration` | D3GramDrawConfiguration | ... | - |
+`selector` | *any* | - | dom selector for an svg element   |
+`configuration` | *Partial*<D3GramDrawConfiguration\> | ... | - |
 
 **Returns:** *object*
 
 Name | Type |
 ------ | ------ |
-`links` | *Selection*<*any*, [*GramLinkDatum*](../interfaces/d3_gram_types.gramlinkdatum.md), *any*, *unknown*\> |
-`nodes` | *Selection*<*any*, [*GramNodeDatum*](../interfaces/d3_gram_types.gramnodedatum.md), *any*, *unknown*\> |
+`linkSelection` | *Selection*<*any*, [*GramLinkDatum*](../interfaces/d3_gram_types.gramlinkdatum.md), *any*, *unknown*\> |
+`nodeSelection` | *Selection*<*any*, [*GramNodeDatum*](../interfaces/d3_gram_types.gramnodedatum.md), *any*, *unknown*\> |
 
-Defined in: [src/d3-gram-renderer.ts:121](https://github.com/gram-data/d3-gram/blob/b65614d/src/d3-gram-renderer.ts#L121)
+Defined in: [src/d3-gram-renderer.ts:153](https://github.com/gram-data/d3-gram/blob/3dd6a0d/src/d3-gram-renderer.ts#L153)
 
 ___
 
@@ -118,7 +118,7 @@ Name | Type |
 
 **Returns:** [*GramLinkDatum*](../interfaces/d3_gram_types.gramlinkdatum.md)
 
-Defined in: [src/d3-gram-parse.ts:66](https://github.com/gram-data/d3-gram/blob/b65614d/src/d3-gram-parse.ts#L66)
+Defined in: [src/d3-gram-parse.ts:66](https://github.com/gram-data/d3-gram/blob/3dd6a0d/src/d3-gram-parse.ts#L66)
 
 ___
 
@@ -134,7 +134,7 @@ Name | Type |
 
 **Returns:** o is GramNodeDatum
 
-Defined in: [src/d3-gram-types.ts:25](https://github.com/gram-data/d3-gram/blob/b65614d/src/d3-gram-types.ts#L25)
+Defined in: [src/d3-gram-types.ts:25](https://github.com/gram-data/d3-gram/blob/3dd6a0d/src/d3-gram-types.ts#L25)
 
 ___
 
@@ -151,7 +151,7 @@ Name | Type | Default value | Description |
 
 **Returns:** *Simulation*<SimulationNodeDatum, *undefined*\>
 
-Defined in: [src/d3-gram-layout.ts:44](https://github.com/gram-data/d3-gram/blob/b65614d/src/d3-gram-layout.ts#L44)
+Defined in: [src/d3-gram-layout.ts:44](https://github.com/gram-data/d3-gram/blob/3dd6a0d/src/d3-gram-layout.ts#L44)
 
 ___
 
@@ -179,7 +179,7 @@ Name | Type |
 `source` | *string* |
 `target` | *string* |
 
-Defined in: [src/d3-gram-types.ts:35](https://github.com/gram-data/d3-gram/blob/b65614d/src/d3-gram-types.ts#L35)
+Defined in: [src/d3-gram-types.ts:35](https://github.com/gram-data/d3-gram/blob/3dd6a0d/src/d3-gram-types.ts#L35)
 
 ___
 
@@ -203,7 +203,7 @@ Name | Type |
 `labels` | *string*[] |
 `record` | [*PathDatumRecord*](d3_gram_types.md#pathdatumrecord) |
 
-Defined in: [src/d3-gram-types.ts:13](https://github.com/gram-data/d3-gram/blob/b65614d/src/d3-gram-types.ts#L13)
+Defined in: [src/d3-gram-types.ts:13](https://github.com/gram-data/d3-gram/blob/3dd6a0d/src/d3-gram-types.ts#L13)
 
 ___
 
@@ -219,7 +219,7 @@ Name | Type |
 
 **Returns:** *void*
 
-Defined in: [src/d3-gram-renderer.ts:89](https://github.com/gram-data/d3-gram/blob/b65614d/src/d3-gram-renderer.ts#L89)
+Defined in: [src/d3-gram-renderer.ts:117](https://github.com/gram-data/d3-gram/blob/3dd6a0d/src/d3-gram-renderer.ts#L117)
 
 ___
 
@@ -235,7 +235,7 @@ Name | Type |
 
 **Returns:** *void*
 
-Defined in: [src/d3-gram-renderer.ts:105](https://github.com/gram-data/d3-gram/blob/b65614d/src/d3-gram-renderer.ts#L105)
+Defined in: [src/d3-gram-renderer.ts:133](https://github.com/gram-data/d3-gram/blob/3dd6a0d/src/d3-gram-renderer.ts#L133)
 
 ___
 
@@ -251,7 +251,7 @@ Name | Type |
 
 **Returns:** [*GramNodeDatum*](../interfaces/d3_gram_types.gramnodedatum.md)
 
-Defined in: [src/d3-gram-parse.ts:50](https://github.com/gram-data/d3-gram/blob/b65614d/src/d3-gram-parse.ts#L50)
+Defined in: [src/d3-gram-parse.ts:50](https://github.com/gram-data/d3-gram/blob/3dd6a0d/src/d3-gram-parse.ts#L50)
 
 ___
 
@@ -270,4 +270,4 @@ Name | Type | Description |
 
 **Returns:** [*GramGraphData*](../interfaces/d3_gram_types.gramgraphdata.md)
 
-Defined in: [src/d3-gram-parse.ts:29](https://github.com/gram-data/d3-gram/blob/b65614d/src/d3-gram-parse.ts#L29)
+Defined in: [src/d3-gram-parse.ts:29](https://github.com/gram-data/d3-gram/blob/3dd6a0d/src/d3-gram-parse.ts#L29)

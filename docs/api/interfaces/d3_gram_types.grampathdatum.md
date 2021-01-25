@@ -25,4 +25,4 @@ layout: api
 
 • **links**: [*GramLinkDatum*](d3_gram_types.gramlinkdatum.md)[]
 
-Defined in: [src/d3-gram-types.ts:52](https://github.com/gram-data/d3-gram/blob/b65614d/src/d3-gram-types.ts#L52)
+Defined in: [src/d3-gram-types.ts:52](https://github.com/gram-data/d3-gram/blob/3dd6a0d/src/d3-gram-types.ts#L52)

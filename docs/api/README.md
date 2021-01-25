@@ -14,18 +14,19 @@ ready to be used in a `d3-force` simulation.
 
 ``` TypeScript
 import * as d3 from "d3";
-import {d3Gram} from 'd3-gram';
+import {parse, layout, draw, moveNodes, moveLinks} from 'd3-gram';
 
 d3.text("https://raw.githubusercontent.com/gram-data/d3-gram/master/public/miserables.gram").then( gramSource => {
 
-  let graph = d3Gram(gramSource);
+  let graph = parse(gramSource);
 
-  let simulation = d3.forceSimulation()
-    .force("charge", d3.forceManyBody())
-    .force("center", d3.forceCenter(300,200)) // preferably calculate the center of the svg
-    .force('collision', d3.forceCollide());
+  let simulation = layout(graph);
 
-  simulation.nodes(graph.nodes);
-  simulation.force("link", d3.forceLink(graph.links).id((d:any) => d.id))
+  const {nodeSelection, linkSelection} = draw(graph, "svg");
 
+  simulation.on("tick", () => {
+    moveNodes(nodeSelection);
+    moveLinks(linkSelection);
+  });
+}
 ```

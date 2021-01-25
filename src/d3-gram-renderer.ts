@@ -1,5 +1,5 @@
 import * as d3 from 'd3';
-import { select } from 'd3-selection';
+import { BaseType, select } from 'd3-selection';
 
 import {
   GramNodeDatum,
@@ -8,82 +8,107 @@ import {
   GramGraphData,
 } from './d3-gram-types';
 
-const shapeRadius = 2;
-const shapeSize = Math.PI * shapeRadius * shapeRadius; // the area of the shape
+const nodeShaper = (shapeRadius: number) => {
+  const shapeSize = Math.PI * shapeRadius * shapeRadius; // the area of the shape
 
-const shapeDomain = new Map([
-  ['Person', 'square'],
-  ['Triangle', 'triangle'],
-  ['Movie', 'star'],
-  ['Event', 'wye'],
-]);
+  const shapeDomain = new Map([
+    ['Person', 'square'],
+    ['Triangle', 'triangle'],
+    ['Movie', 'star'],
+    ['Event', 'wye'],
+  ]);
 
-const symbolPathData = new Map([
-  [
-    'circle',
-    d3
-      .symbol()
-      .type(d3.symbolCircle)
-      .size(shapeSize)(),
-  ],
-  [
-    'square',
-    d3
-      .symbol()
-      .type(d3.symbolSquare)
-      .size(shapeSize)(),
-  ],
-  [
-    'triangle',
-    d3
-      .symbol()
-      .type(d3.symbolTriangle)
-      .size(shapeSize)(),
-  ],
-  [
-    'cross',
-    d3
-      .symbol()
-      .type(d3.symbolCross)
-      .size(shapeSize)(),
-  ],
-  [
-    'diamond',
-    d3
-      .symbol()
-      .type(d3.symbolDiamond)
-      .size(shapeSize)(),
-  ],
-  [
-    'star',
-    d3
-      .symbol()
-      .type(d3.symbolStar)
-      .size(shapeSize)(),
-  ],
-  [
-    'wye',
-    d3
-      .symbol()
-      .type(d3.symbolWye)
-      .size(shapeSize)(),
-  ],
-]);
+  const symbolPathData = new Map([
+    [
+      'circle',
+      d3
+        .symbol()
+        .type(d3.symbolCircle)
+        .size(shapeSize)(),
+    ],
+    [
+      'square',
+      d3
+        .symbol()
+        .type(d3.symbolSquare)
+        .size(shapeSize)(),
+    ],
+    [
+      'triangle',
+      d3
+        .symbol()
+        .type(d3.symbolTriangle)
+        .size(shapeSize)(),
+    ],
+    [
+      'cross',
+      d3
+        .symbol()
+        .type(d3.symbolCross)
+        .size(shapeSize)(),
+    ],
+    [
+      'diamond',
+      d3
+        .symbol()
+        .type(d3.symbolDiamond)
+        .size(shapeSize)(),
+    ],
+    [
+      'star',
+      d3
+        .symbol()
+        .type(d3.symbolStar)
+        .size(shapeSize)(),
+    ],
+    [
+      'wye',
+      d3
+        .symbol()
+        .type(d3.symbolWye)
+        .size(shapeSize)(),
+    ],
+  ]);
 
-const shapeFor = (node: GramNodeDatum) => {
-  const shape =
-    node.labels !== undefined
-      ? shapeDomain.get(node.labels[0]) || 'circle'
-      : 'circle';
-  return symbolPathData.get(shape) || '';
+  return (node: GramNodeDatum) => {
+    const shape =
+      node.labels !== undefined
+        ? shapeDomain.get(node.labels[0]) || 'circle'
+        : 'circle';
+    return symbolPathData.get(shape) || '';
+  };
 };
 
-const color = d3.scaleOrdinal(d3.schemeCategory10);
-color.domain(['Default', 'Person', 'Movie', 'Event']);
+const interpolatedColorScheme = (
+  size: number,
+  interpolator: (n: number) => string
+) => {
+  var interpolatedColors = [];
+  for (let i = 1; i <= size; i++) {
+    interpolatedColors.push(interpolator(i / size));
+  }
+  return interpolatedColors;
+};
 
-const colorFor = (node: GramNodeDatum) => {
-  const label = node.labels !== undefined ? node.labels[0] : 'Default';
-  return color(label) || 'gray';
+const colorsFor = (graph: GramGraphData) => {
+  const labelsFrom = (graph: GramGraphData) => {
+    return Array.from(
+      graph.nodes
+        .reduce((foundLabels, node) => {
+          node.labels.forEach(label => foundLabels.add(label));
+          return foundLabels;
+        }, new Set())
+        .values()
+    );
+  };
+
+  const labels = labelsFrom(graph);
+
+  // const scale = d3.scaleOrdinal(d3.schemeCategory10);
+  const scale = d3.scaleOrdinal(
+    interpolatedColorScheme(labels ? labels.length + 1 : 1, d3.interpolateTurbo)
+  );
+  return (d: GramNodeDatum) => scale(d.labels[0]);
 };
 
 export const moveLinks = (links: any) => {
@@ -108,9 +133,13 @@ export const moveNodes = (nodes: any) => {
   });
 };
 
-interface D3GramDrawConfiguration {}
+interface D3GramDrawConfiguration {
+  shapeRadius: number;
+}
 
-const defaultConfiguration: D3GramDrawConfiguration = {};
+const defaultConfiguration: D3GramDrawConfiguration = {
+  shapeRadius: 2,
+};
 
 /**
  *
@@ -120,14 +149,17 @@ const defaultConfiguration: D3GramDrawConfiguration = {};
  */
 export const draw = (
   graph: GramGraphData,
-  selector: string,
-  configuration: D3GramDrawConfiguration = {}
+  selector: string | BaseType,
+  configuration: Partial<D3GramDrawConfiguration> = {}
 ) => {
   const mergedConfiguration = Object.assign(
     defaultConfiguration,
     configuration
   );
-  console.log(mergedConfiguration);
+
+  const shapeFor = nodeShaper(mergedConfiguration.shapeRadius);
+
+  const colorFor = colorsFor(graph);
 
   const svg = select(selector);
 

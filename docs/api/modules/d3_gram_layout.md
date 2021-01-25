@@ -32,4 +32,4 @@ Name | Type | Default value | Description |
 
 **Returns:** *Simulation*<SimulationNodeDatum, *undefined*\>
 
-Defined in: [src/d3-gram-layout.ts:44](https://github.com/gram-data/d3-gram/blob/b65614d/src/d3-gram-layout.ts#L44)
+Defined in: [src/d3-gram-layout.ts:44](https://github.com/gram-data/d3-gram/blob/3dd6a0d/src/d3-gram-layout.ts#L44)

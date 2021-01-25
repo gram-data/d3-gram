@@ -36,7 +36,7 @@ layout: api
 
 Ƭ **PathDatumRecord**: { [key: string]: *any*;  }
 
-Defined in: [src/d3-gram-types.ts:5](https://github.com/gram-data/d3-gram/blob/b65614d/src/d3-gram-types.ts#L5)
+Defined in: [src/d3-gram-types.ts:5](https://github.com/gram-data/d3-gram/blob/3dd6a0d/src/d3-gram-types.ts#L5)
 
 ## Variables
 
@@ -44,7 +44,7 @@ Defined in: [src/d3-gram-types.ts:5](https://github.com/gram-data/d3-gram/blob/b
 
 • `Const` **MISSING\_ID**: *__missing_id__*= '\_\_missing\_id\_\_'
 
-Defined in: [src/d3-gram-types.ts:3](https://github.com/gram-data/d3-gram/blob/b65614d/src/d3-gram-types.ts#L3)
+Defined in: [src/d3-gram-types.ts:3](https://github.com/gram-data/d3-gram/blob/3dd6a0d/src/d3-gram-types.ts#L3)
 
 ## Functions
 
@@ -60,7 +60,7 @@ Name | Type |
 
 **Returns:** o is GramNodeDatum
 
-Defined in: [src/d3-gram-types.ts:25](https://github.com/gram-data/d3-gram/blob/b65614d/src/d3-gram-types.ts#L25)
+Defined in: [src/d3-gram-types.ts:25](https://github.com/gram-data/d3-gram/blob/3dd6a0d/src/d3-gram-types.ts#L25)
 
 ___
 
@@ -88,7 +88,7 @@ Name | Type |
 `source` | *string* |
 `target` | *string* |
 
-Defined in: [src/d3-gram-types.ts:35](https://github.com/gram-data/d3-gram/blob/b65614d/src/d3-gram-types.ts#L35)
+Defined in: [src/d3-gram-types.ts:35](https://github.com/gram-data/d3-gram/blob/3dd6a0d/src/d3-gram-types.ts#L35)
 
 ___
 
@@ -112,4 +112,4 @@ Name | Type |
 `labels` | *string*[] |
 `record` | [*PathDatumRecord*](d3_gram_types.md#pathdatumrecord) |
 
-Defined in: [src/d3-gram-types.ts:13](https://github.com/gram-data/d3-gram/blob/b65614d/src/d3-gram-types.ts#L13)
+Defined in: [src/d3-gram-types.ts:13](https://github.com/gram-data/d3-gram/blob/3dd6a0d/src/d3-gram-types.ts#L13)

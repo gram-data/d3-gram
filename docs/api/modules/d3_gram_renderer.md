@@ -19,24 +19,24 @@ layout: api
 
 ### draw
 
-▸ `Const`**draw**(`graph`: [*GramGraphData*](../interfaces/d3_gram_types.gramgraphdata.md), `selector`: *string*, `configuration?`: D3GramDrawConfiguration): *object*
+▸ `Const`**draw**(`graph`: [*GramGraphData*](../interfaces/d3_gram_types.gramgraphdata.md), `selector`: *any*, `configuration?`: *Partial*<D3GramDrawConfiguration\>): *object*
 
 #### Parameters:
 
 Name | Type | Default value | Description |
 ------ | ------ | ------ | ------ |
 `graph` | [*GramGraphData*](../interfaces/d3_gram_types.gramgraphdata.md) | - | gram source text   |
-`selector` | *string* | - | dom selector for an svg element   |
-`configuration` | D3GramDrawConfiguration | ... | - |
+`selector` | *any* | - | dom selector for an svg element   |
+`configuration` | *Partial*<D3GramDrawConfiguration\> | ... | - |
 
 **Returns:** *object*
 
 Name | Type |
 ------ | ------ |
-`links` | *Selection*<*any*, [*GramLinkDatum*](../interfaces/d3_gram_types.gramlinkdatum.md), *any*, *unknown*\> |
-`nodes` | *Selection*<*any*, [*GramNodeDatum*](../interfaces/d3_gram_types.gramnodedatum.md), *any*, *unknown*\> |
+`linkSelection` | *Selection*<*any*, [*GramLinkDatum*](../interfaces/d3_gram_types.gramlinkdatum.md), *any*, *unknown*\> |
+`nodeSelection` | *Selection*<*any*, [*GramNodeDatum*](../interfaces/d3_gram_types.gramnodedatum.md), *any*, *unknown*\> |
 
-Defined in: [src/d3-gram-renderer.ts:121](https://github.com/gram-data/d3-gram/blob/b65614d/src/d3-gram-renderer.ts#L121)
+Defined in: [src/d3-gram-renderer.ts:153](https://github.com/gram-data/d3-gram/blob/3dd6a0d/src/d3-gram-renderer.ts#L153)
 
 ___
 
@@ -52,7 +52,7 @@ Name | Type |
 
 **Returns:** *void*
 
-Defined in: [src/d3-gram-renderer.ts:89](https://github.com/gram-data/d3-gram/blob/b65614d/src/d3-gram-renderer.ts#L89)
+Defined in: [src/d3-gram-renderer.ts:117](https://github.com/gram-data/d3-gram/blob/3dd6a0d/src/d3-gram-renderer.ts#L117)
 
 ___
 
@@ -68,4 +68,4 @@ Name | Type |
 
 **Returns:** *void*
 
-Defined in: [src/d3-gram-renderer.ts:105](https://github.com/gram-data/d3-gram/blob/b65614d/src/d3-gram-renderer.ts#L105)
+Defined in: [src/d3-gram-renderer.ts:133](https://github.com/gram-data/d3-gram/blob/3dd6a0d/src/d3-gram-renderer.ts#L133)

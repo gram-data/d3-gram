@@ -8536,13 +8536,14 @@
     return scale;
   }
 
-  function colors(specifier) {
-    var n = specifier.length / 6 | 0, colors = new Array(n), i = 0;
-    while (i < n) colors[i] = "#" + specifier.slice(i * 6, ++i * 6);
-    return colors;
+  function turbo(t) {
+    t = Math.max(0, Math.min(1, t));
+    return "rgb("
+        + Math.max(0, Math.min(255, Math.round(34.61 + t * (1172.33 - t * (10793.56 - t * (33300.12 - t * (38394.49 - t * 14825.05))))))) + ", "
+        + Math.max(0, Math.min(255, Math.round(23.31 + t * (557.33 + t * (1225.33 - t * (3574.96 - t * (1073.77 + t * 707.56))))))) + ", "
+        + Math.max(0, Math.min(255, Math.round(27.2 + t * (3211.1 - t * (15327.97 - t * (27814 - t * (22569.18 - t * 6838.66)))))))
+        + ")";
   }
-
-  var category10 = colors("1f77b4ff7f0e2ca02cd627289467bd8c564be377c27f7f7fbcbd2217becf");
 
   function constant$3(x) {
     return function constant() {
@@ -8692,7 +8693,7 @@
     return symbol;
   }
 
-  const initializeSimulation = center$1 => simulation().force("charge", manyBody().strength(-30)).force("center", center(center$1.x, center$1.y)).force('collision', collide().radius(30)).stop();
+  const initializeSimulation = center$1 => simulation().force('charge', manyBody().strength(-30)).force('center', center(center$1.x, center$1.y)).force('collision', collide().radius(30)).stop();
 
   const defaultLayoutConfiguration = {
     width: 1200,
@@ -8714,7 +8715,7 @@
     };
     let simulation = initializeSimulation(center);
     simulation.nodes(graph.nodes);
-    simulation.force("link", link(graph.links).id(d => d.id));
+    simulation.force('link', link(graph.links).id(d => d.id));
 
     for (let tick = 0; tick < _config.ticks && simulation.alpha() > simulation.alphaMin(); tick++) {
       simulation.tick();
@@ -8723,34 +8724,58 @@
     return simulation;
   };
 
-  const shapeRadius = 2;
-  const shapeSize = Math.PI * shapeRadius * shapeRadius; // the area of the shape
+  const nodeShaper = shapeRadius => {
+    const shapeSize = Math.PI * shapeRadius * shapeRadius; // the area of the shape
 
-  const shapeDomain = /*#__PURE__*/new Map([["Person", "square"], ["Triangle", "triangle"], ["Movie", "star"], ["Event", "wye"]]);
-  const symbolPathData = /*#__PURE__*/new Map([["circle", /*#__PURE__*/symbol$2().type(circle).size(shapeSize)()], ["square", /*#__PURE__*/symbol$2().type(square).size(shapeSize)()], ["triangle", /*#__PURE__*/symbol$2().type(triangle).size(shapeSize)()], ["cross", /*#__PURE__*/symbol$2().type(cross).size(shapeSize)()], ["diamond", /*#__PURE__*/symbol$2().type(diamond).size(shapeSize)()], ["star", /*#__PURE__*/symbol$2().type(star).size(shapeSize)()], ["wye", /*#__PURE__*/symbol$2().type(wye).size(shapeSize)()]]);
+    const shapeDomain = new Map([['Person', 'square'], ['Triangle', 'triangle'], ['Movie', 'star'], ['Event', 'wye']]);
+    const symbolPathData = new Map([['circle', symbol$2().type(circle).size(shapeSize)()], ['square', symbol$2().type(square).size(shapeSize)()], ['triangle', symbol$2().type(triangle).size(shapeSize)()], ['cross', symbol$2().type(cross).size(shapeSize)()], ['diamond', symbol$2().type(diamond).size(shapeSize)()], ['star', symbol$2().type(star).size(shapeSize)()], ['wye', symbol$2().type(wye).size(shapeSize)()]]);
+    return node => {
+      const shape = node.labels !== undefined ? shapeDomain.get(node.labels[0]) || 'circle' : 'circle';
+      return symbolPathData.get(shape) || '';
+    };
+  }; // const color = d3.scaleOrdinal(d3.schemeCategory10);
+  // color.domain(['Default', 'Person', 'Movie', 'Event']);
+  // const colorFor = (node: GramNodeDatum) => {
+  //   const label = node.labels !== undefined ? node.labels[0] : 'Default';
+  //   return color(label) || 'gray';
+  // };
 
-  const shapeFor = node => {
-    const shape = node.labels !== undefined ? shapeDomain.get(node.labels[0]) || 'circle' : 'circle';
-    return symbolPathData.get(shape) || '';
+
+  const interpolatedColorScheme = (size, interpolator) => {
+    var interpolatedColors = [];
+
+    for (let i = 1; i <= size; i++) {
+      interpolatedColors.push(interpolator(i / size));
+    }
+
+    return interpolatedColors;
   };
 
-  const color$1 = /*#__PURE__*/ordinal(category10);
-  color$1.domain(["Default", "Person", "Movie", "Event"]);
+  const colorsFor = graph => {
+    const labelsFrom = graph => {
+      return Array.from(graph.nodes.reduce((foundLabels, node) => {
+        node.labels.forEach(label => foundLabels.add(label));
+        return foundLabels;
+      }, new Set()).values());
+    };
 
-  const colorFor = node => {
-    const label = node.labels !== undefined ? node.labels[0] : 'Default';
-    return color$1(label) || 'gray';
+    const labels = labelsFrom(graph); // const scale = d3.scaleOrdinal(d3.schemeCategory10);
+
+    const scale = ordinal(interpolatedColorScheme(labels ? labels.length + 1 : 1, turbo));
+    return d => scale(d.labels[0]);
   };
 
   const moveLinks = links => {
-    links.attr("x1", d => isGramNodeDatum(d.source) ? d.source.x : 0).attr("y1", d => isGramNodeDatum(d.source) ? d.source.y : 0).attr("x2", d => isGramNodeDatum(d.target) ? d.target.x : 0).attr("y2", d => isGramNodeDatum(d.target) ? d.target.y : 0);
+    links.attr('x1', d => isGramNodeDatum(d.source) ? d.source.x : 0).attr('y1', d => isGramNodeDatum(d.source) ? d.source.y : 0).attr('x2', d => isGramNodeDatum(d.target) ? d.target.x : 0).attr('y2', d => isGramNodeDatum(d.target) ? d.target.y : 0);
   };
   const moveNodes = nodes => {
-    nodes.attr("transform", function (d) {
-      return "translate(" + d.x + "," + d.y + ")";
+    nodes.attr('transform', function (d) {
+      return 'translate(' + d.x + ',' + d.y + ')';
     });
   };
-  const defaultConfiguration = {};
+  const defaultConfiguration = {
+    shapeRadius: 2
+  };
   /**
    *
    * @param graph gram source text
@@ -8760,21 +8785,21 @@
 
   const draw = (graph, selector, configuration = {}) => {
     const mergedConfiguration = Object.assign(defaultConfiguration, configuration);
-    console.log(mergedConfiguration);
+    const shapeFor = nodeShaper(mergedConfiguration.shapeRadius);
+    const colorFor = colorsFor(graph);
     const svg = select(selector);
-    let linkSelection = svg.append("g").attr("stroke", "#999").attr("stroke-opacity", 0.6).selectAll("line").data(graph.links).join("line").attr("stroke-width", 2); // .attr("stroke-width", d => Math.sqrt(d.value));
+    let linkSelection = svg.append('g').attr('stroke', '#999').attr('stroke-opacity', 0.6).selectAll('line').data(graph.links).join('line').attr('stroke-width', 2); // .attr("stroke-width", d => Math.sqrt(d.value));
 
-    let nodeSelection = svg.append("g").attr("class", "nodes").selectAll("g").data(graph.nodes).enter().append("g"); // node.append("circle")
-    //   .attr("r", 25)
-    //   .attr("fill", "black")
-
+    let nodeSelection = svg.append('g').attr('class', 'nodes').selectAll('g').data(graph.nodes).enter().append('g');
     nodeSelection.append('path').attr('fill', colorFor).attr('stroke', d => (color(colorFor(d)) || rgb(0x33, 0x33, 0x33)).darker().hex()).attr('stroke-width', 4).attr('d', shapeFor);
-    nodeSelection.append("title").text(function (d) {
+    nodeSelection.append('title').text(function (d) {
       return d.id;
     });
+    moveNodes(nodeSelection);
+    moveLinks(linkSelection);
     return {
-      nodes: nodeSelection,
-      links: linkSelection
+      nodeSelection,
+      linkSelection
     };
   };
 
