@@ -1,16 +1,16 @@
-import { d3Gram, isGramNodeDatum, MISSING_ID } from '../src';
+import { parse, isGramNodeDatum, MISSING_ID } from '../src';
 
 describe('d3Gram from nodes', () => {
   it('()', () => {
     const src = '()';
-    const gramGraph = d3Gram(src);
+    const gramGraph = parse(src);
     expect(gramGraph.nodes).toHaveLength(1);
     expect(isGramNodeDatum(gramGraph.nodes[0])).toBeTruthy();
     expect(gramGraph.nodes[0].id).toBeDefined();
   });
   it('()-->()', () => {
     const src = '()-->()';
-    const gramGraph = d3Gram(src);
+    const gramGraph = parse(src);
     expect(gramGraph.nodes).toHaveLength(2);
     expect(isGramNodeDatum(gramGraph.nodes[0])).toBeTruthy();
     expect(gramGraph.nodes[0].id).toBeDefined();
@@ -18,7 +18,7 @@ describe('d3Gram from nodes', () => {
   });
   it('(:Aye)-->(:Bee)', () => {
     const src = '()-->()';
-    const gramGraph = d3Gram(src);
+    const gramGraph = parse(src);
     expect(gramGraph.nodes).toHaveLength(2);
     expect(isGramNodeDatum(gramGraph.nodes[0])).toBeTruthy();
     expect(gramGraph.nodes[0].id).toBeDefined();
@@ -26,21 +26,21 @@ describe('d3Gram from nodes', () => {
   });
   it('(a)', () => {
     const src = '(a)';
-    const gramGraph = d3Gram(src);
+    const gramGraph = parse(src);
     expect(gramGraph.nodes).toHaveLength(1);
     expect(isGramNodeDatum(gramGraph.nodes[0])).toBeTruthy();
     expect(gramGraph.nodes[0].id).toBe('a');
   });
   it('(a) (b)', () => {
     const src = '(a) (b)';
-    const gramGraph = d3Gram(src);
+    const gramGraph = parse(src);
     expect(gramGraph.nodes).toHaveLength(2);
     expect(gramGraph.nodes[0].id).toBe('a');
     expect(gramGraph.nodes[1].id).toBe('b');
   });
   it('(a) (b) (c)', () => {
     const src = '(a) (b) (c)';
-    const gramGraph = d3Gram(src);
+    const gramGraph = parse(src);
     expect(gramGraph.nodes).toHaveLength(3);
     expect(gramGraph.nodes[0].id).toBe('a');
     expect(gramGraph.nodes[1].id).toBe('b');
@@ -48,12 +48,12 @@ describe('d3Gram from nodes', () => {
   });
   it('(a) (a) (a)', () => {
     const src = '(a) (a) (a)';
-    const gramGraph = d3Gram(src);
+    const gramGraph = parse(src);
     expect(gramGraph.nodes).toHaveLength(1);
   });
   it('(a:Aye)', () => {
     const src = '(a:Aye)';
-    const gramGraph = d3Gram(src);
+    const gramGraph = parse(src);
     expect(gramGraph.nodes).toHaveLength(1);
     const n = gramGraph.nodes[0];
     expect(n.id).toBe('a');
@@ -61,7 +61,7 @@ describe('d3Gram from nodes', () => {
   });
   it('(a {k:"v"})', () => {
     const src = '(a {k:"v"})';
-    const gramGraph = d3Gram(src);
+    const gramGraph = parse(src);
     expect(gramGraph.nodes).toHaveLength(1);
     const n = gramGraph.nodes[0];
     expect(n.id).toBe('a');
@@ -70,7 +70,7 @@ describe('d3Gram from nodes', () => {
   });
   it('(a {})', () => {
     const src = '(a {})';
-    const gramGraph = d3Gram(src);
+    const gramGraph = parse(src);
     expect(gramGraph.nodes).toHaveLength(1);
     const n = gramGraph.nodes[0];
     expect(n.id).toBe('a');
@@ -82,33 +82,33 @@ describe('d3Gram from nodes', () => {
 describe('d3Gram with links', () => {
   it('links "right" direction from source to target', () => {
     const src = '(a)-->(b)';
-    const gramGraph = d3Gram(src);
+    const gramGraph = parse(src);
     expect(gramGraph.links).toHaveLength(1);
     expect(gramGraph.links[0].source).toBe(gramGraph.nodes[0].id);
     expect(gramGraph.links[0].target).toBe(gramGraph.nodes[1].id);
   });
   it('links "right" direction from anonymous source to anonymous target', () => {
     const src = '()-->()';
-    const gramGraph = d3Gram(src);
+    const gramGraph = parse(src);
     expect(gramGraph.links).toHaveLength(1);
     expect(gramGraph.links[0].source).not.toBe(MISSING_ID);
     expect(gramGraph.links[0].target).not.toBe(MISSING_ID);
   });
   it('links "left" direction from target to source', () => {
     const src = '(a)<--(b)';
-    const gramGraph = d3Gram(src);
+    const gramGraph = parse(src);
     expect(gramGraph.links[0].source).toBe(gramGraph.nodes[1].id);
     expect(gramGraph.links[0].target).toBe(gramGraph.nodes[0].id);
   });
   it('links direction "either" from source to target', () => {
     const src = '(a)--(b)';
-    const gramGraph = d3Gram(src);
+    const gramGraph = parse(src);
     expect(gramGraph.links[0].source).toBe(gramGraph.nodes[0].id);
     expect(gramGraph.links[0].target).toBe(gramGraph.nodes[1].id);
   });
   it('correctly links longer paths', () => {
     const src = '(a)-->(b)<--(c)';
-    const gramGraph = d3Gram(src);
+    const gramGraph = parse(src);
     expect(gramGraph.links[0].source).toBe(gramGraph.nodes[0].id);
     expect(gramGraph.links[0].target).toBe(gramGraph.nodes[1].id);
     expect(gramGraph.links[1].source).toBe(gramGraph.nodes[2].id);

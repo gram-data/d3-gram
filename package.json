@@ -39,7 +39,7 @@
     "lint": "tsdx lint src",
     "lint:fix": "tsdx lint src --fix",
     "demo": "parcel public/index.html",
-    "release": "np --no-tests --no-release-draft --no-yarn",
+    "release": "np --no-yarn",
     "prepare": "npm run build",
     "docs": "run-s docs:**",
     "docs:api": "shx rm -rf docs/api && typedoc",

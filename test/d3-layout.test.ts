@@ -7,7 +7,6 @@ import {
   GramGraphData
 } from '../src';
 import * as d3 from 'd3-force';
-import { nodes } from '@gram-data/gram-ops';
 
 const makeGraph = ():GramGraphData => {
   const nodeA = makeGramNodeDatum('a');
