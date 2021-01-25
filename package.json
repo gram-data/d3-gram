@@ -31,14 +31,21 @@
   },
   "scripts": {
     "start": "tsdx watch",
-    "build": "tsdx build --format umd,esm,cjs",
+    "build": "run-s build:**",
+    "build:lib": "tsdx build --format umd,esm,cjs",
+    "build:demo": "shx cp dist/d3-gram.umd.development.* ./public",
     "test": "tsdx test",
     "test:watch": "tsdx test --watch",
     "lint": "tsdx lint src",
     "lint:fix": "tsdx lint src --fix",
     "demo": "parcel public/index.html",
     "release": "np --no-tests --no-release-draft --no-yarn",
-    "prepare": "npm run build"
+    "prepare": "npm run build",
+    "docs": "run-s docs:**",
+    "docs:api": "shx rm -rf docs/api && typedoc",
+    "docs:api-data": "typedoc --json docs/_data/api.json",
+    "docs:headers": "node ./scripts/api-headers.js",
+    "docs:scripts": "shx cp './dist/d3-gram.umd.*' docs/assets/scripts"
   },
   "husky": {
     "hooks": {
@@ -51,31 +58,45 @@
     "singleQuote": true,
     "trailingComma": "es5"
   },
+  "browserslist": [
+    "last 3 and_chr versions",
+    "last 3 chrome versions",
+    "last 3 opera versions",
+    "last 3 ios_saf versions",
+    "last 3 safari versions"
+  ],
   "devDependencies": {
-    "@gram-data/gram-builder": "^0.3.1",
-    "@gram-data/gram-stringify": "^0.3.1",
+    "@gram-data/gram-builder": "^0.3.11",
+    "@gram-data/gram-stringify": "^0.3.11",
     "@types/d3": "^6.2.0",
-    "@types/jest": "^26.0.17",
+    "@types/d3-force": "^2.1.0",
+    "@types/d3-selection": "^2.0.0",
+    "@types/jest": "^26.0.20",
     "@types/unist": "^2.0.3",
-    "@typescript-eslint/parser": "^4.9.1",
-    "d3": "^6.3.0",
+    "@typescript-eslint/parser": "^4.14.0",
+    "d3": "^6.5.0",
     "d3-force": "^2.1.1",
-    "husky": "^4.3.5",
-    "np": "^7.0.0",
+    "fs-jetpack": "^4.1.0",
+    "husky": "^4.3.8",
+    "np": "^7.2.0",
     "npm-run-all": "^4.1.5",
     "rollup-plugin-node-builtins": "^2.1.2",
     "rollup-plugin-node-globals": "^1.4.0",
     "serve": "^11.3.2",
     "shx": "^0.3.3",
     "tsdx": "^0.14.1",
-    "tslib": "^2.0.3",
-    "typescript": "^4.1.2"
+    "tslib": "^2.1.0",
+    "typedoc": "^0.20.19",
+    "typedoc-plugin-markdown": "^3.4.3",
+    "typescript": "^4.1.3"
   },
   "dependencies": {
-    "@gram-data/gram-ast": "^0.3.1",
-    "@gram-data/gram-ops": "^0.3.1",
-    "@gram-data/gram-parse": "^0.3.1",
-    "@gram-data/gram-preset-basic": "^0.3.1"
+    "@gram-data/gram-ast": "^0.3.11",
+    "@gram-data/gram-ops": "^0.3.11",
+    "@gram-data/gram-parse": "^0.3.11",
+    "@gram-data/gram-preset-basic": "^0.3.11",
+    "d3-selection": "^2.0.0",
+    "unified": "^9.2.0"
   },
   "gitHead": "a255da2f7cfa6bd16f637d1241d17e10510e60c0"
 }

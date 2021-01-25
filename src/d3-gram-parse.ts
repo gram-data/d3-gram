@@ -1,4 +1,3 @@
-import { edges, nodes } from '@gram-data/gram-ops';
 import {
   GramGraphData,
   GramLinkDatum,
@@ -8,8 +7,10 @@ import {
   makeGramNodeDatum,
   MISSING_ID,
   PathDatumRecord,
-} from './gram-d3-types';
+} from './d3-gram-types';
+
 import { GramEdge, GramNode, GramPath, isGramNode } from '@gram-data/gram-ast';
+import { edges, nodes } from '@gram-data/gram-ops';
 
 import unified from 'unified';
 import { gramParserPlugin } from '@gram-data/gram-parse';
@@ -25,17 +26,17 @@ const gramProcessor = unified()
  *
  * @param src
  */
-export const d3Gram = (src: string): GramGraphData => {
+export const parse = (src: string): GramGraphData => {
   const parsed: GramPath = gramProcessor.runSync(
     gramProcessor.parse(src)
   ) as GramPath;
-  const d3Gram = {
+  const gramGraph = {
     nodes: (nodes(parsed) as GramNode[]).map(nodeToD3),
     links: (edges(parsed) as GramEdge[]).map(edgeToD3),
     paths: [] as GramPathDatum[],
   };
 
-  return d3Gram;
+  return gramGraph;
 };
 
 export const dataFromPath = (p: GramPath): PathDatumRecord => {

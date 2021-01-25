@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "~@fontsource/cormorant-garamond/index.css";
+@import "~@fontsource/fira-code/index.css";
+@import "~@fontsource/open-sans/index.css";
+
+h1,h2,h3,h4,h5 {
+  @apply font-serif font-light;
+}
+
+.excerpt svg.railroad-diagram {
+  margin: 0;
+}
+
+svg.railroad-diagram {
+  /* background-color: hsl(30,20%,95%); */
+  margin-bottom: 4em;
+  margin-top: -2em;
+}
+svg.railroad-diagram path {
+  stroke-width: 3;
+  stroke: black;
+  fill: rgba(0,0,0,0);
+}
+svg.railroad-diagram text {
+  @apply font-mono text-gray-200;
+  text-anchor: middle;
+  fill: currentColor;
+}
+svg.railroad-diagram text.label {
+  text-anchor: start;
+}
+svg.railroad-diagram text.comment {
+  @apply font-mono italic;
+}
+
+svg.railroad-diagram rect {
+  @apply bg-gray-800;
+  stroke-width: 1;
+  stroke: black;
+  fill: currentColor;
+}

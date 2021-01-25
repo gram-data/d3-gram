@@ -1,0 +1,3666 @@
+{
+	"id": 0,
+	"name": "gram.js API",
+	"kind": 0,
+	"flags": {},
+	"children": [
+		{
+			"id": 1,
+			"name": "d3-gram-layout",
+			"kind": 1,
+			"kindString": "Module",
+			"flags": {},
+			"children": [
+				{
+					"id": 2,
+					"name": "D3GramLayoutConfiguration",
+					"kind": 256,
+					"kindString": "Interface",
+					"flags": {},
+					"comment": {
+						"shortText": "All numbers are in scale-free units."
+					},
+					"children": [
+						{
+							"id": 4,
+							"name": "height",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {},
+							"comment": {
+								"shortText": "Scene height."
+							},
+							"sources": [
+								{
+									"fileName": "src/d3-gram-layout.ts",
+									"line": 26,
+									"character": 8
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "number"
+							}
+						},
+						{
+							"id": 5,
+							"name": "ticks",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {},
+							"comment": {
+								"shortText": "How long to run the simulation."
+							},
+							"sources": [
+								{
+									"fileName": "src/d3-gram-layout.ts",
+									"line": 30,
+									"character": 7
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "number"
+							}
+						},
+						{
+							"id": 3,
+							"name": "width",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {},
+							"comment": {
+								"shortText": "Scene width."
+							},
+							"sources": [
+								{
+									"fileName": "src/d3-gram-layout.ts",
+									"line": 22,
+									"character": 7
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "number"
+							}
+						}
+					],
+					"groups": [
+						{
+							"title": "Properties",
+							"kind": 1024,
+							"children": [
+								4,
+								5,
+								3
+							]
+						}
+					],
+					"sources": [
+						{
+							"fileName": "src/d3-gram-layout.ts",
+							"line": 18,
+							"character": 42
+						}
+					]
+				},
+				{
+					"id": 6,
+					"name": "layout",
+					"kind": 64,
+					"kindString": "Function",
+					"flags": {
+						"isConst": true
+					},
+					"sources": [
+						{
+							"fileName": "src/d3-gram-layout.ts",
+							"line": 44,
+							"character": 19
+						}
+					],
+					"signatures": [
+						{
+							"id": 7,
+							"name": "layout",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"comment": {},
+							"parameters": [
+								{
+									"id": 8,
+									"name": "graph",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"comment": {},
+									"type": {
+										"type": "reference",
+										"id": 89,
+										"name": "GramGraphData"
+									}
+								},
+								{
+									"id": 9,
+									"name": "configuration",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"comment": {
+										"text": "\n"
+									},
+									"type": {
+										"type": "reference",
+										"typeArguments": [
+											{
+												"type": "reference",
+												"id": 2,
+												"name": "D3GramLayoutConfiguration"
+											}
+										],
+										"name": "Partial"
+									},
+									"defaultValue": "..."
+								}
+							],
+							"type": {
+								"type": "reference",
+								"typeArguments": [
+									{
+										"type": "reference",
+										"name": "SimulationNodeDatum"
+									},
+									{
+										"type": "intrinsic",
+										"name": "undefined"
+									}
+								],
+								"name": "Simulation"
+							}
+						}
+					]
+				}
+			],
+			"groups": [
+				{
+					"title": "Interfaces",
+					"kind": 256,
+					"children": [
+						2
+					]
+				},
+				{
+					"title": "Functions",
+					"kind": 64,
+					"children": [
+						6
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "src/d3-gram-layout.ts",
+					"line": 1,
+					"character": 0
+				}
+			]
+		},
+		{
+			"id": 10,
+			"name": "d3-gram-parse",
+			"kind": 1,
+			"kindString": "Module",
+			"flags": {},
+			"children": [
+				{
+					"id": 14,
+					"name": "dataFromPath",
+					"kind": 64,
+					"kindString": "Function",
+					"flags": {
+						"isConst": true
+					},
+					"sources": [
+						{
+							"fileName": "src/d3-gram-parse.ts",
+							"line": 42,
+							"character": 25
+						}
+					],
+					"signatures": [
+						{
+							"id": 15,
+							"name": "dataFromPath",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"parameters": [
+								{
+									"id": 16,
+									"name": "p",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "reference",
+										"name": "GramPath"
+									}
+								}
+							],
+							"type": {
+								"type": "reference",
+								"id": 40,
+								"name": "PathDatumRecord"
+							}
+						}
+					]
+				},
+				{
+					"id": 20,
+					"name": "edgeToD3",
+					"kind": 64,
+					"kindString": "Function",
+					"flags": {
+						"isConst": true
+					},
+					"sources": [
+						{
+							"fileName": "src/d3-gram-parse.ts",
+							"line": 66,
+							"character": 21
+						}
+					],
+					"signatures": [
+						{
+							"id": 21,
+							"name": "edgeToD3",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"parameters": [
+								{
+									"id": 22,
+									"name": "edge",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "reference",
+										"name": "GramEdge"
+									}
+								}
+							],
+							"type": {
+								"type": "reference",
+								"id": 67,
+								"name": "GramLinkDatum"
+							}
+						}
+					]
+				},
+				{
+					"id": 17,
+					"name": "nodeToD3",
+					"kind": 64,
+					"kindString": "Function",
+					"flags": {
+						"isConst": true
+					},
+					"sources": [
+						{
+							"fileName": "src/d3-gram-parse.ts",
+							"line": 50,
+							"character": 21
+						}
+					],
+					"signatures": [
+						{
+							"id": 18,
+							"name": "nodeToD3",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"parameters": [
+								{
+									"id": 19,
+									"name": "node",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "reference",
+										"name": "GramNode"
+									}
+								}
+							],
+							"type": {
+								"type": "reference",
+								"id": 44,
+								"name": "GramNodeDatum"
+							}
+						}
+					]
+				},
+				{
+					"id": 11,
+					"name": "parse",
+					"kind": 64,
+					"kindString": "Function",
+					"flags": {
+						"isConst": true
+					},
+					"sources": [
+						{
+							"fileName": "src/d3-gram-parse.ts",
+							"line": 29,
+							"character": 18
+						}
+					],
+					"signatures": [
+						{
+							"id": 12,
+							"name": "parse",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"comment": {
+								"shortText": "Parses text as [gram](https://github.com/gram-data/gram-js),\nreturning a graph representated nodes, links and paths."
+							},
+							"parameters": [
+								{
+									"id": 13,
+									"name": "src",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"comment": {
+										"text": "\n"
+									},
+									"type": {
+										"type": "intrinsic",
+										"name": "string"
+									}
+								}
+							],
+							"type": {
+								"type": "reference",
+								"id": 89,
+								"name": "GramGraphData"
+							}
+						}
+					]
+				}
+			],
+			"groups": [
+				{
+					"title": "Functions",
+					"kind": 64,
+					"children": [
+						14,
+						20,
+						17,
+						11
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "src/d3-gram-parse.ts",
+					"line": 1,
+					"character": 0
+				}
+			]
+		},
+		{
+			"id": 23,
+			"name": "d3-gram-renderer",
+			"kind": 1,
+			"kindString": "Module",
+			"flags": {},
+			"children": [
+				{
+					"id": 30,
+					"name": "draw",
+					"kind": 64,
+					"kindString": "Function",
+					"flags": {
+						"isConst": true
+					},
+					"sources": [
+						{
+							"fileName": "src/d3-gram-renderer.ts",
+							"line": 121,
+							"character": 17
+						}
+					],
+					"signatures": [
+						{
+							"id": 31,
+							"name": "draw",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"comment": {},
+							"parameters": [
+								{
+									"id": 32,
+									"name": "graph",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"comment": {
+										"text": "gram source text"
+									},
+									"type": {
+										"type": "reference",
+										"id": 89,
+										"name": "GramGraphData"
+									}
+								},
+								{
+									"id": 33,
+									"name": "selector",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"comment": {
+										"text": "dom selector for an svg element"
+									},
+									"type": {
+										"type": "intrinsic",
+										"name": "string"
+									}
+								},
+								{
+									"id": 34,
+									"name": "configuration",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "reference",
+										"name": "D3GramDrawConfiguration"
+									},
+									"defaultValue": "..."
+								}
+							],
+							"type": {
+								"type": "reflection",
+								"declaration": {
+									"id": 35,
+									"name": "__type",
+									"kind": 65536,
+									"kindString": "Type literal",
+									"flags": {},
+									"children": [
+										{
+											"id": 37,
+											"name": "links",
+											"kind": 1024,
+											"kindString": "Property",
+											"flags": {},
+											"type": {
+												"type": "reference",
+												"typeArguments": [
+													{
+														"type": "intrinsic",
+														"name": "any"
+													},
+													{
+														"type": "reference",
+														"id": 67,
+														"name": "GramLinkDatum"
+													},
+													{
+														"type": "intrinsic",
+														"name": "any"
+													},
+													{
+														"type": "intrinsic",
+														"name": "unknown"
+													}
+												],
+												"name": "Selection"
+											},
+											"defaultValue": "..."
+										},
+										{
+											"id": 36,
+											"name": "nodes",
+											"kind": 1024,
+											"kindString": "Property",
+											"flags": {},
+											"type": {
+												"type": "reference",
+												"typeArguments": [
+													{
+														"type": "intrinsic",
+														"name": "any"
+													},
+													{
+														"type": "reference",
+														"id": 44,
+														"name": "GramNodeDatum"
+													},
+													{
+														"type": "intrinsic",
+														"name": "any"
+													},
+													{
+														"type": "intrinsic",
+														"name": "unknown"
+													}
+												],
+												"name": "Selection"
+											},
+											"defaultValue": "..."
+										}
+									],
+									"groups": [
+										{
+											"title": "Properties",
+											"kind": 1024,
+											"children": [
+												37,
+												36
+											]
+										}
+									]
+								}
+							}
+						}
+					]
+				},
+				{
+					"id": 24,
+					"name": "moveLinks",
+					"kind": 64,
+					"kindString": "Function",
+					"flags": {
+						"isConst": true
+					},
+					"sources": [
+						{
+							"fileName": "src/d3-gram-renderer.ts",
+							"line": 89,
+							"character": 22
+						}
+					],
+					"signatures": [
+						{
+							"id": 25,
+							"name": "moveLinks",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"parameters": [
+								{
+									"id": 26,
+									"name": "links",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "intrinsic",
+										"name": "any"
+									}
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "void"
+							}
+						}
+					]
+				},
+				{
+					"id": 27,
+					"name": "moveNodes",
+					"kind": 64,
+					"kindString": "Function",
+					"flags": {
+						"isConst": true
+					},
+					"sources": [
+						{
+							"fileName": "src/d3-gram-renderer.ts",
+							"line": 105,
+							"character": 22
+						}
+					],
+					"signatures": [
+						{
+							"id": 28,
+							"name": "moveNodes",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"parameters": [
+								{
+									"id": 29,
+									"name": "nodes",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "intrinsic",
+										"name": "any"
+									}
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "void"
+							}
+						}
+					]
+				}
+			],
+			"groups": [
+				{
+					"title": "Functions",
+					"kind": 64,
+					"children": [
+						30,
+						24,
+						27
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "src/d3-gram-renderer.ts",
+					"line": 1,
+					"character": 0
+				}
+			]
+		},
+		{
+			"id": 38,
+			"name": "d3-gram-types",
+			"kind": 1,
+			"kindString": "Module",
+			"flags": {},
+			"children": [
+				{
+					"id": 89,
+					"name": "GramGraphData",
+					"kind": 256,
+					"kindString": "Interface",
+					"flags": {},
+					"children": [
+						{
+							"id": 91,
+							"name": "links",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "src/d3-gram-types.ts",
+									"line": 57,
+									"character": 7
+								}
+							],
+							"type": {
+								"type": "array",
+								"elementType": {
+									"type": "reference",
+									"id": 67,
+									"name": "GramLinkDatum"
+								}
+							}
+						},
+						{
+							"id": 90,
+							"name": "nodes",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "src/d3-gram-types.ts",
+									"line": 56,
+									"character": 7
+								}
+							],
+							"type": {
+								"type": "array",
+								"elementType": {
+									"type": "reference",
+									"id": 44,
+									"name": "GramNodeDatum"
+								}
+							}
+						},
+						{
+							"id": 92,
+							"name": "paths",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "src/d3-gram-types.ts",
+									"line": 58,
+									"character": 7
+								}
+							],
+							"type": {
+								"type": "array",
+								"elementType": {
+									"type": "reference",
+									"id": 87,
+									"name": "GramPathDatum"
+								}
+							}
+						}
+					],
+					"groups": [
+						{
+							"title": "Properties",
+							"kind": 1024,
+							"children": [
+								91,
+								90,
+								92
+							]
+						}
+					],
+					"sources": [
+						{
+							"fileName": "src/d3-gram-types.ts",
+							"line": 55,
+							"character": 30
+						}
+					]
+				},
+				{
+					"id": 67,
+					"name": "GramLinkDatum",
+					"kind": 256,
+					"kindString": "Interface",
+					"flags": {},
+					"children": [
+						{
+							"id": 68,
+							"name": "id",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "src/d3-gram-types.ts",
+									"line": 30,
+									"character": 4
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "string"
+							}
+						},
+						{
+							"id": 73,
+							"name": "index",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isExternal": true,
+								"isOptional": true
+							},
+							"comment": {
+								"shortText": "The zero-based index into the links array. Internally generated when calling ForceLink.links(...)"
+							},
+							"sources": [
+								{
+									"fileName": "node_modules/@types/d3-force/index.d.ts",
+									"line": 90,
+									"character": 9
+								}
+							],
+							"type": {
+								"type": "union",
+								"types": [
+									{
+										"type": "intrinsic",
+										"name": "undefined"
+									},
+									{
+										"type": "intrinsic",
+										"name": "number"
+									}
+								]
+							}
+						},
+						{
+							"id": 69,
+							"name": "labels",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isOptional": true
+							},
+							"sources": [
+								{
+									"fileName": "src/d3-gram-types.ts",
+									"line": 31,
+									"character": 8
+								}
+							],
+							"type": {
+								"type": "union",
+								"types": [
+									{
+										"type": "intrinsic",
+										"name": "undefined"
+									},
+									{
+										"type": "array",
+										"elementType": {
+											"type": "intrinsic",
+											"name": "string"
+										}
+									}
+								]
+							}
+						},
+						{
+							"id": 70,
+							"name": "record",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "src/d3-gram-types.ts",
+									"line": 32,
+									"character": 8
+								}
+							],
+							"type": {
+								"type": "reference",
+								"id": 40,
+								"name": "PathDatumRecord"
+							}
+						},
+						{
+							"id": 71,
+							"name": "source",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isExternal": true
+							},
+							"comment": {
+								"shortText": "Link’s source node.\nFor convenience, a link’s source and target properties may be initialized using numeric or string identifiers rather than object references; see link.id.\nWhen the link force is initialized (or re-initialized, as when the nodes or links change), any link.source or link.target property which is not an object\nis replaced by an object reference to the corresponding node with the given identifier.\nAfter initialization, the source property represents the source node object."
+							},
+							"sources": [
+								{
+									"fileName": "node_modules/@types/d3-force/index.d.ts",
+									"line": 78,
+									"character": 10
+								}
+							],
+							"type": {
+								"type": "union",
+								"types": [
+									{
+										"type": "intrinsic",
+										"name": "string"
+									},
+									{
+										"type": "intrinsic",
+										"name": "number"
+									},
+									{
+										"type": "reference",
+										"id": 44,
+										"name": "GramNodeDatum"
+									}
+								]
+							}
+						},
+						{
+							"id": 72,
+							"name": "target",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isExternal": true
+							},
+							"comment": {
+								"shortText": "Link’s source link\nFor convenience, a link’s source and target properties may be initialized using numeric or string identifiers rather than object references; see link.id.\nWhen the link force is initialized (or re-initialized, as when the nodes or links change), any link.source or link.target property which is not an object\nis replaced by an object reference to the corresponding node with the given identifier.\nAfter initialization, the target property represents the target node object."
+							},
+							"sources": [
+								{
+									"fileName": "node_modules/@types/d3-force/index.d.ts",
+									"line": 86,
+									"character": 10
+								}
+							],
+							"type": {
+								"type": "union",
+								"types": [
+									{
+										"type": "intrinsic",
+										"name": "string"
+									},
+									{
+										"type": "intrinsic",
+										"name": "number"
+									},
+									{
+										"type": "reference",
+										"id": 44,
+										"name": "GramNodeDatum"
+									}
+								]
+							}
+						}
+					],
+					"groups": [
+						{
+							"title": "Properties",
+							"kind": 1024,
+							"children": [
+								68,
+								73,
+								69,
+								70,
+								71,
+								72
+							]
+						}
+					],
+					"sources": [
+						{
+							"fileName": "src/d3-gram-types.ts",
+							"line": 29,
+							"character": 30
+						}
+					],
+					"extendedTypes": [
+						{
+							"type": "reference",
+							"typeArguments": [
+								{
+									"type": "reference",
+									"id": 44,
+									"name": "GramNodeDatum"
+								}
+							],
+							"name": "SimulationLinkDatum"
+						}
+					]
+				},
+				{
+					"id": 44,
+					"name": "GramNodeDatum",
+					"kind": 256,
+					"kindString": "Interface",
+					"flags": {},
+					"children": [
+						{
+							"id": 53,
+							"name": "fx",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isExternal": true,
+								"isOptional": true
+							},
+							"comment": {
+								"shortText": "Node’s fixed x-position (if position was fixed)"
+							},
+							"sources": [
+								{
+									"fileName": "node_modules/@types/d3-force/index.d.ts",
+									"line": 52,
+									"character": 6
+								}
+							],
+							"type": {
+								"type": "union",
+								"types": [
+									{
+										"type": "intrinsic",
+										"name": "undefined"
+									},
+									{
+										"type": "literal",
+										"value": null
+									},
+									{
+										"type": "intrinsic",
+										"name": "number"
+									}
+								]
+							}
+						},
+						{
+							"id": 54,
+							"name": "fy",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isExternal": true,
+								"isOptional": true
+							},
+							"comment": {
+								"shortText": "Node’s fixed y-position (if position was fixed)"
+							},
+							"sources": [
+								{
+									"fileName": "node_modules/@types/d3-force/index.d.ts",
+									"line": 56,
+									"character": 6
+								}
+							],
+							"type": {
+								"type": "union",
+								"types": [
+									{
+										"type": "intrinsic",
+										"name": "undefined"
+									},
+									{
+										"type": "literal",
+										"value": null
+									},
+									{
+										"type": "intrinsic",
+										"name": "number"
+									}
+								]
+							}
+						},
+						{
+							"id": 45,
+							"name": "id",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "src/d3-gram-types.ts",
+									"line": 8,
+									"character": 4
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "string"
+							}
+						},
+						{
+							"id": 48,
+							"name": "index",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isExternal": true,
+								"isOptional": true
+							},
+							"comment": {
+								"shortText": "Node’s zero-based index into nodes array. This property is set during the initialization process of a simulation."
+							},
+							"sources": [
+								{
+									"fileName": "node_modules/@types/d3-force/index.d.ts",
+									"line": 32,
+									"character": 9
+								}
+							],
+							"type": {
+								"type": "union",
+								"types": [
+									{
+										"type": "intrinsic",
+										"name": "undefined"
+									},
+									{
+										"type": "intrinsic",
+										"name": "number"
+									}
+								]
+							}
+						},
+						{
+							"id": 46,
+							"name": "labels",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "src/d3-gram-types.ts",
+									"line": 9,
+									"character": 8
+								}
+							],
+							"type": {
+								"type": "array",
+								"elementType": {
+									"type": "intrinsic",
+									"name": "string"
+								}
+							}
+						},
+						{
+							"id": 47,
+							"name": "record",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "src/d3-gram-types.ts",
+									"line": 10,
+									"character": 8
+								}
+							],
+							"type": {
+								"type": "reference",
+								"id": 40,
+								"name": "PathDatumRecord"
+							}
+						},
+						{
+							"id": 51,
+							"name": "vx",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isExternal": true,
+								"isOptional": true
+							},
+							"comment": {
+								"shortText": "Node’s current x-velocity"
+							},
+							"sources": [
+								{
+									"fileName": "node_modules/@types/d3-force/index.d.ts",
+									"line": 44,
+									"character": 6
+								}
+							],
+							"type": {
+								"type": "union",
+								"types": [
+									{
+										"type": "intrinsic",
+										"name": "undefined"
+									},
+									{
+										"type": "intrinsic",
+										"name": "number"
+									}
+								]
+							}
+						},
+						{
+							"id": 52,
+							"name": "vy",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isExternal": true,
+								"isOptional": true
+							},
+							"comment": {
+								"shortText": "Node’s current y-velocity"
+							},
+							"sources": [
+								{
+									"fileName": "node_modules/@types/d3-force/index.d.ts",
+									"line": 48,
+									"character": 6
+								}
+							],
+							"type": {
+								"type": "union",
+								"types": [
+									{
+										"type": "intrinsic",
+										"name": "undefined"
+									},
+									{
+										"type": "intrinsic",
+										"name": "number"
+									}
+								]
+							}
+						},
+						{
+							"id": 49,
+							"name": "x",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isExternal": true,
+								"isOptional": true
+							},
+							"comment": {
+								"shortText": "Node’s current x-position"
+							},
+							"sources": [
+								{
+									"fileName": "node_modules/@types/d3-force/index.d.ts",
+									"line": 36,
+									"character": 5
+								}
+							],
+							"type": {
+								"type": "union",
+								"types": [
+									{
+										"type": "intrinsic",
+										"name": "undefined"
+									},
+									{
+										"type": "intrinsic",
+										"name": "number"
+									}
+								]
+							}
+						},
+						{
+							"id": 50,
+							"name": "y",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isExternal": true,
+								"isOptional": true
+							},
+							"comment": {
+								"shortText": "Node’s current y-position"
+							},
+							"sources": [
+								{
+									"fileName": "node_modules/@types/d3-force/index.d.ts",
+									"line": 40,
+									"character": 5
+								}
+							],
+							"type": {
+								"type": "union",
+								"types": [
+									{
+										"type": "intrinsic",
+										"name": "undefined"
+									},
+									{
+										"type": "intrinsic",
+										"name": "number"
+									}
+								]
+							}
+						}
+					],
+					"groups": [
+						{
+							"title": "Properties",
+							"kind": 1024,
+							"children": [
+								53,
+								54,
+								45,
+								48,
+								46,
+								47,
+								51,
+								52,
+								49,
+								50
+							]
+						}
+					],
+					"sources": [
+						{
+							"fileName": "src/d3-gram-types.ts",
+							"line": 7,
+							"character": 30
+						}
+					],
+					"extendedTypes": [
+						{
+							"type": "reference",
+							"name": "SimulationNodeDatum"
+						}
+					]
+				},
+				{
+					"id": 87,
+					"name": "GramPathDatum",
+					"kind": 256,
+					"kindString": "Interface",
+					"flags": {},
+					"children": [
+						{
+							"id": 88,
+							"name": "links",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "src/d3-gram-types.ts",
+									"line": 52,
+									"character": 7
+								}
+							],
+							"type": {
+								"type": "array",
+								"elementType": {
+									"type": "reference",
+									"id": 67,
+									"name": "GramLinkDatum"
+								}
+							}
+						}
+					],
+					"groups": [
+						{
+							"title": "Properties",
+							"kind": 1024,
+							"children": [
+								88
+							]
+						}
+					],
+					"sources": [
+						{
+							"fileName": "src/d3-gram-types.ts",
+							"line": 51,
+							"character": 30
+						}
+					]
+				},
+				{
+					"id": 40,
+					"name": "PathDatumRecord",
+					"kind": 4194304,
+					"kindString": "Type alias",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "src/d3-gram-types.ts",
+							"line": 5,
+							"character": 27
+						}
+					],
+					"type": {
+						"type": "reflection",
+						"declaration": {
+							"id": 41,
+							"name": "__type",
+							"kind": 65536,
+							"kindString": "Type literal",
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "src/d3-gram-types.ts",
+									"line": 5,
+									"character": 29
+								}
+							],
+							"indexSignature": {
+								"id": 42,
+								"name": "__index",
+								"kind": 8192,
+								"kindString": "Index signature",
+								"flags": {},
+								"parameters": [
+									{
+										"id": 43,
+										"name": "key",
+										"kind": 32768,
+										"flags": {},
+										"type": {
+											"type": "intrinsic",
+											"name": "string"
+										}
+									}
+								],
+								"type": {
+									"type": "intrinsic",
+									"name": "any"
+								}
+							}
+						}
+					}
+				},
+				{
+					"id": 39,
+					"name": "MISSING_ID",
+					"kind": 32,
+					"kindString": "Variable",
+					"flags": {
+						"isConst": true
+					},
+					"sources": [
+						{
+							"fileName": "src/d3-gram-types.ts",
+							"line": 3,
+							"character": 23
+						}
+					],
+					"type": {
+						"type": "literal",
+						"value": "__missing_id__"
+					},
+					"defaultValue": "'__missing_id__'"
+				},
+				{
+					"id": 64,
+					"name": "isGramNodeDatum",
+					"kind": 64,
+					"kindString": "Function",
+					"flags": {
+						"isConst": true
+					},
+					"sources": [
+						{
+							"fileName": "src/d3-gram-types.ts",
+							"line": 25,
+							"character": 28
+						}
+					],
+					"signatures": [
+						{
+							"id": 65,
+							"name": "isGramNodeDatum",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"parameters": [
+								{
+									"id": 66,
+									"name": "o",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "intrinsic",
+										"name": "any"
+									}
+								}
+							],
+							"type": {
+								"type": "predicate",
+								"name": "o",
+								"asserts": false,
+								"targetType": {
+									"type": "reference",
+									"id": 44,
+									"name": "GramNodeDatum"
+								}
+							}
+						}
+					]
+				},
+				{
+					"id": 74,
+					"name": "makeGramLinkDatum",
+					"kind": 64,
+					"kindString": "Function",
+					"flags": {
+						"isConst": true
+					},
+					"sources": [
+						{
+							"fileName": "src/d3-gram-types.ts",
+							"line": 35,
+							"character": 30
+						}
+					],
+					"signatures": [
+						{
+							"id": 75,
+							"name": "makeGramLinkDatum",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"parameters": [
+								{
+									"id": 76,
+									"name": "source",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "intrinsic",
+										"name": "string"
+									}
+								},
+								{
+									"id": 77,
+									"name": "target",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "intrinsic",
+										"name": "string"
+									}
+								},
+								{
+									"id": 78,
+									"name": "id",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {
+										"isOptional": true
+									},
+									"type": {
+										"type": "intrinsic",
+										"name": "string"
+									}
+								},
+								{
+									"id": 79,
+									"name": "labels",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {
+										"isOptional": true
+									},
+									"type": {
+										"type": "array",
+										"elementType": {
+											"type": "intrinsic",
+											"name": "string"
+										}
+									}
+								},
+								{
+									"id": 80,
+									"name": "record",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {
+										"isOptional": true
+									},
+									"type": {
+										"type": "reference",
+										"id": 40,
+										"name": "PathDatumRecord"
+									}
+								}
+							],
+							"type": {
+								"type": "reflection",
+								"declaration": {
+									"id": 81,
+									"name": "__type",
+									"kind": 65536,
+									"kindString": "Type literal",
+									"flags": {},
+									"children": [
+										{
+											"id": 82,
+											"name": "id",
+											"kind": 1024,
+											"kindString": "Property",
+											"flags": {},
+											"type": {
+												"type": "intrinsic",
+												"name": "string"
+											},
+											"defaultValue": "..."
+										},
+										{
+											"id": 83,
+											"name": "labels",
+											"kind": 1024,
+											"kindString": "Property",
+											"flags": {},
+											"type": {
+												"type": "array",
+												"elementType": {
+													"type": "intrinsic",
+													"name": "string"
+												}
+											},
+											"defaultValue": "..."
+										},
+										{
+											"id": 84,
+											"name": "record",
+											"kind": 1024,
+											"kindString": "Property",
+											"flags": {},
+											"type": {
+												"type": "reference",
+												"id": 40,
+												"name": "PathDatumRecord"
+											},
+											"defaultValue": "..."
+										},
+										{
+											"id": 85,
+											"name": "source",
+											"kind": 1024,
+											"kindString": "Property",
+											"flags": {},
+											"type": {
+												"type": "intrinsic",
+												"name": "string"
+											}
+										},
+										{
+											"id": 86,
+											"name": "target",
+											"kind": 1024,
+											"kindString": "Property",
+											"flags": {},
+											"type": {
+												"type": "intrinsic",
+												"name": "string"
+											}
+										}
+									],
+									"groups": [
+										{
+											"title": "Properties",
+											"kind": 1024,
+											"children": [
+												82,
+												83,
+												84,
+												85,
+												86
+											]
+										}
+									]
+								}
+							}
+						}
+					]
+				},
+				{
+					"id": 55,
+					"name": "makeGramNodeDatum",
+					"kind": 64,
+					"kindString": "Function",
+					"flags": {
+						"isConst": true
+					},
+					"sources": [
+						{
+							"fileName": "src/d3-gram-types.ts",
+							"line": 13,
+							"character": 30
+						}
+					],
+					"signatures": [
+						{
+							"id": 56,
+							"name": "makeGramNodeDatum",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"parameters": [
+								{
+									"id": 57,
+									"name": "id",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {
+										"isOptional": true
+									},
+									"type": {
+										"type": "intrinsic",
+										"name": "string"
+									}
+								},
+								{
+									"id": 58,
+									"name": "labels",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {
+										"isOptional": true
+									},
+									"type": {
+										"type": "array",
+										"elementType": {
+											"type": "intrinsic",
+											"name": "string"
+										}
+									}
+								},
+								{
+									"id": 59,
+									"name": "record",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {
+										"isOptional": true
+									},
+									"type": {
+										"type": "reference",
+										"id": 40,
+										"name": "PathDatumRecord"
+									}
+								}
+							],
+							"type": {
+								"type": "reflection",
+								"declaration": {
+									"id": 60,
+									"name": "__type",
+									"kind": 65536,
+									"kindString": "Type literal",
+									"flags": {},
+									"children": [
+										{
+											"id": 61,
+											"name": "id",
+											"kind": 1024,
+											"kindString": "Property",
+											"flags": {},
+											"type": {
+												"type": "intrinsic",
+												"name": "string"
+											},
+											"defaultValue": "..."
+										},
+										{
+											"id": 62,
+											"name": "labels",
+											"kind": 1024,
+											"kindString": "Property",
+											"flags": {},
+											"type": {
+												"type": "array",
+												"elementType": {
+													"type": "intrinsic",
+													"name": "string"
+												}
+											},
+											"defaultValue": "..."
+										},
+										{
+											"id": 63,
+											"name": "record",
+											"kind": 1024,
+											"kindString": "Property",
+											"flags": {},
+											"type": {
+												"type": "reference",
+												"id": 40,
+												"name": "PathDatumRecord"
+											},
+											"defaultValue": "..."
+										}
+									],
+									"groups": [
+										{
+											"title": "Properties",
+											"kind": 1024,
+											"children": [
+												61,
+												62,
+												63
+											]
+										}
+									]
+								}
+							}
+						}
+					]
+				}
+			],
+			"groups": [
+				{
+					"title": "Interfaces",
+					"kind": 256,
+					"children": [
+						89,
+						67,
+						44,
+						87
+					]
+				},
+				{
+					"title": "Type aliases",
+					"kind": 4194304,
+					"children": [
+						40
+					]
+				},
+				{
+					"title": "Variables",
+					"kind": 32,
+					"children": [
+						39
+					]
+				},
+				{
+					"title": "Functions",
+					"kind": 64,
+					"children": [
+						64,
+						74,
+						55
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "src/d3-gram-types.ts",
+					"line": 1,
+					"character": 0
+				}
+			]
+		},
+		{
+			"id": 93,
+			"name": "index",
+			"kind": 1,
+			"kindString": "Module",
+			"flags": {},
+			"children": [
+				{
+					"id": 94,
+					"name": "default",
+					"kind": 16777216,
+					"kindString": "Reference",
+					"flags": {},
+					"target": 11
+				},
+				{
+					"id": 161,
+					"name": "D3GramLayoutConfiguration",
+					"kind": 256,
+					"kindString": "Interface",
+					"flags": {},
+					"comment": {
+						"shortText": "All numbers are in scale-free units."
+					},
+					"children": [
+						{
+							"id": 163,
+							"name": "height",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {},
+							"comment": {
+								"shortText": "Scene height."
+							},
+							"sources": [
+								{
+									"fileName": "src/d3-gram-layout.ts",
+									"line": 26,
+									"character": 8
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "number"
+							}
+						},
+						{
+							"id": 164,
+							"name": "ticks",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {},
+							"comment": {
+								"shortText": "How long to run the simulation."
+							},
+							"sources": [
+								{
+									"fileName": "src/d3-gram-layout.ts",
+									"line": 30,
+									"character": 7
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "number"
+							}
+						},
+						{
+							"id": 162,
+							"name": "width",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {},
+							"comment": {
+								"shortText": "Scene width."
+							},
+							"sources": [
+								{
+									"fileName": "src/d3-gram-layout.ts",
+									"line": 22,
+									"character": 7
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "number"
+							}
+						}
+					],
+					"groups": [
+						{
+							"title": "Properties",
+							"kind": 1024,
+							"children": [
+								163,
+								164,
+								162
+							]
+						}
+					],
+					"sources": [
+						{
+							"fileName": "src/d3-gram-layout.ts",
+							"line": 18,
+							"character": 42
+						}
+					]
+				},
+				{
+					"id": 157,
+					"name": "GramGraphData",
+					"kind": 256,
+					"kindString": "Interface",
+					"flags": {},
+					"children": [
+						{
+							"id": 159,
+							"name": "links",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "src/d3-gram-types.ts",
+									"line": 57,
+									"character": 7
+								}
+							],
+							"type": {
+								"type": "array",
+								"elementType": {
+									"type": "reference",
+									"id": 67,
+									"name": "GramLinkDatum"
+								}
+							}
+						},
+						{
+							"id": 158,
+							"name": "nodes",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "src/d3-gram-types.ts",
+									"line": 56,
+									"character": 7
+								}
+							],
+							"type": {
+								"type": "array",
+								"elementType": {
+									"type": "reference",
+									"id": 44,
+									"name": "GramNodeDatum"
+								}
+							}
+						},
+						{
+							"id": 160,
+							"name": "paths",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "src/d3-gram-types.ts",
+									"line": 58,
+									"character": 7
+								}
+							],
+							"type": {
+								"type": "array",
+								"elementType": {
+									"type": "reference",
+									"id": 87,
+									"name": "GramPathDatum"
+								}
+							}
+						}
+					],
+					"groups": [
+						{
+							"title": "Properties",
+							"kind": 1024,
+							"children": [
+								159,
+								158,
+								160
+							]
+						}
+					],
+					"sources": [
+						{
+							"fileName": "src/d3-gram-types.ts",
+							"line": 55,
+							"character": 30
+						}
+					]
+				},
+				{
+					"id": 135,
+					"name": "GramLinkDatum",
+					"kind": 256,
+					"kindString": "Interface",
+					"flags": {},
+					"children": [
+						{
+							"id": 136,
+							"name": "id",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "src/d3-gram-types.ts",
+									"line": 30,
+									"character": 4
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "string"
+							}
+						},
+						{
+							"id": 141,
+							"name": "index",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isExternal": true,
+								"isOptional": true
+							},
+							"comment": {
+								"shortText": "The zero-based index into the links array. Internally generated when calling ForceLink.links(...)"
+							},
+							"sources": [
+								{
+									"fileName": "node_modules/@types/d3-force/index.d.ts",
+									"line": 90,
+									"character": 9
+								}
+							],
+							"type": {
+								"type": "union",
+								"types": [
+									{
+										"type": "intrinsic",
+										"name": "undefined"
+									},
+									{
+										"type": "intrinsic",
+										"name": "number"
+									}
+								]
+							}
+						},
+						{
+							"id": 137,
+							"name": "labels",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isOptional": true
+							},
+							"sources": [
+								{
+									"fileName": "src/d3-gram-types.ts",
+									"line": 31,
+									"character": 8
+								}
+							],
+							"type": {
+								"type": "union",
+								"types": [
+									{
+										"type": "intrinsic",
+										"name": "undefined"
+									},
+									{
+										"type": "array",
+										"elementType": {
+											"type": "intrinsic",
+											"name": "string"
+										}
+									}
+								]
+							}
+						},
+						{
+							"id": 138,
+							"name": "record",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "src/d3-gram-types.ts",
+									"line": 32,
+									"character": 8
+								}
+							],
+							"type": {
+								"type": "reference",
+								"id": 40,
+								"name": "PathDatumRecord"
+							}
+						},
+						{
+							"id": 139,
+							"name": "source",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isExternal": true
+							},
+							"comment": {
+								"shortText": "Link’s source node.\nFor convenience, a link’s source and target properties may be initialized using numeric or string identifiers rather than object references; see link.id.\nWhen the link force is initialized (or re-initialized, as when the nodes or links change), any link.source or link.target property which is not an object\nis replaced by an object reference to the corresponding node with the given identifier.\nAfter initialization, the source property represents the source node object."
+							},
+							"sources": [
+								{
+									"fileName": "node_modules/@types/d3-force/index.d.ts",
+									"line": 78,
+									"character": 10
+								}
+							],
+							"type": {
+								"type": "union",
+								"types": [
+									{
+										"type": "intrinsic",
+										"name": "string"
+									},
+									{
+										"type": "intrinsic",
+										"name": "number"
+									},
+									{
+										"type": "reference",
+										"id": 44,
+										"name": "GramNodeDatum"
+									}
+								]
+							}
+						},
+						{
+							"id": 140,
+							"name": "target",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isExternal": true
+							},
+							"comment": {
+								"shortText": "Link’s source link\nFor convenience, a link’s source and target properties may be initialized using numeric or string identifiers rather than object references; see link.id.\nWhen the link force is initialized (or re-initialized, as when the nodes or links change), any link.source or link.target property which is not an object\nis replaced by an object reference to the corresponding node with the given identifier.\nAfter initialization, the target property represents the target node object."
+							},
+							"sources": [
+								{
+									"fileName": "node_modules/@types/d3-force/index.d.ts",
+									"line": 86,
+									"character": 10
+								}
+							],
+							"type": {
+								"type": "union",
+								"types": [
+									{
+										"type": "intrinsic",
+										"name": "string"
+									},
+									{
+										"type": "intrinsic",
+										"name": "number"
+									},
+									{
+										"type": "reference",
+										"id": 44,
+										"name": "GramNodeDatum"
+									}
+								]
+							}
+						}
+					],
+					"groups": [
+						{
+							"title": "Properties",
+							"kind": 1024,
+							"children": [
+								136,
+								141,
+								137,
+								138,
+								139,
+								140
+							]
+						}
+					],
+					"sources": [
+						{
+							"fileName": "src/d3-gram-types.ts",
+							"line": 29,
+							"character": 30
+						}
+					],
+					"extendedTypes": [
+						{
+							"type": "reference",
+							"typeArguments": [
+								{
+									"type": "reference",
+									"id": 44,
+									"name": "GramNodeDatum"
+								}
+							],
+							"name": "SimulationLinkDatum"
+						}
+					]
+				},
+				{
+					"id": 112,
+					"name": "GramNodeDatum",
+					"kind": 256,
+					"kindString": "Interface",
+					"flags": {},
+					"children": [
+						{
+							"id": 121,
+							"name": "fx",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isExternal": true,
+								"isOptional": true
+							},
+							"comment": {
+								"shortText": "Node’s fixed x-position (if position was fixed)"
+							},
+							"sources": [
+								{
+									"fileName": "node_modules/@types/d3-force/index.d.ts",
+									"line": 52,
+									"character": 6
+								}
+							],
+							"type": {
+								"type": "union",
+								"types": [
+									{
+										"type": "intrinsic",
+										"name": "undefined"
+									},
+									{
+										"type": "literal",
+										"value": null
+									},
+									{
+										"type": "intrinsic",
+										"name": "number"
+									}
+								]
+							}
+						},
+						{
+							"id": 122,
+							"name": "fy",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isExternal": true,
+								"isOptional": true
+							},
+							"comment": {
+								"shortText": "Node’s fixed y-position (if position was fixed)"
+							},
+							"sources": [
+								{
+									"fileName": "node_modules/@types/d3-force/index.d.ts",
+									"line": 56,
+									"character": 6
+								}
+							],
+							"type": {
+								"type": "union",
+								"types": [
+									{
+										"type": "intrinsic",
+										"name": "undefined"
+									},
+									{
+										"type": "literal",
+										"value": null
+									},
+									{
+										"type": "intrinsic",
+										"name": "number"
+									}
+								]
+							}
+						},
+						{
+							"id": 113,
+							"name": "id",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "src/d3-gram-types.ts",
+									"line": 8,
+									"character": 4
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "string"
+							}
+						},
+						{
+							"id": 116,
+							"name": "index",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isExternal": true,
+								"isOptional": true
+							},
+							"comment": {
+								"shortText": "Node’s zero-based index into nodes array. This property is set during the initialization process of a simulation."
+							},
+							"sources": [
+								{
+									"fileName": "node_modules/@types/d3-force/index.d.ts",
+									"line": 32,
+									"character": 9
+								}
+							],
+							"type": {
+								"type": "union",
+								"types": [
+									{
+										"type": "intrinsic",
+										"name": "undefined"
+									},
+									{
+										"type": "intrinsic",
+										"name": "number"
+									}
+								]
+							}
+						},
+						{
+							"id": 114,
+							"name": "labels",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "src/d3-gram-types.ts",
+									"line": 9,
+									"character": 8
+								}
+							],
+							"type": {
+								"type": "array",
+								"elementType": {
+									"type": "intrinsic",
+									"name": "string"
+								}
+							}
+						},
+						{
+							"id": 115,
+							"name": "record",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "src/d3-gram-types.ts",
+									"line": 10,
+									"character": 8
+								}
+							],
+							"type": {
+								"type": "reference",
+								"id": 40,
+								"name": "PathDatumRecord"
+							}
+						},
+						{
+							"id": 119,
+							"name": "vx",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isExternal": true,
+								"isOptional": true
+							},
+							"comment": {
+								"shortText": "Node’s current x-velocity"
+							},
+							"sources": [
+								{
+									"fileName": "node_modules/@types/d3-force/index.d.ts",
+									"line": 44,
+									"character": 6
+								}
+							],
+							"type": {
+								"type": "union",
+								"types": [
+									{
+										"type": "intrinsic",
+										"name": "undefined"
+									},
+									{
+										"type": "intrinsic",
+										"name": "number"
+									}
+								]
+							}
+						},
+						{
+							"id": 120,
+							"name": "vy",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isExternal": true,
+								"isOptional": true
+							},
+							"comment": {
+								"shortText": "Node’s current y-velocity"
+							},
+							"sources": [
+								{
+									"fileName": "node_modules/@types/d3-force/index.d.ts",
+									"line": 48,
+									"character": 6
+								}
+							],
+							"type": {
+								"type": "union",
+								"types": [
+									{
+										"type": "intrinsic",
+										"name": "undefined"
+									},
+									{
+										"type": "intrinsic",
+										"name": "number"
+									}
+								]
+							}
+						},
+						{
+							"id": 117,
+							"name": "x",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isExternal": true,
+								"isOptional": true
+							},
+							"comment": {
+								"shortText": "Node’s current x-position"
+							},
+							"sources": [
+								{
+									"fileName": "node_modules/@types/d3-force/index.d.ts",
+									"line": 36,
+									"character": 5
+								}
+							],
+							"type": {
+								"type": "union",
+								"types": [
+									{
+										"type": "intrinsic",
+										"name": "undefined"
+									},
+									{
+										"type": "intrinsic",
+										"name": "number"
+									}
+								]
+							}
+						},
+						{
+							"id": 118,
+							"name": "y",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isExternal": true,
+								"isOptional": true
+							},
+							"comment": {
+								"shortText": "Node’s current y-position"
+							},
+							"sources": [
+								{
+									"fileName": "node_modules/@types/d3-force/index.d.ts",
+									"line": 40,
+									"character": 5
+								}
+							],
+							"type": {
+								"type": "union",
+								"types": [
+									{
+										"type": "intrinsic",
+										"name": "undefined"
+									},
+									{
+										"type": "intrinsic",
+										"name": "number"
+									}
+								]
+							}
+						}
+					],
+					"groups": [
+						{
+							"title": "Properties",
+							"kind": 1024,
+							"children": [
+								121,
+								122,
+								113,
+								116,
+								114,
+								115,
+								119,
+								120,
+								117,
+								118
+							]
+						}
+					],
+					"sources": [
+						{
+							"fileName": "src/d3-gram-types.ts",
+							"line": 7,
+							"character": 30
+						}
+					],
+					"extendedTypes": [
+						{
+							"type": "reference",
+							"name": "SimulationNodeDatum"
+						}
+					]
+				},
+				{
+					"id": 155,
+					"name": "GramPathDatum",
+					"kind": 256,
+					"kindString": "Interface",
+					"flags": {},
+					"children": [
+						{
+							"id": 156,
+							"name": "links",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "src/d3-gram-types.ts",
+									"line": 52,
+									"character": 7
+								}
+							],
+							"type": {
+								"type": "array",
+								"elementType": {
+									"type": "reference",
+									"id": 67,
+									"name": "GramLinkDatum"
+								}
+							}
+						}
+					],
+					"groups": [
+						{
+							"title": "Properties",
+							"kind": 1024,
+							"children": [
+								156
+							]
+						}
+					],
+					"sources": [
+						{
+							"fileName": "src/d3-gram-types.ts",
+							"line": 51,
+							"character": 30
+						}
+					]
+				},
+				{
+					"id": 108,
+					"name": "PathDatumRecord",
+					"kind": 4194304,
+					"kindString": "Type alias",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "src/d3-gram-types.ts",
+							"line": 5,
+							"character": 27
+						}
+					],
+					"type": {
+						"type": "reflection",
+						"declaration": {
+							"id": 109,
+							"name": "__type",
+							"kind": 65536,
+							"kindString": "Type literal",
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "src/d3-gram-types.ts",
+									"line": 5,
+									"character": 29
+								}
+							],
+							"indexSignature": {
+								"id": 110,
+								"name": "__index",
+								"kind": 8192,
+								"kindString": "Index signature",
+								"flags": {},
+								"parameters": [
+									{
+										"id": 111,
+										"name": "key",
+										"kind": 32768,
+										"flags": {},
+										"type": {
+											"type": "intrinsic",
+											"name": "string"
+										}
+									}
+								],
+								"type": {
+									"type": "intrinsic",
+									"name": "any"
+								}
+							}
+						}
+					}
+				},
+				{
+					"id": 107,
+					"name": "MISSING_ID",
+					"kind": 32,
+					"kindString": "Variable",
+					"flags": {
+						"isConst": true
+					},
+					"sources": [
+						{
+							"fileName": "src/d3-gram-types.ts",
+							"line": 3,
+							"character": 23
+						}
+					],
+					"type": {
+						"type": "literal",
+						"value": "__missing_id__"
+					},
+					"defaultValue": "'__missing_id__'"
+				},
+				{
+					"id": 98,
+					"name": "dataFromPath",
+					"kind": 64,
+					"kindString": "Function",
+					"flags": {
+						"isConst": true
+					},
+					"sources": [
+						{
+							"fileName": "src/d3-gram-parse.ts",
+							"line": 42,
+							"character": 25
+						}
+					],
+					"signatures": [
+						{
+							"id": 99,
+							"name": "dataFromPath",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"parameters": [
+								{
+									"id": 100,
+									"name": "p",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "reference",
+										"name": "GramPath"
+									}
+								}
+							],
+							"type": {
+								"type": "reference",
+								"id": 40,
+								"name": "PathDatumRecord"
+							}
+						}
+					]
+				},
+				{
+					"id": 175,
+					"name": "draw",
+					"kind": 64,
+					"kindString": "Function",
+					"flags": {
+						"isConst": true
+					},
+					"sources": [
+						{
+							"fileName": "src/d3-gram-renderer.ts",
+							"line": 121,
+							"character": 17
+						}
+					],
+					"signatures": [
+						{
+							"id": 176,
+							"name": "draw",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"comment": {},
+							"parameters": [
+								{
+									"id": 177,
+									"name": "graph",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"comment": {
+										"text": "gram source text"
+									},
+									"type": {
+										"type": "reference",
+										"id": 89,
+										"name": "GramGraphData"
+									}
+								},
+								{
+									"id": 178,
+									"name": "selector",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"comment": {
+										"text": "dom selector for an svg element"
+									},
+									"type": {
+										"type": "intrinsic",
+										"name": "string"
+									}
+								},
+								{
+									"id": 179,
+									"name": "configuration",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "reference",
+										"name": "D3GramDrawConfiguration"
+									},
+									"defaultValue": "..."
+								}
+							],
+							"type": {
+								"type": "reflection",
+								"declaration": {
+									"id": 180,
+									"name": "__type",
+									"kind": 65536,
+									"kindString": "Type literal",
+									"flags": {},
+									"children": [
+										{
+											"id": 182,
+											"name": "links",
+											"kind": 1024,
+											"kindString": "Property",
+											"flags": {},
+											"type": {
+												"type": "reference",
+												"typeArguments": [
+													{
+														"type": "intrinsic",
+														"name": "any"
+													},
+													{
+														"type": "reference",
+														"id": 67,
+														"name": "GramLinkDatum"
+													},
+													{
+														"type": "intrinsic",
+														"name": "any"
+													},
+													{
+														"type": "intrinsic",
+														"name": "unknown"
+													}
+												],
+												"name": "Selection"
+											},
+											"defaultValue": "..."
+										},
+										{
+											"id": 181,
+											"name": "nodes",
+											"kind": 1024,
+											"kindString": "Property",
+											"flags": {},
+											"type": {
+												"type": "reference",
+												"typeArguments": [
+													{
+														"type": "intrinsic",
+														"name": "any"
+													},
+													{
+														"type": "reference",
+														"id": 44,
+														"name": "GramNodeDatum"
+													},
+													{
+														"type": "intrinsic",
+														"name": "any"
+													},
+													{
+														"type": "intrinsic",
+														"name": "unknown"
+													}
+												],
+												"name": "Selection"
+											},
+											"defaultValue": "..."
+										}
+									],
+									"groups": [
+										{
+											"title": "Properties",
+											"kind": 1024,
+											"children": [
+												182,
+												181
+											]
+										}
+									]
+								}
+							}
+						}
+					]
+				},
+				{
+					"id": 104,
+					"name": "edgeToD3",
+					"kind": 64,
+					"kindString": "Function",
+					"flags": {
+						"isConst": true
+					},
+					"sources": [
+						{
+							"fileName": "src/d3-gram-parse.ts",
+							"line": 66,
+							"character": 21
+						}
+					],
+					"signatures": [
+						{
+							"id": 105,
+							"name": "edgeToD3",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"parameters": [
+								{
+									"id": 106,
+									"name": "edge",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "reference",
+										"name": "GramEdge"
+									}
+								}
+							],
+							"type": {
+								"type": "reference",
+								"id": 67,
+								"name": "GramLinkDatum"
+							}
+						}
+					]
+				},
+				{
+					"id": 132,
+					"name": "isGramNodeDatum",
+					"kind": 64,
+					"kindString": "Function",
+					"flags": {
+						"isConst": true
+					},
+					"sources": [
+						{
+							"fileName": "src/d3-gram-types.ts",
+							"line": 25,
+							"character": 28
+						}
+					],
+					"signatures": [
+						{
+							"id": 133,
+							"name": "isGramNodeDatum",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"parameters": [
+								{
+									"id": 134,
+									"name": "o",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "intrinsic",
+										"name": "any"
+									}
+								}
+							],
+							"type": {
+								"type": "predicate",
+								"name": "o",
+								"asserts": false,
+								"targetType": {
+									"type": "reference",
+									"id": 44,
+									"name": "GramNodeDatum"
+								}
+							}
+						}
+					]
+				},
+				{
+					"id": 165,
+					"name": "layout",
+					"kind": 64,
+					"kindString": "Function",
+					"flags": {
+						"isConst": true
+					},
+					"sources": [
+						{
+							"fileName": "src/d3-gram-layout.ts",
+							"line": 44,
+							"character": 19
+						}
+					],
+					"signatures": [
+						{
+							"id": 166,
+							"name": "layout",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"comment": {},
+							"parameters": [
+								{
+									"id": 167,
+									"name": "graph",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"comment": {},
+									"type": {
+										"type": "reference",
+										"id": 89,
+										"name": "GramGraphData"
+									}
+								},
+								{
+									"id": 168,
+									"name": "configuration",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"comment": {
+										"text": "\n"
+									},
+									"type": {
+										"type": "reference",
+										"typeArguments": [
+											{
+												"type": "reference",
+												"id": 2,
+												"name": "D3GramLayoutConfiguration"
+											}
+										],
+										"name": "Partial"
+									},
+									"defaultValue": "..."
+								}
+							],
+							"type": {
+								"type": "reference",
+								"typeArguments": [
+									{
+										"type": "reference",
+										"name": "SimulationNodeDatum"
+									},
+									{
+										"type": "intrinsic",
+										"name": "undefined"
+									}
+								],
+								"name": "Simulation"
+							}
+						}
+					]
+				},
+				{
+					"id": 142,
+					"name": "makeGramLinkDatum",
+					"kind": 64,
+					"kindString": "Function",
+					"flags": {
+						"isConst": true
+					},
+					"sources": [
+						{
+							"fileName": "src/d3-gram-types.ts",
+							"line": 35,
+							"character": 30
+						}
+					],
+					"signatures": [
+						{
+							"id": 143,
+							"name": "makeGramLinkDatum",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"parameters": [
+								{
+									"id": 144,
+									"name": "source",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "intrinsic",
+										"name": "string"
+									}
+								},
+								{
+									"id": 145,
+									"name": "target",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "intrinsic",
+										"name": "string"
+									}
+								},
+								{
+									"id": 146,
+									"name": "id",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {
+										"isOptional": true
+									},
+									"type": {
+										"type": "intrinsic",
+										"name": "string"
+									}
+								},
+								{
+									"id": 147,
+									"name": "labels",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {
+										"isOptional": true
+									},
+									"type": {
+										"type": "array",
+										"elementType": {
+											"type": "intrinsic",
+											"name": "string"
+										}
+									}
+								},
+								{
+									"id": 148,
+									"name": "record",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {
+										"isOptional": true
+									},
+									"type": {
+										"type": "reference",
+										"id": 40,
+										"name": "PathDatumRecord"
+									}
+								}
+							],
+							"type": {
+								"type": "reflection",
+								"declaration": {
+									"id": 149,
+									"name": "__type",
+									"kind": 65536,
+									"kindString": "Type literal",
+									"flags": {},
+									"children": [
+										{
+											"id": 150,
+											"name": "id",
+											"kind": 1024,
+											"kindString": "Property",
+											"flags": {},
+											"type": {
+												"type": "intrinsic",
+												"name": "string"
+											},
+											"defaultValue": "..."
+										},
+										{
+											"id": 151,
+											"name": "labels",
+											"kind": 1024,
+											"kindString": "Property",
+											"flags": {},
+											"type": {
+												"type": "array",
+												"elementType": {
+													"type": "intrinsic",
+													"name": "string"
+												}
+											},
+											"defaultValue": "..."
+										},
+										{
+											"id": 152,
+											"name": "record",
+											"kind": 1024,
+											"kindString": "Property",
+											"flags": {},
+											"type": {
+												"type": "reference",
+												"id": 40,
+												"name": "PathDatumRecord"
+											},
+											"defaultValue": "..."
+										},
+										{
+											"id": 153,
+											"name": "source",
+											"kind": 1024,
+											"kindString": "Property",
+											"flags": {},
+											"type": {
+												"type": "intrinsic",
+												"name": "string"
+											}
+										},
+										{
+											"id": 154,
+											"name": "target",
+											"kind": 1024,
+											"kindString": "Property",
+											"flags": {},
+											"type": {
+												"type": "intrinsic",
+												"name": "string"
+											}
+										}
+									],
+									"groups": [
+										{
+											"title": "Properties",
+											"kind": 1024,
+											"children": [
+												150,
+												151,
+												152,
+												153,
+												154
+											]
+										}
+									]
+								}
+							}
+						}
+					]
+				},
+				{
+					"id": 123,
+					"name": "makeGramNodeDatum",
+					"kind": 64,
+					"kindString": "Function",
+					"flags": {
+						"isConst": true
+					},
+					"sources": [
+						{
+							"fileName": "src/d3-gram-types.ts",
+							"line": 13,
+							"character": 30
+						}
+					],
+					"signatures": [
+						{
+							"id": 124,
+							"name": "makeGramNodeDatum",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"parameters": [
+								{
+									"id": 125,
+									"name": "id",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {
+										"isOptional": true
+									},
+									"type": {
+										"type": "intrinsic",
+										"name": "string"
+									}
+								},
+								{
+									"id": 126,
+									"name": "labels",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {
+										"isOptional": true
+									},
+									"type": {
+										"type": "array",
+										"elementType": {
+											"type": "intrinsic",
+											"name": "string"
+										}
+									}
+								},
+								{
+									"id": 127,
+									"name": "record",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {
+										"isOptional": true
+									},
+									"type": {
+										"type": "reference",
+										"id": 40,
+										"name": "PathDatumRecord"
+									}
+								}
+							],
+							"type": {
+								"type": "reflection",
+								"declaration": {
+									"id": 128,
+									"name": "__type",
+									"kind": 65536,
+									"kindString": "Type literal",
+									"flags": {},
+									"children": [
+										{
+											"id": 129,
+											"name": "id",
+											"kind": 1024,
+											"kindString": "Property",
+											"flags": {},
+											"type": {
+												"type": "intrinsic",
+												"name": "string"
+											},
+											"defaultValue": "..."
+										},
+										{
+											"id": 130,
+											"name": "labels",
+											"kind": 1024,
+											"kindString": "Property",
+											"flags": {},
+											"type": {
+												"type": "array",
+												"elementType": {
+													"type": "intrinsic",
+													"name": "string"
+												}
+											},
+											"defaultValue": "..."
+										},
+										{
+											"id": 131,
+											"name": "record",
+											"kind": 1024,
+											"kindString": "Property",
+											"flags": {},
+											"type": {
+												"type": "reference",
+												"id": 40,
+												"name": "PathDatumRecord"
+											},
+											"defaultValue": "..."
+										}
+									],
+									"groups": [
+										{
+											"title": "Properties",
+											"kind": 1024,
+											"children": [
+												129,
+												130,
+												131
+											]
+										}
+									]
+								}
+							}
+						}
+					]
+				},
+				{
+					"id": 169,
+					"name": "moveLinks",
+					"kind": 64,
+					"kindString": "Function",
+					"flags": {
+						"isConst": true
+					},
+					"sources": [
+						{
+							"fileName": "src/d3-gram-renderer.ts",
+							"line": 89,
+							"character": 22
+						}
+					],
+					"signatures": [
+						{
+							"id": 170,
+							"name": "moveLinks",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"parameters": [
+								{
+									"id": 171,
+									"name": "links",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "intrinsic",
+										"name": "any"
+									}
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "void"
+							}
+						}
+					]
+				},
+				{
+					"id": 172,
+					"name": "moveNodes",
+					"kind": 64,
+					"kindString": "Function",
+					"flags": {
+						"isConst": true
+					},
+					"sources": [
+						{
+							"fileName": "src/d3-gram-renderer.ts",
+							"line": 105,
+							"character": 22
+						}
+					],
+					"signatures": [
+						{
+							"id": 173,
+							"name": "moveNodes",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"parameters": [
+								{
+									"id": 174,
+									"name": "nodes",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "intrinsic",
+										"name": "any"
+									}
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "void"
+							}
+						}
+					]
+				},
+				{
+					"id": 101,
+					"name": "nodeToD3",
+					"kind": 64,
+					"kindString": "Function",
+					"flags": {
+						"isConst": true
+					},
+					"sources": [
+						{
+							"fileName": "src/d3-gram-parse.ts",
+							"line": 50,
+							"character": 21
+						}
+					],
+					"signatures": [
+						{
+							"id": 102,
+							"name": "nodeToD3",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"parameters": [
+								{
+									"id": 103,
+									"name": "node",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "reference",
+										"name": "GramNode"
+									}
+								}
+							],
+							"type": {
+								"type": "reference",
+								"id": 44,
+								"name": "GramNodeDatum"
+							}
+						}
+					]
+				},
+				{
+					"id": 95,
+					"name": "parse",
+					"kind": 64,
+					"kindString": "Function",
+					"flags": {
+						"isConst": true
+					},
+					"sources": [
+						{
+							"fileName": "src/d3-gram-parse.ts",
+							"line": 29,
+							"character": 18
+						}
+					],
+					"signatures": [
+						{
+							"id": 96,
+							"name": "parse",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"comment": {
+								"shortText": "Parses text as [gram](https://github.com/gram-data/gram-js),\nreturning a graph representated nodes, links and paths."
+							},
+							"parameters": [
+								{
+									"id": 97,
+									"name": "src",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"comment": {
+										"text": "\n"
+									},
+									"type": {
+										"type": "intrinsic",
+										"name": "string"
+									}
+								}
+							],
+							"type": {
+								"type": "reference",
+								"id": 89,
+								"name": "GramGraphData"
+							}
+						}
+					]
+				}
+			],
+			"groups": [
+				{
+					"title": "References",
+					"kind": 16777216,
+					"children": [
+						94
+					]
+				},
+				{
+					"title": "Interfaces",
+					"kind": 256,
+					"children": [
+						161,
+						157,
+						135,
+						112,
+						155
+					]
+				},
+				{
+					"title": "Type aliases",
+					"kind": 4194304,
+					"children": [
+						108
+					]
+				},
+				{
+					"title": "Variables",
+					"kind": 32,
+					"children": [
+						107
+					]
+				},
+				{
+					"title": "Functions",
+					"kind": 64,
+					"children": [
+						98,
+						175,
+						104,
+						132,
+						165,
+						142,
+						123,
+						169,
+						172,
+						101,
+						95
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "src/index.ts",
+					"line": 1,
+					"character": 0
+				}
+			]
+		}
+	],
+	"groups": [
+		{
+			"title": "Modules",
+			"kind": 1,
+			"children": [
+				1,
+				10,
+				23,
+				38,
+				93
+			]
+		}
+	]
+}

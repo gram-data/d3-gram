@@ -1,0 +1,12 @@
+{
+  "name": "gram.js API",
+  "readme": "README.md",
+  "entryPoints": [
+    "src"
+  ],
+  "out": "docs/api",
+  "listInvalidSymbolLinks": true,
+  "exclude": "*.(spec|test).ts",
+  "excludePrivate": true,
+  "hideGenerator": true
+}
