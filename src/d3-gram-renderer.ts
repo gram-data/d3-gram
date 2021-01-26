@@ -111,7 +111,7 @@ const colorsFor = (graph: GramGraphData) => {
   return (d: GramNodeDatum) => scale(d.labels[0]);
 };
 
-export const moveLinks = (links: any) => {
+export const updateLinks = (links: any) => {
   links
     .attr('x1', (d: GramLinkDatum) =>
       isGramNodeDatum(d.source) ? d.source.x : 0
@@ -127,7 +127,7 @@ export const moveLinks = (links: any) => {
     );
 };
 
-export const moveNodes = (nodes: any) => {
+export const updateNodes = (nodes: any) => {
   nodes.attr('transform', function(d: any) {
     return 'translate(' + d.x + ',' + d.y + ')';
   });
@@ -194,8 +194,8 @@ export const draw = (
     return d.id;
   });
 
-  moveNodes(nodeSelection);
-  moveLinks(linkSelection);
+  updateNodes(nodeSelection);
+  updateLinks(linkSelection);
 
   return {
     nodeSelection,

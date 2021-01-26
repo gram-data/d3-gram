@@ -56,7 +56,7 @@ ___
 
 • **id**: *string*
 
-Defined in: [src/d3-gram-types.ts:8](https://github.com/gram-data/d3-gram/blob/3dd6a0d/src/d3-gram-types.ts#L8)
+Defined in: [src/d3-gram-types.ts:8](https://github.com/gram-data/d3-gram/blob/f6f773c/src/d3-gram-types.ts#L8)
 
 ___
 
@@ -74,7 +74,7 @@ ___
 
 • **labels**: *string*[]
 
-Defined in: [src/d3-gram-types.ts:9](https://github.com/gram-data/d3-gram/blob/3dd6a0d/src/d3-gram-types.ts#L9)
+Defined in: [src/d3-gram-types.ts:9](https://github.com/gram-data/d3-gram/blob/f6f773c/src/d3-gram-types.ts#L9)
 
 ___
 
@@ -82,7 +82,7 @@ ___
 
 • **record**: [*PathDatumRecord*](../modules/d3_gram_types.md#pathdatumrecord)
 
-Defined in: [src/d3-gram-types.ts:10](https://github.com/gram-data/d3-gram/blob/3dd6a0d/src/d3-gram-types.ts#L10)
+Defined in: [src/d3-gram-types.ts:10](https://github.com/gram-data/d3-gram/blob/f6f773c/src/d3-gram-types.ts#L10)
 
 ___
 

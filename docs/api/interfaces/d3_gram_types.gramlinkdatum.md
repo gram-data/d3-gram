@@ -32,7 +32,7 @@ layout: api
 
 • **id**: *string*
 
-Defined in: [src/d3-gram-types.ts:30](https://github.com/gram-data/d3-gram/blob/3dd6a0d/src/d3-gram-types.ts#L30)
+Defined in: [src/d3-gram-types.ts:30](https://github.com/gram-data/d3-gram/blob/f6f773c/src/d3-gram-types.ts#L30)
 
 ___
 
@@ -50,7 +50,7 @@ ___
 
 • `Optional` **labels**: *undefined* | *string*[]
 
-Defined in: [src/d3-gram-types.ts:31](https://github.com/gram-data/d3-gram/blob/3dd6a0d/src/d3-gram-types.ts#L31)
+Defined in: [src/d3-gram-types.ts:31](https://github.com/gram-data/d3-gram/blob/f6f773c/src/d3-gram-types.ts#L31)
 
 ___
 
@@ -58,7 +58,7 @@ ___
 
 • **record**: [*PathDatumRecord*](../modules/d3_gram_types.md#pathdatumrecord)
 
-Defined in: [src/d3-gram-types.ts:32](https://github.com/gram-data/d3-gram/blob/3dd6a0d/src/d3-gram-types.ts#L32)
+Defined in: [src/d3-gram-types.ts:32](https://github.com/gram-data/d3-gram/blob/f6f773c/src/d3-gram-types.ts#L32)
 
 ___
 

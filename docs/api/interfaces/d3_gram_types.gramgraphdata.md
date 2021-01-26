@@ -27,7 +27,7 @@ layout: api
 
 • **links**: [*GramLinkDatum*](d3_gram_types.gramlinkdatum.md)[]
 
-Defined in: [src/d3-gram-types.ts:57](https://github.com/gram-data/d3-gram/blob/3dd6a0d/src/d3-gram-types.ts#L57)
+Defined in: [src/d3-gram-types.ts:57](https://github.com/gram-data/d3-gram/blob/f6f773c/src/d3-gram-types.ts#L57)
 
 ___
 
@@ -35,7 +35,7 @@ ___
 
 • **nodes**: [*GramNodeDatum*](d3_gram_types.gramnodedatum.md)[]
 
-Defined in: [src/d3-gram-types.ts:56](https://github.com/gram-data/d3-gram/blob/3dd6a0d/src/d3-gram-types.ts#L56)
+Defined in: [src/d3-gram-types.ts:56](https://github.com/gram-data/d3-gram/blob/f6f773c/src/d3-gram-types.ts#L56)
 
 ___
 
@@ -43,4 +43,4 @@ ___
 
 • **paths**: [*GramPathDatum*](d3_gram_types.grampathdatum.md)[]
 
-Defined in: [src/d3-gram-types.ts:58](https://github.com/gram-data/d3-gram/blob/3dd6a0d/src/d3-gram-types.ts#L58)
+Defined in: [src/d3-gram-types.ts:58](https://github.com/gram-data/d3-gram/blob/f6f773c/src/d3-gram-types.ts#L58)

@@ -31,7 +31,7 @@ All numbers are in scale-free units.
 
 Scene height.
 
-Defined in: [src/d3-gram-layout.ts:26](https://github.com/gram-data/d3-gram/blob/3dd6a0d/src/d3-gram-layout.ts#L26)
+Defined in: [src/d3-gram-layout.ts:26](https://github.com/gram-data/d3-gram/blob/f6f773c/src/d3-gram-layout.ts#L26)
 
 ___
 
@@ -41,7 +41,7 @@ ___
 
 How long to run the simulation.
 
-Defined in: [src/d3-gram-layout.ts:30](https://github.com/gram-data/d3-gram/blob/3dd6a0d/src/d3-gram-layout.ts#L30)
+Defined in: [src/d3-gram-layout.ts:30](https://github.com/gram-data/d3-gram/blob/f6f773c/src/d3-gram-layout.ts#L30)
 
 ___
 
@@ -51,4 +51,4 @@ ___
 
 Scene width.
 
-Defined in: [src/d3-gram-layout.ts:22](https://github.com/gram-data/d3-gram/blob/3dd6a0d/src/d3-gram-layout.ts#L22)
+Defined in: [src/d3-gram-layout.ts:22](https://github.com/gram-data/d3-gram/blob/f6f773c/src/d3-gram-layout.ts#L22)

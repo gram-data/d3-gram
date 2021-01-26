@@ -7,7 +7,7 @@ ready to be used in a `d3-force` simulation.
 
 ``` TypeScript
 import * as d3 from "d3";
-import {parse, layout, draw, moveNodes, moveLinks} from 'd3-gram';
+import {parse, layout, draw, drag, updateNodes, updateLinks} from 'd3-gram';
 
 d3.text("https://raw.githubusercontent.com/gram-data/d3-gram/master/public/miserables.gram").then( gramSource => {
 
@@ -17,9 +17,11 @@ d3.text("https://raw.githubusercontent.com/gram-data/d3-gram/master/public/miser
 
   const {nodeSelection, linkSelection} = draw(graph, "svg");
 
+  nodeSelection.call(drag(simulation));
+
   simulation.on("tick", () => {
-    moveNodes(nodeSelection);
-    moveLinks(linkSelection);
+    updateNodes(nodeSelection);
+    updateLinks(linkSelection);
   });
 }
 ```

@@ -12,8 +12,8 @@ layout: api
 ### Functions
 
 - [draw](d3_gram_renderer.md#draw)
-- [moveLinks](d3_gram_renderer.md#movelinks)
-- [moveNodes](d3_gram_renderer.md#movenodes)
+- [updateLinks](d3_gram_renderer.md#updatelinks)
+- [updateNodes](d3_gram_renderer.md#updatenodes)
 
 ## Functions
 
@@ -36,13 +36,13 @@ Name | Type |
 `linkSelection` | *Selection*<*any*, [*GramLinkDatum*](../interfaces/d3_gram_types.gramlinkdatum.md), *any*, *unknown*\> |
 `nodeSelection` | *Selection*<*any*, [*GramNodeDatum*](../interfaces/d3_gram_types.gramnodedatum.md), *any*, *unknown*\> |
 
-Defined in: [src/d3-gram-renderer.ts:153](https://github.com/gram-data/d3-gram/blob/3dd6a0d/src/d3-gram-renderer.ts#L153)
+Defined in: [src/d3-gram-renderer.ts:150](https://github.com/gram-data/d3-gram/blob/f6f773c/src/d3-gram-renderer.ts#L150)
 
 ___
 
-### moveLinks
+### updateLinks
 
-▸ `Const`**moveLinks**(`links`: *any*): *void*
+▸ `Const`**updateLinks**(`links`: *any*): *void*
 
 #### Parameters:
 
@@ -52,13 +52,13 @@ Name | Type |
 
 **Returns:** *void*
 
-Defined in: [src/d3-gram-renderer.ts:117](https://github.com/gram-data/d3-gram/blob/3dd6a0d/src/d3-gram-renderer.ts#L117)
+Defined in: [src/d3-gram-renderer.ts:114](https://github.com/gram-data/d3-gram/blob/f6f773c/src/d3-gram-renderer.ts#L114)
 
 ___
 
-### moveNodes
+### updateNodes
 
-▸ `Const`**moveNodes**(`nodes`: *any*): *void*
+▸ `Const`**updateNodes**(`nodes`: *any*): *void*
 
 #### Parameters:
 
@@ -68,4 +68,4 @@ Name | Type |
 
 **Returns:** *void*
 
-Defined in: [src/d3-gram-renderer.ts:133](https://github.com/gram-data/d3-gram/blob/3dd6a0d/src/d3-gram-renderer.ts#L133)
+Defined in: [src/d3-gram-renderer.ts:130](https://github.com/gram-data/d3-gram/blob/f6f773c/src/d3-gram-renderer.ts#L130)

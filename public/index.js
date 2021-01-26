@@ -1,6 +1,6 @@
 import * as d3 from "d3";
 
-import {parse, layout, draw, moveNodes, moveLinks} from './d3-gram.umd.development.js';
+import {parse, layout, draw, updateNodes, updateLinks} from './d3-gram.umd.development.js';
 
 // a trick enabled by parcel. `miserables` will  be a URL
 const miserables = require('./miserables.gram'); 
@@ -58,8 +58,8 @@ window.onload = () => {
     nodeSelection.call(drag(simulation));
 
     simulation.on("tick", () => {
-      moveNodes(nodeSelection);
-      moveLinks(linkSelection);
+      updateNodes(nodeSelection);
+      updateLinks(linkSelection);
     });
   
   })

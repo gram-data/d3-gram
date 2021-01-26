@@ -6,13 +6,138 @@
 	"children": [
 		{
 			"id": 1,
-			"name": "d3-gram-layout",
+			"name": "d3-gram-drag",
 			"kind": 1,
 			"kindString": "Module",
 			"flags": {},
 			"children": [
 				{
 					"id": 2,
+					"name": "drag",
+					"kind": 64,
+					"kindString": "Function",
+					"flags": {
+						"isConst": true
+					},
+					"sources": [
+						{
+							"fileName": "src/d3-gram-drag.ts",
+							"line": 3,
+							"character": 17
+						}
+					],
+					"signatures": [
+						{
+							"id": 3,
+							"name": "drag",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"typeParameter": [
+								{
+									"id": 4,
+									"name": "ActualNodeDatum",
+									"kind": 131072,
+									"kindString": "Type parameter",
+									"flags": {},
+									"type": {
+										"type": "reference",
+										"name": "SimulationNodeDatum"
+									}
+								},
+								{
+									"id": 5,
+									"name": "ActualLinkDatum",
+									"kind": 131072,
+									"kindString": "Type parameter",
+									"flags": {},
+									"type": {
+										"type": "reference",
+										"typeArguments": [
+											{
+												"type": "reference",
+												"name": "ActualNodeDatum"
+											},
+											{
+												"type": "reference",
+												"name": "ActualLinkDatum"
+											}
+										],
+										"name": "SimulationLinkDatum"
+									}
+								}
+							],
+							"parameters": [
+								{
+									"id": 6,
+									"name": "simulation",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "reference",
+										"typeArguments": [
+											{
+												"type": "reference",
+												"name": "ActualNodeDatum"
+											},
+											{
+												"type": "reference",
+												"name": "ActualLinkDatum"
+											}
+										],
+										"name": "Simulation"
+									}
+								}
+							],
+							"type": {
+								"type": "reference",
+								"typeArguments": [
+									{
+										"type": "intrinsic",
+										"name": "any"
+									},
+									{
+										"type": "intrinsic",
+										"name": "unknown"
+									},
+									{
+										"type": "intrinsic",
+										"name": "unknown"
+									}
+								],
+								"name": "DragBehavior"
+							}
+						}
+					]
+				}
+			],
+			"groups": [
+				{
+					"title": "Functions",
+					"kind": 64,
+					"children": [
+						2
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "src/d3-gram-drag.ts",
+					"line": 1,
+					"character": 0
+				}
+			]
+		},
+		{
+			"id": 7,
+			"name": "d3-gram-layout",
+			"kind": 1,
+			"kindString": "Module",
+			"flags": {},
+			"children": [
+				{
+					"id": 8,
 					"name": "D3GramLayoutConfiguration",
 					"kind": 256,
 					"kindString": "Interface",
@@ -22,7 +147,7 @@
 					},
 					"children": [
 						{
-							"id": 4,
+							"id": 10,
 							"name": "height",
 							"kind": 1024,
 							"kindString": "Property",
@@ -43,7 +168,7 @@
 							}
 						},
 						{
-							"id": 5,
+							"id": 11,
 							"name": "ticks",
 							"kind": 1024,
 							"kindString": "Property",
@@ -64,7 +189,7 @@
 							}
 						},
 						{
-							"id": 3,
+							"id": 9,
 							"name": "width",
 							"kind": 1024,
 							"kindString": "Property",
@@ -90,9 +215,9 @@
 							"title": "Properties",
 							"kind": 1024,
 							"children": [
-								4,
-								5,
-								3
+								10,
+								11,
+								9
 							]
 						}
 					],
@@ -105,7 +230,7 @@
 					]
 				},
 				{
-					"id": 6,
+					"id": 12,
 					"name": "layout",
 					"kind": 64,
 					"kindString": "Function",
@@ -121,7 +246,7 @@
 					],
 					"signatures": [
 						{
-							"id": 7,
+							"id": 13,
 							"name": "layout",
 							"kind": 4096,
 							"kindString": "Call signature",
@@ -129,7 +254,7 @@
 							"comment": {},
 							"parameters": [
 								{
-									"id": 8,
+									"id": 14,
 									"name": "graph",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -137,12 +262,12 @@
 									"comment": {},
 									"type": {
 										"type": "reference",
-										"id": 89,
+										"id": 95,
 										"name": "GramGraphData"
 									}
 								},
 								{
-									"id": 9,
+									"id": 15,
 									"name": "configuration",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -155,7 +280,7 @@
 										"typeArguments": [
 											{
 												"type": "reference",
-												"id": 2,
+												"id": 8,
 												"name": "D3GramLayoutConfiguration"
 											}
 										],
@@ -187,14 +312,14 @@
 					"title": "Interfaces",
 					"kind": 256,
 					"children": [
-						2
+						8
 					]
 				},
 				{
 					"title": "Functions",
 					"kind": 64,
 					"children": [
-						6
+						12
 					]
 				}
 			],
@@ -207,14 +332,14 @@
 			]
 		},
 		{
-			"id": 10,
+			"id": 16,
 			"name": "d3-gram-parse",
 			"kind": 1,
 			"kindString": "Module",
 			"flags": {},
 			"children": [
 				{
-					"id": 14,
+					"id": 20,
 					"name": "dataFromPath",
 					"kind": 64,
 					"kindString": "Function",
@@ -230,14 +355,14 @@
 					],
 					"signatures": [
 						{
-							"id": 15,
+							"id": 21,
 							"name": "dataFromPath",
 							"kind": 4096,
 							"kindString": "Call signature",
 							"flags": {},
 							"parameters": [
 								{
-									"id": 16,
+									"id": 22,
 									"name": "p",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -250,14 +375,14 @@
 							],
 							"type": {
 								"type": "reference",
-								"id": 40,
+								"id": 46,
 								"name": "PathDatumRecord"
 							}
 						}
 					]
 				},
 				{
-					"id": 20,
+					"id": 26,
 					"name": "edgeToD3",
 					"kind": 64,
 					"kindString": "Function",
@@ -273,14 +398,14 @@
 					],
 					"signatures": [
 						{
-							"id": 21,
+							"id": 27,
 							"name": "edgeToD3",
 							"kind": 4096,
 							"kindString": "Call signature",
 							"flags": {},
 							"parameters": [
 								{
-									"id": 22,
+									"id": 28,
 									"name": "edge",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -293,14 +418,14 @@
 							],
 							"type": {
 								"type": "reference",
-								"id": 67,
+								"id": 73,
 								"name": "GramLinkDatum"
 							}
 						}
 					]
 				},
 				{
-					"id": 17,
+					"id": 23,
 					"name": "nodeToD3",
 					"kind": 64,
 					"kindString": "Function",
@@ -316,14 +441,14 @@
 					],
 					"signatures": [
 						{
-							"id": 18,
+							"id": 24,
 							"name": "nodeToD3",
 							"kind": 4096,
 							"kindString": "Call signature",
 							"flags": {},
 							"parameters": [
 								{
-									"id": 19,
+									"id": 25,
 									"name": "node",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -336,14 +461,14 @@
 							],
 							"type": {
 								"type": "reference",
-								"id": 44,
+								"id": 50,
 								"name": "GramNodeDatum"
 							}
 						}
 					]
 				},
 				{
-					"id": 11,
+					"id": 17,
 					"name": "parse",
 					"kind": 64,
 					"kindString": "Function",
@@ -359,7 +484,7 @@
 					],
 					"signatures": [
 						{
-							"id": 12,
+							"id": 18,
 							"name": "parse",
 							"kind": 4096,
 							"kindString": "Call signature",
@@ -369,7 +494,7 @@
 							},
 							"parameters": [
 								{
-									"id": 13,
+									"id": 19,
 									"name": "src",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -385,7 +510,7 @@
 							],
 							"type": {
 								"type": "reference",
-								"id": 89,
+								"id": 95,
 								"name": "GramGraphData"
 							}
 						}
@@ -397,10 +522,10 @@
 					"title": "Functions",
 					"kind": 64,
 					"children": [
-						14,
 						20,
-						17,
-						11
+						26,
+						23,
+						17
 					]
 				}
 			],
@@ -413,14 +538,14 @@
 			]
 		},
 		{
-			"id": 23,
+			"id": 29,
 			"name": "d3-gram-renderer",
 			"kind": 1,
 			"kindString": "Module",
 			"flags": {},
 			"children": [
 				{
-					"id": 30,
+					"id": 36,
 					"name": "draw",
 					"kind": 64,
 					"kindString": "Function",
@@ -430,13 +555,13 @@
 					"sources": [
 						{
 							"fileName": "src/d3-gram-renderer.ts",
-							"line": 153,
+							"line": 150,
 							"character": 17
 						}
 					],
 					"signatures": [
 						{
-							"id": 31,
+							"id": 37,
 							"name": "draw",
 							"kind": 4096,
 							"kindString": "Call signature",
@@ -444,7 +569,7 @@
 							"comment": {},
 							"parameters": [
 								{
-									"id": 32,
+									"id": 38,
 									"name": "graph",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -454,12 +579,12 @@
 									},
 									"type": {
 										"type": "reference",
-										"id": 89,
+										"id": 95,
 										"name": "GramGraphData"
 									}
 								},
 								{
-									"id": 33,
+									"id": 39,
 									"name": "selector",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -473,7 +598,7 @@
 									}
 								},
 								{
-									"id": 34,
+									"id": 40,
 									"name": "configuration",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -494,14 +619,14 @@
 							"type": {
 								"type": "reflection",
 								"declaration": {
-									"id": 35,
+									"id": 41,
 									"name": "__type",
 									"kind": 65536,
 									"kindString": "Type literal",
 									"flags": {},
 									"children": [
 										{
-											"id": 37,
+											"id": 43,
 											"name": "linkSelection",
 											"kind": 1024,
 											"kindString": "Property",
@@ -515,7 +640,7 @@
 													},
 													{
 														"type": "reference",
-														"id": 67,
+														"id": 73,
 														"name": "GramLinkDatum"
 													},
 													{
@@ -531,7 +656,7 @@
 											}
 										},
 										{
-											"id": 36,
+											"id": 42,
 											"name": "nodeSelection",
 											"kind": 1024,
 											"kindString": "Property",
@@ -545,7 +670,7 @@
 													},
 													{
 														"type": "reference",
-														"id": 44,
+														"id": 50,
 														"name": "GramNodeDatum"
 													},
 													{
@@ -566,8 +691,8 @@
 											"title": "Properties",
 											"kind": 1024,
 											"children": [
-												37,
-												36
+												43,
+												42
 											]
 										}
 									]
@@ -577,8 +702,8 @@
 					]
 				},
 				{
-					"id": 24,
-					"name": "moveLinks",
+					"id": 30,
+					"name": "updateLinks",
 					"kind": 64,
 					"kindString": "Function",
 					"flags": {
@@ -587,20 +712,20 @@
 					"sources": [
 						{
 							"fileName": "src/d3-gram-renderer.ts",
-							"line": 117,
-							"character": 22
+							"line": 114,
+							"character": 24
 						}
 					],
 					"signatures": [
 						{
-							"id": 25,
-							"name": "moveLinks",
+							"id": 31,
+							"name": "updateLinks",
 							"kind": 4096,
 							"kindString": "Call signature",
 							"flags": {},
 							"parameters": [
 								{
-									"id": 26,
+									"id": 32,
 									"name": "links",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -619,8 +744,8 @@
 					]
 				},
 				{
-					"id": 27,
-					"name": "moveNodes",
+					"id": 33,
+					"name": "updateNodes",
 					"kind": 64,
 					"kindString": "Function",
 					"flags": {
@@ -629,20 +754,20 @@
 					"sources": [
 						{
 							"fileName": "src/d3-gram-renderer.ts",
-							"line": 133,
-							"character": 22
+							"line": 130,
+							"character": 24
 						}
 					],
 					"signatures": [
 						{
-							"id": 28,
-							"name": "moveNodes",
+							"id": 34,
+							"name": "updateNodes",
 							"kind": 4096,
 							"kindString": "Call signature",
 							"flags": {},
 							"parameters": [
 								{
-									"id": 29,
+									"id": 35,
 									"name": "nodes",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -666,9 +791,9 @@
 					"title": "Functions",
 					"kind": 64,
 					"children": [
+						36,
 						30,
-						24,
-						27
+						33
 					]
 				}
 			],
@@ -681,21 +806,21 @@
 			]
 		},
 		{
-			"id": 38,
+			"id": 44,
 			"name": "d3-gram-types",
 			"kind": 1,
 			"kindString": "Module",
 			"flags": {},
 			"children": [
 				{
-					"id": 89,
+					"id": 95,
 					"name": "GramGraphData",
 					"kind": 256,
 					"kindString": "Interface",
 					"flags": {},
 					"children": [
 						{
-							"id": 91,
+							"id": 97,
 							"name": "links",
 							"kind": 1024,
 							"kindString": "Property",
@@ -711,13 +836,13 @@
 								"type": "array",
 								"elementType": {
 									"type": "reference",
-									"id": 67,
+									"id": 73,
 									"name": "GramLinkDatum"
 								}
 							}
 						},
 						{
-							"id": 90,
+							"id": 96,
 							"name": "nodes",
 							"kind": 1024,
 							"kindString": "Property",
@@ -733,13 +858,13 @@
 								"type": "array",
 								"elementType": {
 									"type": "reference",
-									"id": 44,
+									"id": 50,
 									"name": "GramNodeDatum"
 								}
 							}
 						},
 						{
-							"id": 92,
+							"id": 98,
 							"name": "paths",
 							"kind": 1024,
 							"kindString": "Property",
@@ -755,7 +880,7 @@
 								"type": "array",
 								"elementType": {
 									"type": "reference",
-									"id": 87,
+									"id": 93,
 									"name": "GramPathDatum"
 								}
 							}
@@ -766,9 +891,9 @@
 							"title": "Properties",
 							"kind": 1024,
 							"children": [
-								91,
-								90,
-								92
+								97,
+								96,
+								98
 							]
 						}
 					],
@@ -781,14 +906,14 @@
 					]
 				},
 				{
-					"id": 67,
+					"id": 73,
 					"name": "GramLinkDatum",
 					"kind": 256,
 					"kindString": "Interface",
 					"flags": {},
 					"children": [
 						{
-							"id": 68,
+							"id": 74,
 							"name": "id",
 							"kind": 1024,
 							"kindString": "Property",
@@ -806,7 +931,7 @@
 							}
 						},
 						{
-							"id": 73,
+							"id": 79,
 							"name": "index",
 							"kind": 1024,
 							"kindString": "Property",
@@ -839,7 +964,7 @@
 							}
 						},
 						{
-							"id": 69,
+							"id": 75,
 							"name": "labels",
 							"kind": 1024,
 							"kindString": "Property",
@@ -871,7 +996,7 @@
 							}
 						},
 						{
-							"id": 70,
+							"id": 76,
 							"name": "record",
 							"kind": 1024,
 							"kindString": "Property",
@@ -885,12 +1010,12 @@
 							],
 							"type": {
 								"type": "reference",
-								"id": 40,
+								"id": 46,
 								"name": "PathDatumRecord"
 							}
 						},
 						{
-							"id": 71,
+							"id": 77,
 							"name": "source",
 							"kind": 1024,
 							"kindString": "Property",
@@ -920,14 +1045,14 @@
 									},
 									{
 										"type": "reference",
-										"id": 44,
+										"id": 50,
 										"name": "GramNodeDatum"
 									}
 								]
 							}
 						},
 						{
-							"id": 72,
+							"id": 78,
 							"name": "target",
 							"kind": 1024,
 							"kindString": "Property",
@@ -957,7 +1082,7 @@
 									},
 									{
 										"type": "reference",
-										"id": 44,
+										"id": 50,
 										"name": "GramNodeDatum"
 									}
 								]
@@ -969,12 +1094,12 @@
 							"title": "Properties",
 							"kind": 1024,
 							"children": [
-								68,
-								73,
-								69,
-								70,
-								71,
-								72
+								74,
+								79,
+								75,
+								76,
+								77,
+								78
 							]
 						}
 					],
@@ -991,7 +1116,7 @@
 							"typeArguments": [
 								{
 									"type": "reference",
-									"id": 44,
+									"id": 50,
 									"name": "GramNodeDatum"
 								}
 							],
@@ -1000,14 +1125,14 @@
 					]
 				},
 				{
-					"id": 44,
+					"id": 50,
 					"name": "GramNodeDatum",
 					"kind": 256,
 					"kindString": "Interface",
 					"flags": {},
 					"children": [
 						{
-							"id": 53,
+							"id": 59,
 							"name": "fx",
 							"kind": 1024,
 							"kindString": "Property",
@@ -1044,7 +1169,7 @@
 							}
 						},
 						{
-							"id": 54,
+							"id": 60,
 							"name": "fy",
 							"kind": 1024,
 							"kindString": "Property",
@@ -1081,7 +1206,7 @@
 							}
 						},
 						{
-							"id": 45,
+							"id": 51,
 							"name": "id",
 							"kind": 1024,
 							"kindString": "Property",
@@ -1099,7 +1224,7 @@
 							}
 						},
 						{
-							"id": 48,
+							"id": 54,
 							"name": "index",
 							"kind": 1024,
 							"kindString": "Property",
@@ -1115,79 +1240,6 @@
 									"fileName": "node_modules/@types/d3-force/index.d.ts",
 									"line": 32,
 									"character": 9
-								}
-							],
-							"type": {
-								"type": "union",
-								"types": [
-									{
-										"type": "intrinsic",
-										"name": "undefined"
-									},
-									{
-										"type": "intrinsic",
-										"name": "number"
-									}
-								]
-							}
-						},
-						{
-							"id": 46,
-							"name": "labels",
-							"kind": 1024,
-							"kindString": "Property",
-							"flags": {},
-							"sources": [
-								{
-									"fileName": "src/d3-gram-types.ts",
-									"line": 9,
-									"character": 8
-								}
-							],
-							"type": {
-								"type": "array",
-								"elementType": {
-									"type": "intrinsic",
-									"name": "string"
-								}
-							}
-						},
-						{
-							"id": 47,
-							"name": "record",
-							"kind": 1024,
-							"kindString": "Property",
-							"flags": {},
-							"sources": [
-								{
-									"fileName": "src/d3-gram-types.ts",
-									"line": 10,
-									"character": 8
-								}
-							],
-							"type": {
-								"type": "reference",
-								"id": 40,
-								"name": "PathDatumRecord"
-							}
-						},
-						{
-							"id": 51,
-							"name": "vx",
-							"kind": 1024,
-							"kindString": "Property",
-							"flags": {
-								"isExternal": true,
-								"isOptional": true
-							},
-							"comment": {
-								"shortText": "Node’s current x-velocity"
-							},
-							"sources": [
-								{
-									"fileName": "node_modules/@types/d3-force/index.d.ts",
-									"line": 44,
-									"character": 6
 								}
 							],
 							"type": {
@@ -1206,6 +1258,79 @@
 						},
 						{
 							"id": 52,
+							"name": "labels",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "src/d3-gram-types.ts",
+									"line": 9,
+									"character": 8
+								}
+							],
+							"type": {
+								"type": "array",
+								"elementType": {
+									"type": "intrinsic",
+									"name": "string"
+								}
+							}
+						},
+						{
+							"id": 53,
+							"name": "record",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "src/d3-gram-types.ts",
+									"line": 10,
+									"character": 8
+								}
+							],
+							"type": {
+								"type": "reference",
+								"id": 46,
+								"name": "PathDatumRecord"
+							}
+						},
+						{
+							"id": 57,
+							"name": "vx",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isExternal": true,
+								"isOptional": true
+							},
+							"comment": {
+								"shortText": "Node’s current x-velocity"
+							},
+							"sources": [
+								{
+									"fileName": "node_modules/@types/d3-force/index.d.ts",
+									"line": 44,
+									"character": 6
+								}
+							],
+							"type": {
+								"type": "union",
+								"types": [
+									{
+										"type": "intrinsic",
+										"name": "undefined"
+									},
+									{
+										"type": "intrinsic",
+										"name": "number"
+									}
+								]
+							}
+						},
+						{
+							"id": 58,
 							"name": "vy",
 							"kind": 1024,
 							"kindString": "Property",
@@ -1238,7 +1363,7 @@
 							}
 						},
 						{
-							"id": 49,
+							"id": 55,
 							"name": "x",
 							"kind": 1024,
 							"kindString": "Property",
@@ -1271,7 +1396,7 @@
 							}
 						},
 						{
-							"id": 50,
+							"id": 56,
 							"name": "y",
 							"kind": 1024,
 							"kindString": "Property",
@@ -1309,16 +1434,16 @@
 							"title": "Properties",
 							"kind": 1024,
 							"children": [
-								53,
-								54,
-								45,
-								48,
-								46,
-								47,
+								59,
+								60,
 								51,
+								54,
 								52,
-								49,
-								50
+								53,
+								57,
+								58,
+								55,
+								56
 							]
 						}
 					],
@@ -1337,14 +1462,14 @@
 					]
 				},
 				{
-					"id": 87,
+					"id": 93,
 					"name": "GramPathDatum",
 					"kind": 256,
 					"kindString": "Interface",
 					"flags": {},
 					"children": [
 						{
-							"id": 88,
+							"id": 94,
 							"name": "links",
 							"kind": 1024,
 							"kindString": "Property",
@@ -1360,7 +1485,7 @@
 								"type": "array",
 								"elementType": {
 									"type": "reference",
-									"id": 67,
+									"id": 73,
 									"name": "GramLinkDatum"
 								}
 							}
@@ -1371,7 +1496,7 @@
 							"title": "Properties",
 							"kind": 1024,
 							"children": [
-								88
+								94
 							]
 						}
 					],
@@ -1384,7 +1509,7 @@
 					]
 				},
 				{
-					"id": 40,
+					"id": 46,
 					"name": "PathDatumRecord",
 					"kind": 4194304,
 					"kindString": "Type alias",
@@ -1399,7 +1524,7 @@
 					"type": {
 						"type": "reflection",
 						"declaration": {
-							"id": 41,
+							"id": 47,
 							"name": "__type",
 							"kind": 65536,
 							"kindString": "Type literal",
@@ -1412,14 +1537,14 @@
 								}
 							],
 							"indexSignature": {
-								"id": 42,
+								"id": 48,
 								"name": "__index",
 								"kind": 8192,
 								"kindString": "Index signature",
 								"flags": {},
 								"parameters": [
 									{
-										"id": 43,
+										"id": 49,
 										"name": "key",
 										"kind": 32768,
 										"flags": {},
@@ -1438,7 +1563,7 @@
 					}
 				},
 				{
-					"id": 39,
+					"id": 45,
 					"name": "MISSING_ID",
 					"kind": 32,
 					"kindString": "Variable",
@@ -1459,7 +1584,7 @@
 					"defaultValue": "'__missing_id__'"
 				},
 				{
-					"id": 64,
+					"id": 70,
 					"name": "isGramNodeDatum",
 					"kind": 64,
 					"kindString": "Function",
@@ -1475,14 +1600,14 @@
 					],
 					"signatures": [
 						{
-							"id": 65,
+							"id": 71,
 							"name": "isGramNodeDatum",
 							"kind": 4096,
 							"kindString": "Call signature",
 							"flags": {},
 							"parameters": [
 								{
-									"id": 66,
+									"id": 72,
 									"name": "o",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -1499,7 +1624,7 @@
 								"asserts": false,
 								"targetType": {
 									"type": "reference",
-									"id": 44,
+									"id": 50,
 									"name": "GramNodeDatum"
 								}
 							}
@@ -1507,7 +1632,7 @@
 					]
 				},
 				{
-					"id": 74,
+					"id": 80,
 					"name": "makeGramLinkDatum",
 					"kind": 64,
 					"kindString": "Function",
@@ -1523,14 +1648,14 @@
 					],
 					"signatures": [
 						{
-							"id": 75,
+							"id": 81,
 							"name": "makeGramLinkDatum",
 							"kind": 4096,
 							"kindString": "Call signature",
 							"flags": {},
 							"parameters": [
 								{
-									"id": 76,
+									"id": 82,
 									"name": "source",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -1541,7 +1666,7 @@
 									}
 								},
 								{
-									"id": 77,
+									"id": 83,
 									"name": "target",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -1552,7 +1677,7 @@
 									}
 								},
 								{
-									"id": 78,
+									"id": 84,
 									"name": "id",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -1565,7 +1690,7 @@
 									}
 								},
 								{
-									"id": 79,
+									"id": 85,
 									"name": "labels",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -1581,7 +1706,7 @@
 									}
 								},
 								{
-									"id": 80,
+									"id": 86,
 									"name": "record",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -1590,7 +1715,7 @@
 									},
 									"type": {
 										"type": "reference",
-										"id": 40,
+										"id": 46,
 										"name": "PathDatumRecord"
 									}
 								}
@@ -1598,14 +1723,14 @@
 							"type": {
 								"type": "reflection",
 								"declaration": {
-									"id": 81,
+									"id": 87,
 									"name": "__type",
 									"kind": 65536,
 									"kindString": "Type literal",
 									"flags": {},
 									"children": [
 										{
-											"id": 82,
+											"id": 88,
 											"name": "id",
 											"kind": 1024,
 											"kindString": "Property",
@@ -1617,7 +1742,7 @@
 											"defaultValue": "..."
 										},
 										{
-											"id": 83,
+											"id": 89,
 											"name": "labels",
 											"kind": 1024,
 											"kindString": "Property",
@@ -1632,20 +1757,20 @@
 											"defaultValue": "..."
 										},
 										{
-											"id": 84,
+											"id": 90,
 											"name": "record",
 											"kind": 1024,
 											"kindString": "Property",
 											"flags": {},
 											"type": {
 												"type": "reference",
-												"id": 40,
+												"id": 46,
 												"name": "PathDatumRecord"
 											},
 											"defaultValue": "..."
 										},
 										{
-											"id": 85,
+											"id": 91,
 											"name": "source",
 											"kind": 1024,
 											"kindString": "Property",
@@ -1656,7 +1781,7 @@
 											}
 										},
 										{
-											"id": 86,
+											"id": 92,
 											"name": "target",
 											"kind": 1024,
 											"kindString": "Property",
@@ -1672,11 +1797,11 @@
 											"title": "Properties",
 											"kind": 1024,
 											"children": [
-												82,
-												83,
-												84,
-												85,
-												86
+												88,
+												89,
+												90,
+												91,
+												92
 											]
 										}
 									]
@@ -1686,7 +1811,7 @@
 					]
 				},
 				{
-					"id": 55,
+					"id": 61,
 					"name": "makeGramNodeDatum",
 					"kind": 64,
 					"kindString": "Function",
@@ -1702,14 +1827,14 @@
 					],
 					"signatures": [
 						{
-							"id": 56,
+							"id": 62,
 							"name": "makeGramNodeDatum",
 							"kind": 4096,
 							"kindString": "Call signature",
 							"flags": {},
 							"parameters": [
 								{
-									"id": 57,
+									"id": 63,
 									"name": "id",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -1722,7 +1847,7 @@
 									}
 								},
 								{
-									"id": 58,
+									"id": 64,
 									"name": "labels",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -1738,7 +1863,7 @@
 									}
 								},
 								{
-									"id": 59,
+									"id": 65,
 									"name": "record",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -1747,7 +1872,7 @@
 									},
 									"type": {
 										"type": "reference",
-										"id": 40,
+										"id": 46,
 										"name": "PathDatumRecord"
 									}
 								}
@@ -1755,14 +1880,14 @@
 							"type": {
 								"type": "reflection",
 								"declaration": {
-									"id": 60,
+									"id": 66,
 									"name": "__type",
 									"kind": 65536,
 									"kindString": "Type literal",
 									"flags": {},
 									"children": [
 										{
-											"id": 61,
+											"id": 67,
 											"name": "id",
 											"kind": 1024,
 											"kindString": "Property",
@@ -1774,7 +1899,7 @@
 											"defaultValue": "..."
 										},
 										{
-											"id": 62,
+											"id": 68,
 											"name": "labels",
 											"kind": 1024,
 											"kindString": "Property",
@@ -1789,14 +1914,14 @@
 											"defaultValue": "..."
 										},
 										{
-											"id": 63,
+											"id": 69,
 											"name": "record",
 											"kind": 1024,
 											"kindString": "Property",
 											"flags": {},
 											"type": {
 												"type": "reference",
-												"id": 40,
+												"id": 46,
 												"name": "PathDatumRecord"
 											},
 											"defaultValue": "..."
@@ -1807,9 +1932,9 @@
 											"title": "Properties",
 											"kind": 1024,
 											"children": [
-												61,
-												62,
-												63
+												67,
+												68,
+												69
 											]
 										}
 									]
@@ -1824,33 +1949,33 @@
 					"title": "Interfaces",
 					"kind": 256,
 					"children": [
-						89,
-						67,
-						44,
-						87
+						95,
+						73,
+						50,
+						93
 					]
 				},
 				{
 					"title": "Type aliases",
 					"kind": 4194304,
 					"children": [
-						40
+						46
 					]
 				},
 				{
 					"title": "Variables",
 					"kind": 32,
 					"children": [
-						39
+						45
 					]
 				},
 				{
 					"title": "Functions",
 					"kind": 64,
 					"children": [
-						64,
-						74,
-						55
+						70,
+						80,
+						61
 					]
 				}
 			],
@@ -1863,22 +1988,14 @@
 			]
 		},
 		{
-			"id": 93,
+			"id": 99,
 			"name": "index",
 			"kind": 1,
 			"kindString": "Module",
 			"flags": {},
 			"children": [
 				{
-					"id": 94,
-					"name": "default",
-					"kind": 16777216,
-					"kindString": "Reference",
-					"flags": {},
-					"target": 11
-				},
-				{
-					"id": 161,
+					"id": 166,
 					"name": "D3GramLayoutConfiguration",
 					"kind": 256,
 					"kindString": "Interface",
@@ -1888,7 +2005,7 @@
 					},
 					"children": [
 						{
-							"id": 163,
+							"id": 168,
 							"name": "height",
 							"kind": 1024,
 							"kindString": "Property",
@@ -1909,7 +2026,7 @@
 							}
 						},
 						{
-							"id": 164,
+							"id": 169,
 							"name": "ticks",
 							"kind": 1024,
 							"kindString": "Property",
@@ -1930,7 +2047,7 @@
 							}
 						},
 						{
-							"id": 162,
+							"id": 167,
 							"name": "width",
 							"kind": 1024,
 							"kindString": "Property",
@@ -1956,9 +2073,9 @@
 							"title": "Properties",
 							"kind": 1024,
 							"children": [
-								163,
-								164,
-								162
+								168,
+								169,
+								167
 							]
 						}
 					],
@@ -1971,14 +2088,14 @@
 					]
 				},
 				{
-					"id": 157,
+					"id": 162,
 					"name": "GramGraphData",
 					"kind": 256,
 					"kindString": "Interface",
 					"flags": {},
 					"children": [
 						{
-							"id": 159,
+							"id": 164,
 							"name": "links",
 							"kind": 1024,
 							"kindString": "Property",
@@ -1994,13 +2111,13 @@
 								"type": "array",
 								"elementType": {
 									"type": "reference",
-									"id": 67,
+									"id": 73,
 									"name": "GramLinkDatum"
 								}
 							}
 						},
 						{
-							"id": 158,
+							"id": 163,
 							"name": "nodes",
 							"kind": 1024,
 							"kindString": "Property",
@@ -2016,13 +2133,13 @@
 								"type": "array",
 								"elementType": {
 									"type": "reference",
-									"id": 44,
+									"id": 50,
 									"name": "GramNodeDatum"
 								}
 							}
 						},
 						{
-							"id": 160,
+							"id": 165,
 							"name": "paths",
 							"kind": 1024,
 							"kindString": "Property",
@@ -2038,7 +2155,7 @@
 								"type": "array",
 								"elementType": {
 									"type": "reference",
-									"id": 87,
+									"id": 93,
 									"name": "GramPathDatum"
 								}
 							}
@@ -2049,9 +2166,9 @@
 							"title": "Properties",
 							"kind": 1024,
 							"children": [
-								159,
-								158,
-								160
+								164,
+								163,
+								165
 							]
 						}
 					],
@@ -2064,14 +2181,14 @@
 					]
 				},
 				{
-					"id": 135,
+					"id": 140,
 					"name": "GramLinkDatum",
 					"kind": 256,
 					"kindString": "Interface",
 					"flags": {},
 					"children": [
 						{
-							"id": 136,
+							"id": 141,
 							"name": "id",
 							"kind": 1024,
 							"kindString": "Property",
@@ -2089,7 +2206,7 @@
 							}
 						},
 						{
-							"id": 141,
+							"id": 146,
 							"name": "index",
 							"kind": 1024,
 							"kindString": "Property",
@@ -2122,7 +2239,7 @@
 							}
 						},
 						{
-							"id": 137,
+							"id": 142,
 							"name": "labels",
 							"kind": 1024,
 							"kindString": "Property",
@@ -2154,7 +2271,7 @@
 							}
 						},
 						{
-							"id": 138,
+							"id": 143,
 							"name": "record",
 							"kind": 1024,
 							"kindString": "Property",
@@ -2168,12 +2285,12 @@
 							],
 							"type": {
 								"type": "reference",
-								"id": 40,
+								"id": 46,
 								"name": "PathDatumRecord"
 							}
 						},
 						{
-							"id": 139,
+							"id": 144,
 							"name": "source",
 							"kind": 1024,
 							"kindString": "Property",
@@ -2203,14 +2320,14 @@
 									},
 									{
 										"type": "reference",
-										"id": 44,
+										"id": 50,
 										"name": "GramNodeDatum"
 									}
 								]
 							}
 						},
 						{
-							"id": 140,
+							"id": 145,
 							"name": "target",
 							"kind": 1024,
 							"kindString": "Property",
@@ -2240,7 +2357,7 @@
 									},
 									{
 										"type": "reference",
-										"id": 44,
+										"id": 50,
 										"name": "GramNodeDatum"
 									}
 								]
@@ -2252,12 +2369,12 @@
 							"title": "Properties",
 							"kind": 1024,
 							"children": [
-								136,
 								141,
-								137,
-								138,
-								139,
-								140
+								146,
+								142,
+								143,
+								144,
+								145
 							]
 						}
 					],
@@ -2274,7 +2391,7 @@
 							"typeArguments": [
 								{
 									"type": "reference",
-									"id": 44,
+									"id": 50,
 									"name": "GramNodeDatum"
 								}
 							],
@@ -2283,14 +2400,14 @@
 					]
 				},
 				{
-					"id": 112,
+					"id": 117,
 					"name": "GramNodeDatum",
 					"kind": 256,
 					"kindString": "Interface",
 					"flags": {},
 					"children": [
 						{
-							"id": 121,
+							"id": 126,
 							"name": "fx",
 							"kind": 1024,
 							"kindString": "Property",
@@ -2327,7 +2444,7 @@
 							}
 						},
 						{
-							"id": 122,
+							"id": 127,
 							"name": "fy",
 							"kind": 1024,
 							"kindString": "Property",
@@ -2364,7 +2481,7 @@
 							}
 						},
 						{
-							"id": 113,
+							"id": 118,
 							"name": "id",
 							"kind": 1024,
 							"kindString": "Property",
@@ -2382,7 +2499,7 @@
 							}
 						},
 						{
-							"id": 116,
+							"id": 121,
 							"name": "index",
 							"kind": 1024,
 							"kindString": "Property",
@@ -2415,7 +2532,7 @@
 							}
 						},
 						{
-							"id": 114,
+							"id": 119,
 							"name": "labels",
 							"kind": 1024,
 							"kindString": "Property",
@@ -2436,7 +2553,7 @@
 							}
 						},
 						{
-							"id": 115,
+							"id": 120,
 							"name": "record",
 							"kind": 1024,
 							"kindString": "Property",
@@ -2450,12 +2567,12 @@
 							],
 							"type": {
 								"type": "reference",
-								"id": 40,
+								"id": 46,
 								"name": "PathDatumRecord"
 							}
 						},
 						{
-							"id": 119,
+							"id": 124,
 							"name": "vx",
 							"kind": 1024,
 							"kindString": "Property",
@@ -2488,7 +2605,7 @@
 							}
 						},
 						{
-							"id": 120,
+							"id": 125,
 							"name": "vy",
 							"kind": 1024,
 							"kindString": "Property",
@@ -2521,7 +2638,7 @@
 							}
 						},
 						{
-							"id": 117,
+							"id": 122,
 							"name": "x",
 							"kind": 1024,
 							"kindString": "Property",
@@ -2554,7 +2671,7 @@
 							}
 						},
 						{
-							"id": 118,
+							"id": 123,
 							"name": "y",
 							"kind": 1024,
 							"kindString": "Property",
@@ -2592,16 +2709,16 @@
 							"title": "Properties",
 							"kind": 1024,
 							"children": [
+								126,
+								127,
+								118,
 								121,
-								122,
-								113,
-								116,
-								114,
-								115,
 								119,
 								120,
-								117,
-								118
+								124,
+								125,
+								122,
+								123
 							]
 						}
 					],
@@ -2620,14 +2737,14 @@
 					]
 				},
 				{
-					"id": 155,
+					"id": 160,
 					"name": "GramPathDatum",
 					"kind": 256,
 					"kindString": "Interface",
 					"flags": {},
 					"children": [
 						{
-							"id": 156,
+							"id": 161,
 							"name": "links",
 							"kind": 1024,
 							"kindString": "Property",
@@ -2643,7 +2760,7 @@
 								"type": "array",
 								"elementType": {
 									"type": "reference",
-									"id": 67,
+									"id": 73,
 									"name": "GramLinkDatum"
 								}
 							}
@@ -2654,7 +2771,7 @@
 							"title": "Properties",
 							"kind": 1024,
 							"children": [
-								156
+								161
 							]
 						}
 					],
@@ -2667,7 +2784,7 @@
 					]
 				},
 				{
-					"id": 108,
+					"id": 113,
 					"name": "PathDatumRecord",
 					"kind": 4194304,
 					"kindString": "Type alias",
@@ -2682,7 +2799,7 @@
 					"type": {
 						"type": "reflection",
 						"declaration": {
-							"id": 109,
+							"id": 114,
 							"name": "__type",
 							"kind": 65536,
 							"kindString": "Type literal",
@@ -2695,14 +2812,14 @@
 								}
 							],
 							"indexSignature": {
-								"id": 110,
+								"id": 115,
 								"name": "__index",
 								"kind": 8192,
 								"kindString": "Index signature",
 								"flags": {},
 								"parameters": [
 									{
-										"id": 111,
+										"id": 116,
 										"name": "key",
 										"kind": 32768,
 										"flags": {},
@@ -2721,7 +2838,7 @@
 					}
 				},
 				{
-					"id": 107,
+					"id": 112,
 					"name": "MISSING_ID",
 					"kind": 32,
 					"kindString": "Variable",
@@ -2742,7 +2859,7 @@
 					"defaultValue": "'__missing_id__'"
 				},
 				{
-					"id": 98,
+					"id": 103,
 					"name": "dataFromPath",
 					"kind": 64,
 					"kindString": "Function",
@@ -2758,14 +2875,14 @@
 					],
 					"signatures": [
 						{
-							"id": 99,
+							"id": 104,
 							"name": "dataFromPath",
 							"kind": 4096,
 							"kindString": "Call signature",
 							"flags": {},
 							"parameters": [
 								{
-									"id": 100,
+									"id": 105,
 									"name": "p",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -2778,14 +2895,114 @@
 							],
 							"type": {
 								"type": "reference",
-								"id": 40,
+								"id": 46,
 								"name": "PathDatumRecord"
 							}
 						}
 					]
 				},
 				{
-					"id": 175,
+					"id": 188,
+					"name": "drag",
+					"kind": 64,
+					"kindString": "Function",
+					"flags": {
+						"isConst": true
+					},
+					"sources": [
+						{
+							"fileName": "src/d3-gram-drag.ts",
+							"line": 3,
+							"character": 17
+						}
+					],
+					"signatures": [
+						{
+							"id": 189,
+							"name": "drag",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"typeParameter": [
+								{
+									"id": 190,
+									"name": "ActualNodeDatum",
+									"kind": 131072,
+									"kindString": "Type parameter",
+									"flags": {},
+									"type": {
+										"type": "reference",
+										"name": "SimulationNodeDatum"
+									}
+								},
+								{
+									"id": 191,
+									"name": "ActualLinkDatum",
+									"kind": 131072,
+									"kindString": "Type parameter",
+									"flags": {},
+									"type": {
+										"type": "reference",
+										"typeArguments": [
+											{
+												"type": "reference",
+												"name": "ActualNodeDatum"
+											},
+											{
+												"type": "reference",
+												"name": "ActualLinkDatum"
+											}
+										],
+										"name": "SimulationLinkDatum"
+									}
+								}
+							],
+							"parameters": [
+								{
+									"id": 192,
+									"name": "simulation",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "reference",
+										"typeArguments": [
+											{
+												"type": "reference",
+												"name": "ActualNodeDatum"
+											},
+											{
+												"type": "reference",
+												"name": "ActualLinkDatum"
+											}
+										],
+										"name": "Simulation"
+									}
+								}
+							],
+							"type": {
+								"type": "reference",
+								"typeArguments": [
+									{
+										"type": "intrinsic",
+										"name": "any"
+									},
+									{
+										"type": "intrinsic",
+										"name": "unknown"
+									},
+									{
+										"type": "intrinsic",
+										"name": "unknown"
+									}
+								],
+								"name": "DragBehavior"
+							}
+						}
+					]
+				},
+				{
+					"id": 180,
 					"name": "draw",
 					"kind": 64,
 					"kindString": "Function",
@@ -2795,13 +3012,13 @@
 					"sources": [
 						{
 							"fileName": "src/d3-gram-renderer.ts",
-							"line": 153,
+							"line": 150,
 							"character": 17
 						}
 					],
 					"signatures": [
 						{
-							"id": 176,
+							"id": 181,
 							"name": "draw",
 							"kind": 4096,
 							"kindString": "Call signature",
@@ -2809,7 +3026,7 @@
 							"comment": {},
 							"parameters": [
 								{
-									"id": 177,
+									"id": 182,
 									"name": "graph",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -2819,12 +3036,12 @@
 									},
 									"type": {
 										"type": "reference",
-										"id": 89,
+										"id": 95,
 										"name": "GramGraphData"
 									}
 								},
 								{
-									"id": 178,
+									"id": 183,
 									"name": "selector",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -2838,7 +3055,7 @@
 									}
 								},
 								{
-									"id": 179,
+									"id": 184,
 									"name": "configuration",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -2859,14 +3076,14 @@
 							"type": {
 								"type": "reflection",
 								"declaration": {
-									"id": 180,
+									"id": 185,
 									"name": "__type",
 									"kind": 65536,
 									"kindString": "Type literal",
 									"flags": {},
 									"children": [
 										{
-											"id": 182,
+											"id": 187,
 											"name": "linkSelection",
 											"kind": 1024,
 											"kindString": "Property",
@@ -2880,7 +3097,7 @@
 													},
 													{
 														"type": "reference",
-														"id": 67,
+														"id": 73,
 														"name": "GramLinkDatum"
 													},
 													{
@@ -2896,7 +3113,7 @@
 											}
 										},
 										{
-											"id": 181,
+											"id": 186,
 											"name": "nodeSelection",
 											"kind": 1024,
 											"kindString": "Property",
@@ -2910,7 +3127,7 @@
 													},
 													{
 														"type": "reference",
-														"id": 44,
+														"id": 50,
 														"name": "GramNodeDatum"
 													},
 													{
@@ -2931,8 +3148,8 @@
 											"title": "Properties",
 											"kind": 1024,
 											"children": [
-												182,
-												181
+												187,
+												186
 											]
 										}
 									]
@@ -2942,7 +3159,7 @@
 					]
 				},
 				{
-					"id": 104,
+					"id": 109,
 					"name": "edgeToD3",
 					"kind": 64,
 					"kindString": "Function",
@@ -2958,14 +3175,14 @@
 					],
 					"signatures": [
 						{
-							"id": 105,
+							"id": 110,
 							"name": "edgeToD3",
 							"kind": 4096,
 							"kindString": "Call signature",
 							"flags": {},
 							"parameters": [
 								{
-									"id": 106,
+									"id": 111,
 									"name": "edge",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -2978,14 +3195,14 @@
 							],
 							"type": {
 								"type": "reference",
-								"id": 67,
+								"id": 73,
 								"name": "GramLinkDatum"
 							}
 						}
 					]
 				},
 				{
-					"id": 132,
+					"id": 137,
 					"name": "isGramNodeDatum",
 					"kind": 64,
 					"kindString": "Function",
@@ -3001,14 +3218,14 @@
 					],
 					"signatures": [
 						{
-							"id": 133,
+							"id": 138,
 							"name": "isGramNodeDatum",
 							"kind": 4096,
 							"kindString": "Call signature",
 							"flags": {},
 							"parameters": [
 								{
-									"id": 134,
+									"id": 139,
 									"name": "o",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -3025,7 +3242,7 @@
 								"asserts": false,
 								"targetType": {
 									"type": "reference",
-									"id": 44,
+									"id": 50,
 									"name": "GramNodeDatum"
 								}
 							}
@@ -3033,7 +3250,7 @@
 					]
 				},
 				{
-					"id": 165,
+					"id": 170,
 					"name": "layout",
 					"kind": 64,
 					"kindString": "Function",
@@ -3049,7 +3266,7 @@
 					],
 					"signatures": [
 						{
-							"id": 166,
+							"id": 171,
 							"name": "layout",
 							"kind": 4096,
 							"kindString": "Call signature",
@@ -3057,7 +3274,7 @@
 							"comment": {},
 							"parameters": [
 								{
-									"id": 167,
+									"id": 172,
 									"name": "graph",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -3065,12 +3282,12 @@
 									"comment": {},
 									"type": {
 										"type": "reference",
-										"id": 89,
+										"id": 95,
 										"name": "GramGraphData"
 									}
 								},
 								{
-									"id": 168,
+									"id": 173,
 									"name": "configuration",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -3083,7 +3300,7 @@
 										"typeArguments": [
 											{
 												"type": "reference",
-												"id": 2,
+												"id": 8,
 												"name": "D3GramLayoutConfiguration"
 											}
 										],
@@ -3110,7 +3327,7 @@
 					]
 				},
 				{
-					"id": 142,
+					"id": 147,
 					"name": "makeGramLinkDatum",
 					"kind": 64,
 					"kindString": "Function",
@@ -3126,14 +3343,14 @@
 					],
 					"signatures": [
 						{
-							"id": 143,
+							"id": 148,
 							"name": "makeGramLinkDatum",
 							"kind": 4096,
 							"kindString": "Call signature",
 							"flags": {},
 							"parameters": [
 								{
-									"id": 144,
+									"id": 149,
 									"name": "source",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -3144,7 +3361,7 @@
 									}
 								},
 								{
-									"id": 145,
+									"id": 150,
 									"name": "target",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -3155,7 +3372,7 @@
 									}
 								},
 								{
-									"id": 146,
+									"id": 151,
 									"name": "id",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -3168,7 +3385,7 @@
 									}
 								},
 								{
-									"id": 147,
+									"id": 152,
 									"name": "labels",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -3184,7 +3401,7 @@
 									}
 								},
 								{
-									"id": 148,
+									"id": 153,
 									"name": "record",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -3193,7 +3410,7 @@
 									},
 									"type": {
 										"type": "reference",
-										"id": 40,
+										"id": 46,
 										"name": "PathDatumRecord"
 									}
 								}
@@ -3201,14 +3418,14 @@
 							"type": {
 								"type": "reflection",
 								"declaration": {
-									"id": 149,
+									"id": 154,
 									"name": "__type",
 									"kind": 65536,
 									"kindString": "Type literal",
 									"flags": {},
 									"children": [
 										{
-											"id": 150,
+											"id": 155,
 											"name": "id",
 											"kind": 1024,
 											"kindString": "Property",
@@ -3220,7 +3437,7 @@
 											"defaultValue": "..."
 										},
 										{
-											"id": 151,
+											"id": 156,
 											"name": "labels",
 											"kind": 1024,
 											"kindString": "Property",
@@ -3235,20 +3452,20 @@
 											"defaultValue": "..."
 										},
 										{
-											"id": 152,
+											"id": 157,
 											"name": "record",
 											"kind": 1024,
 											"kindString": "Property",
 											"flags": {},
 											"type": {
 												"type": "reference",
-												"id": 40,
+												"id": 46,
 												"name": "PathDatumRecord"
 											},
 											"defaultValue": "..."
 										},
 										{
-											"id": 153,
+											"id": 158,
 											"name": "source",
 											"kind": 1024,
 											"kindString": "Property",
@@ -3259,7 +3476,7 @@
 											}
 										},
 										{
-											"id": 154,
+											"id": 159,
 											"name": "target",
 											"kind": 1024,
 											"kindString": "Property",
@@ -3275,11 +3492,11 @@
 											"title": "Properties",
 											"kind": 1024,
 											"children": [
-												150,
-												151,
-												152,
-												153,
-												154
+												155,
+												156,
+												157,
+												158,
+												159
 											]
 										}
 									]
@@ -3289,7 +3506,7 @@
 					]
 				},
 				{
-					"id": 123,
+					"id": 128,
 					"name": "makeGramNodeDatum",
 					"kind": 64,
 					"kindString": "Function",
@@ -3305,14 +3522,14 @@
 					],
 					"signatures": [
 						{
-							"id": 124,
+							"id": 129,
 							"name": "makeGramNodeDatum",
 							"kind": 4096,
 							"kindString": "Call signature",
 							"flags": {},
 							"parameters": [
 								{
-									"id": 125,
+									"id": 130,
 									"name": "id",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -3325,7 +3542,7 @@
 									}
 								},
 								{
-									"id": 126,
+									"id": 131,
 									"name": "labels",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -3341,7 +3558,7 @@
 									}
 								},
 								{
-									"id": 127,
+									"id": 132,
 									"name": "record",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -3350,7 +3567,7 @@
 									},
 									"type": {
 										"type": "reference",
-										"id": 40,
+										"id": 46,
 										"name": "PathDatumRecord"
 									}
 								}
@@ -3358,14 +3575,14 @@
 							"type": {
 								"type": "reflection",
 								"declaration": {
-									"id": 128,
+									"id": 133,
 									"name": "__type",
 									"kind": 65536,
 									"kindString": "Type literal",
 									"flags": {},
 									"children": [
 										{
-											"id": 129,
+											"id": 134,
 											"name": "id",
 											"kind": 1024,
 											"kindString": "Property",
@@ -3377,7 +3594,7 @@
 											"defaultValue": "..."
 										},
 										{
-											"id": 130,
+											"id": 135,
 											"name": "labels",
 											"kind": 1024,
 											"kindString": "Property",
@@ -3392,14 +3609,14 @@
 											"defaultValue": "..."
 										},
 										{
-											"id": 131,
+											"id": 136,
 											"name": "record",
 											"kind": 1024,
 											"kindString": "Property",
 											"flags": {},
 											"type": {
 												"type": "reference",
-												"id": 40,
+												"id": 46,
 												"name": "PathDatumRecord"
 											},
 											"defaultValue": "..."
@@ -3410,9 +3627,9 @@
 											"title": "Properties",
 											"kind": 1024,
 											"children": [
-												129,
-												130,
-												131
+												134,
+												135,
+												136
 											]
 										}
 									]
@@ -3422,8 +3639,100 @@
 					]
 				},
 				{
-					"id": 169,
-					"name": "moveLinks",
+					"id": 106,
+					"name": "nodeToD3",
+					"kind": 64,
+					"kindString": "Function",
+					"flags": {
+						"isConst": true
+					},
+					"sources": [
+						{
+							"fileName": "src/d3-gram-parse.ts",
+							"line": 50,
+							"character": 21
+						}
+					],
+					"signatures": [
+						{
+							"id": 107,
+							"name": "nodeToD3",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"parameters": [
+								{
+									"id": 108,
+									"name": "node",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "reference",
+										"name": "GramNode"
+									}
+								}
+							],
+							"type": {
+								"type": "reference",
+								"id": 50,
+								"name": "GramNodeDatum"
+							}
+						}
+					]
+				},
+				{
+					"id": 100,
+					"name": "parse",
+					"kind": 64,
+					"kindString": "Function",
+					"flags": {
+						"isConst": true
+					},
+					"sources": [
+						{
+							"fileName": "src/d3-gram-parse.ts",
+							"line": 29,
+							"character": 18
+						}
+					],
+					"signatures": [
+						{
+							"id": 101,
+							"name": "parse",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"comment": {
+								"shortText": "Parses text as [gram](https://github.com/gram-data/gram-js),\nreturning a graph representated nodes, links and paths."
+							},
+							"parameters": [
+								{
+									"id": 102,
+									"name": "src",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"comment": {
+										"text": "\n"
+									},
+									"type": {
+										"type": "intrinsic",
+										"name": "string"
+									}
+								}
+							],
+							"type": {
+								"type": "reference",
+								"id": 95,
+								"name": "GramGraphData"
+							}
+						}
+					]
+				},
+				{
+					"id": 174,
+					"name": "updateLinks",
 					"kind": 64,
 					"kindString": "Function",
 					"flags": {
@@ -3432,20 +3741,20 @@
 					"sources": [
 						{
 							"fileName": "src/d3-gram-renderer.ts",
-							"line": 117,
-							"character": 22
+							"line": 114,
+							"character": 24
 						}
 					],
 					"signatures": [
 						{
-							"id": 170,
-							"name": "moveLinks",
+							"id": 175,
+							"name": "updateLinks",
 							"kind": 4096,
 							"kindString": "Call signature",
 							"flags": {},
 							"parameters": [
 								{
-									"id": 171,
+									"id": 176,
 									"name": "links",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -3464,8 +3773,8 @@
 					]
 				},
 				{
-					"id": 172,
-					"name": "moveNodes",
+					"id": 177,
+					"name": "updateNodes",
 					"kind": 64,
 					"kindString": "Function",
 					"flags": {
@@ -3474,20 +3783,20 @@
 					"sources": [
 						{
 							"fileName": "src/d3-gram-renderer.ts",
-							"line": 133,
-							"character": 22
+							"line": 130,
+							"character": 24
 						}
 					],
 					"signatures": [
 						{
-							"id": 173,
-							"name": "moveNodes",
+							"id": 178,
+							"name": "updateNodes",
 							"kind": 4096,
 							"kindString": "Call signature",
 							"flags": {},
 							"parameters": [
 								{
-									"id": 174,
+									"id": 179,
 									"name": "nodes",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -3504,148 +3813,50 @@
 							}
 						}
 					]
-				},
-				{
-					"id": 101,
-					"name": "nodeToD3",
-					"kind": 64,
-					"kindString": "Function",
-					"flags": {
-						"isConst": true
-					},
-					"sources": [
-						{
-							"fileName": "src/d3-gram-parse.ts",
-							"line": 50,
-							"character": 21
-						}
-					],
-					"signatures": [
-						{
-							"id": 102,
-							"name": "nodeToD3",
-							"kind": 4096,
-							"kindString": "Call signature",
-							"flags": {},
-							"parameters": [
-								{
-									"id": 103,
-									"name": "node",
-									"kind": 32768,
-									"kindString": "Parameter",
-									"flags": {},
-									"type": {
-										"type": "reference",
-										"name": "GramNode"
-									}
-								}
-							],
-							"type": {
-								"type": "reference",
-								"id": 44,
-								"name": "GramNodeDatum"
-							}
-						}
-					]
-				},
-				{
-					"id": 95,
-					"name": "parse",
-					"kind": 64,
-					"kindString": "Function",
-					"flags": {
-						"isConst": true
-					},
-					"sources": [
-						{
-							"fileName": "src/d3-gram-parse.ts",
-							"line": 29,
-							"character": 18
-						}
-					],
-					"signatures": [
-						{
-							"id": 96,
-							"name": "parse",
-							"kind": 4096,
-							"kindString": "Call signature",
-							"flags": {},
-							"comment": {
-								"shortText": "Parses text as [gram](https://github.com/gram-data/gram-js),\nreturning a graph representated nodes, links and paths."
-							},
-							"parameters": [
-								{
-									"id": 97,
-									"name": "src",
-									"kind": 32768,
-									"kindString": "Parameter",
-									"flags": {},
-									"comment": {
-										"text": "\n"
-									},
-									"type": {
-										"type": "intrinsic",
-										"name": "string"
-									}
-								}
-							],
-							"type": {
-								"type": "reference",
-								"id": 89,
-								"name": "GramGraphData"
-							}
-						}
-					]
 				}
 			],
 			"groups": [
 				{
-					"title": "References",
-					"kind": 16777216,
-					"children": [
-						94
-					]
-				},
-				{
 					"title": "Interfaces",
 					"kind": 256,
 					"children": [
-						161,
-						157,
-						135,
-						112,
-						155
+						166,
+						162,
+						140,
+						117,
+						160
 					]
 				},
 				{
 					"title": "Type aliases",
 					"kind": 4194304,
 					"children": [
-						108
+						113
 					]
 				},
 				{
 					"title": "Variables",
 					"kind": 32,
 					"children": [
-						107
+						112
 					]
 				},
 				{
 					"title": "Functions",
 					"kind": 64,
 					"children": [
-						98,
-						175,
-						104,
-						132,
-						165,
-						142,
-						123,
-						169,
-						172,
-						101,
-						95
+						103,
+						188,
+						180,
+						109,
+						137,
+						170,
+						147,
+						128,
+						106,
+						100,
+						174,
+						177
 					]
 				}
 			],
@@ -3664,10 +3875,11 @@
 			"kind": 1,
 			"children": [
 				1,
-				10,
-				23,
-				38,
-				93
+				7,
+				16,
+				29,
+				44,
+				99
 			]
 		}
 	]

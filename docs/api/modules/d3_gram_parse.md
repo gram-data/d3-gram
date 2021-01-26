@@ -30,7 +30,7 @@ Name | Type |
 
 **Returns:** [*PathDatumRecord*](d3_gram_types.md#pathdatumrecord)
 
-Defined in: [src/d3-gram-parse.ts:42](https://github.com/gram-data/d3-gram/blob/3dd6a0d/src/d3-gram-parse.ts#L42)
+Defined in: [src/d3-gram-parse.ts:42](https://github.com/gram-data/d3-gram/blob/f6f773c/src/d3-gram-parse.ts#L42)
 
 ___
 
@@ -46,7 +46,7 @@ Name | Type |
 
 **Returns:** [*GramLinkDatum*](../interfaces/d3_gram_types.gramlinkdatum.md)
 
-Defined in: [src/d3-gram-parse.ts:66](https://github.com/gram-data/d3-gram/blob/3dd6a0d/src/d3-gram-parse.ts#L66)
+Defined in: [src/d3-gram-parse.ts:66](https://github.com/gram-data/d3-gram/blob/f6f773c/src/d3-gram-parse.ts#L66)
 
 ___
 
@@ -62,7 +62,7 @@ Name | Type |
 
 **Returns:** [*GramNodeDatum*](../interfaces/d3_gram_types.gramnodedatum.md)
 
-Defined in: [src/d3-gram-parse.ts:50](https://github.com/gram-data/d3-gram/blob/3dd6a0d/src/d3-gram-parse.ts#L50)
+Defined in: [src/d3-gram-parse.ts:50](https://github.com/gram-data/d3-gram/blob/f6f773c/src/d3-gram-parse.ts#L50)
 
 ___
 
@@ -81,4 +81,4 @@ Name | Type | Description |
 
 **Returns:** [*GramGraphData*](../interfaces/d3_gram_types.gramgraphdata.md)
 
-Defined in: [src/d3-gram-parse.ts:29](https://github.com/gram-data/d3-gram/blob/3dd6a0d/src/d3-gram-parse.ts#L29)
+Defined in: [src/d3-gram-parse.ts:29](https://github.com/gram-data/d3-gram/blob/f6f773c/src/d3-gram-parse.ts#L29)

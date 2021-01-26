@@ -7,7 +7,7 @@ layout: default
   <svg class="absolute top-0 right-0" width="800" height="400" id="graph"></svg>
   <div class="container mx-auto">
     <h1 class="font-serif text-white text-6xl">d3-gram</h1>
-    <h2 class="font-mono text-white text-3xl mb-16 mt-2">(gram)-->(d3)</h2>
+    <h2 class="font-mono text-white text-3xl mb-16 mt-2">(d3)<--(gram)</h2>
     <p class="text-white mb-0">d3.js visualization of gram graphs</p>
     <pre class="bg-white rounded pl-2 mt-8 mb-2 w-full">(a:A)-->(b:B)<--(c:C)-->(a), (c)-->(d), (c)-->(e)</pre>
   </div>
@@ -24,7 +24,6 @@ layout: default
 
 <script>
   window.onload = function () {
-    console.log(gram);
     var svg = document.getElementById('graph');
     drawGraph("(a:A)-->(b:B)<--(c:C)-->(a), (c)-->(d), (c)-->(e)", svg);
   }

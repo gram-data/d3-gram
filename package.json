@@ -33,7 +33,8 @@
     "start": "tsdx watch",
     "build": "run-s build:**",
     "build:lib": "tsdx build --format umd,esm,cjs",
-    "build:demo": "shx cp dist/d3-gram.umd.development.* ./public",
+    "build:docs": "shx cp './dist/d3-gram.umd.*' docs/assets/scripts",
+    "build:demo": "shx cp './dist/d3-gram.umd.*' ./public",
     "test": "tsdx test",
     "test:watch": "tsdx test --watch",
     "lint": "tsdx lint src",
@@ -44,8 +45,7 @@
     "docs": "run-s docs:**",
     "docs:api": "shx rm -rf docs/api && typedoc",
     "docs:api-data": "typedoc --json docs/_data/api.json",
-    "docs:headers": "node ./scripts/api-headers.js",
-    "docs:scripts": "shx cp './dist/d3-gram.umd.*' docs/assets/scripts"
+    "docs:headers": "node ./scripts/api-headers.js"
   },
   "husky": {
     "hooks": {
