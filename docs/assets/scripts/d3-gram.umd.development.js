@@ -9092,7 +9092,7 @@
       event.subject.fy = null;
     }
 
-    return d3Drag().on("start", dragstarted).on("drag", dragged).on("end", dragended);
+    return d3Drag().on('start', dragstarted).on('drag', dragged).on('end', dragended);
   };
 
   exports.MISSING_ID = MISSING_ID;
